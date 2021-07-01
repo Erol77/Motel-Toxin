@@ -1,10 +1,11 @@
+const HtmlWebpackPlugin = require('html-webpack-plugin'); // Require  html-webpack-plugin plugin
 const path = require('path');
 module.exports = {
   mode: 'development',
   entry: path.join(__dirname + './src/app/init.js'),
   watch: true,
   output: {
-    path: path.join(__dirname, 'dist'),
+    path:  __dirname + '/dist', //path.join(__dirname, 'dist'),
     publicPath: '/dist/',
     filename: "bundle.js",
     chunkFilename: '[name].js'
