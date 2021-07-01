@@ -13,7 +13,7 @@ module.exports = {
     rules: [{
       test: /.jsx?$/,
       include: [
-        path.resolve(__dirname, 'app')
+        path.resolve(__dirname, 'app', '/app/init.js')
       ],
       exclude: [
         path.resolve(__dirname, 'node_modules')
