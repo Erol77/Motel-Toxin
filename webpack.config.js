@@ -1,7 +1,7 @@
 const path = require('path');
 module.exports = {
   mode: 'development',
-  entry: path.join(__dirname, 'app', 'index','/app/init.js'),
+  entry: path.join(__dirname + '/src/app/init.js'),
   watch: true,
   output: {
     path: path.join(__dirname, 'dist'),
@@ -30,12 +30,17 @@ module.exports = {
       }
     }]
   },
+  plugins: [  // Array of plugins to apply to build chunk
+    new HtmlWebpackPlugin({
+        template: __dirname + "/src/public/init.js",
+        inject: 'body'
+    }),
   resolve: {
     extensions: ['.json', '.js', '.jsx']
   },
   devtool: 'source-map',
   devServer: {
-    contentBase: path.join(__dirname, '/dist/'),
+    contentBase: path.join(__dirname, './src/public'),
     inline: true,
     host: 'localhost',
     port: 8080,
