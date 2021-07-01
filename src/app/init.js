@@ -1,5 +1,3 @@
-const { scrypt } = require("crypto")
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -9,11 +7,13 @@ const { scrypt } = require("crypto")
     </head>
     <body>
     <h3>Simple Webpack Setup</h3>
-    <app>        <scrypt>
-import './a.js';
-import './b.js';
+    <app>    
+        <scrypt>
+        const { scrypt } = require("crypto")
 
-console.log('./init');
+            import './a.js';
+            import './b.js';
+            console.log('./init');
         </scrypt></app>
     </body>
 </html>
