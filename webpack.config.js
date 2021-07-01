@@ -1,7 +1,7 @@
 const path = require('path');
 module.exports = {
   mode: 'development',
-  entry: path.join(__dirname + '/src/app/init.js'),
+  entry: path.join(__dirname + './src/app/init.js'),
   watch: true,
   output: {
     path: path.join(__dirname, 'dist'),
@@ -13,7 +13,7 @@ module.exports = {
     rules: [{
       test: /.jsx?$/,
       include: [
-        path.resolve(__dirname, 'app', '/app/init.js')
+        path.resolve(__dirname + './app/init.js')
       ],
       exclude: [
         path.resolve(__dirname, 'node_modules')
