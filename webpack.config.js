@@ -1,7 +1,7 @@
 const path = require('path');
 module.exports = {
   mode: 'development',
-  entry: path.join(__dirname, 'app', 'index'),
+  entry: path.join(__dirname, 'app', 'index','/app/init.js'),
   watch: true,
   output: {
     path: path.join(__dirname, 'dist'),
