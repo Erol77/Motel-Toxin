@@ -2,19 +2,19 @@ const HtmlWebpackPlugin = require('html-webpack-plugin'); // Require  html-webpa
 const path = require('path');
 module.exports = {
   mode: 'development',
-  entry: './src/app/init.js'),
-  watch: true,
+  entry: ['./src/app/init.js',
+  watch: true],
   output: {
-    path:  path.recolve(__dirname, 'dist'), //path.join(__dirname, 'dist'),
+    path:  path.resolve(__dirname, 'dist'), //path.join(__dirname, 'dist'),
     publicPath: '/dist/',
     filename: "bundle.js",
     chunkFilename: '[name].js'
   },
   module: {
     rules: [{
-      test: /.jsx?$/,
+      test: /\.js$/,
       include: [
-        path.resolve(__dirname + './app/init.js')
+        path.resolve(__dirname + './src/app/init.js')
       ],
       exclude: [
         path.resolve(__dirname, 'node_modules')
@@ -33,7 +33,7 @@ module.exports = {
   },
   plugins: [  // Array of plugins to apply to build chunk
     new HtmlWebpackPlugin({
-        template: __dirname + "/src/public/init.js",
+        template: __dirname + "/src/public/index.html",
         inject: 'body'
     }),
   resolve: {
