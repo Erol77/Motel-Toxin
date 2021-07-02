@@ -3,7 +3,7 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 //const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const fs = require('fs')
-
+/*
 function generateHtmlPlugins(templateDir) {
   const templateFiles = fs.readdirSync(path.resolve(__dirname, templateDir));
   return templateFiles.map(item => {
@@ -17,13 +17,14 @@ function generateHtmlPlugins(templateDir) {
     })
   })
 }
-
+*/
 const htmlPlugins = generateHtmlPlugins('./src/include');
 
 module.exports = {
   entry: [
-    './src/js/index.js',
-    './src/scss/style.scss'
+    './src/app/index.js',
+    './src/app/init.js',
+    './src/style/app.scss'
   ],
   output: {
     filename: './js/bundle.js'
@@ -69,6 +70,14 @@ module.exports = {
     ]
   },
   plugins: [
+    new HtmlWebpackPlugin(), // Generates default index.html
+    new HtmlWebpackPlugin({  // Also generate a test.html
+      filename: 'input.html',
+      template: 'src/public/input.html'
+  /*  new HtmlWebpackPlugin({
+        template: "./public/index.html",
+        inject: 'body'*/
+    }),
     new ExtractTextPlugin({
       filename: './css/style.bundle.css',
       allChunks: true,
