@@ -2,31 +2,34 @@ const HtmlWebpackPlugin = require('html-webpack-plugin'); // Require  html-webpa
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const path = require('path');
 module.exports = {
-  mode: 'development',
-  entry: ['./src/app/init.js','./src/style/app.scss',
+  //mode: 'development',
+  entry: ['./src/app/init.js',
+  './src/style/app.scss', 
+  './src/app/index.js',
   watch: true],
   output: {
-    path:  path.resolve(__dirname, 'out'), //path.join(__dirname, 'dist'),
-    publicPath: '/out/',
-    filename: "bundle.js",
-    chunkFilename: '[name].js'
+  //  path:  path.resolve(__dirname, 'out'), //path.join(__dirname, 'dist'),
+  //  publicPath: '/out/',
+    filename: "./js/bundle.js",
+  //  chunkFilename: '[name].js'
   },
   module: {
     rules: [{
       test: /\.js$/,
       include: [
-        path.resolve(__dirname , './src/app/init.js')
+        path.resolve(__dirname , 'src/app/js')
       ],
       exclude: [
         path.resolve(__dirname, 'node_modules')
       ],
-      loader: 'babel-loader',
-      query: {
-        presets: [
-          ["@babel/env", {
-            "targets": {
-              "browsers": "last 2 chrome versions"
-            }
+      use: {
+        loader: 'babel-loader',
+        options: {
+          presets: 'env'
+        }
+      }
+ //     loader: 'babel-loader',
+ //     query: {        presets: [          ["@babel/env", {          "targets": {              "browsers": "last 2 chrome versions"            }
           }]
         ]
       }
@@ -64,7 +67,7 @@ module.exports = {
     }),
 	]
 //	  plugins: [    new ExtractTextPlugin({      filename: './css/style.bundle.css',      allChunks: true,    }),    ...  ]
-  resolve: {
+ /* resolve: {
     extensions: ['.json', '.js', '.jsx']
   },
   devtool: 'source-map',
@@ -73,5 +76,5 @@ module.exports = {
     inline: true,
     host: 'localhost',
     port: 8080,
-  }
+  }*/
 };
