@@ -14,7 +14,7 @@ module.exports = {
     rules: [{
       test: /\.js$/,
       include: [
-        path.resolve(__dirname + './src/app/index.js')
+        path.resolve(__dirname , './src/app/init.js')
       ],
       exclude: [
         path.resolve(__dirname, 'node_modules')
@@ -33,9 +33,11 @@ module.exports = {
   },
   plugins: [  // Array of plugins to apply to build chunk
     new HtmlWebpackPlugin({
-        template: path.resolve(__dirname, "./src/public/index.html"),
+        template: "./src/public/index.html",
         inject: 'body'
     }),
+	]
+//	  plugins: [    new ExtractTextPlugin({      filename: './css/style.bundle.css',      allChunks: true,    }),    ...  ]
   resolve: {
     extensions: ['.json', '.js', '.jsx']
   },
