@@ -33,7 +33,7 @@ module.exports = {
   },
   plugins: [  // Array of plugins to apply to build chunk
     new HtmlWebpackPlugin({
-        template: __dirname + "/src/public/index.html",
+        template: path.resolve(__dirname, "./src/public/index.html"),
         inject: 'body'
     }),
   resolve: {
