@@ -57,9 +57,13 @@ module.exports = {
     },]
   },
   plugins: [  // Array of plugins to apply to build chunk
-    new HtmlWebpackPlugin({
+    new HtmlWebpackPlugin(), // Generates default index.html
+    new HtmlWebpackPlugin({  // Also generate a test.html
+      filename: 'test.html',
+      template: 'src/public/test.html'
+  /*  new HtmlWebpackPlugin({
         template: "./public/index.html",
-        inject: 'body'
+        inject: 'body'*/
     }),
     new ExtractTextPlugin({
       filename: './css/style.bundle.css',
