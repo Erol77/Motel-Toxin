@@ -1,84 +1,94 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin'); // Require  html-webpack-plugin plugin
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const path = require('path');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+//const CopyWebpackPlugin = require('copy-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const fs = require('fs')
+
+function generateHtmlPlugins(templateDir) {
+  const templateFiles = fs.readdirSync(path.resolve(__dirname, templateDir));
+  return templateFiles.map(item => {
+    const parts = item.split('.');
+    const name = parts[0];
+    const extension = parts[1];
+    return new HtmlWebpackPlugin({
+      filename: `${name}.html`,
+      template: path.resolve(__dirname, `${templateDir}/${name}.${extension}`),
+      inject: false,
+    })
+  })
+}
+
+const htmlPlugins = generateHtmlPlugins('./src/include');
+
 module.exports = {
-  //mode: 'development',
-  entry: ['./src/app/init.js',
-  './src/style/app.scss', 
-  './src/app/index.js',
-  watch: true],
+  entry: [
+    './src/js/index.js',
+    './src/scss/style.scss'
+  ],
   output: {
-  //  path:  path.resolve(__dirname, 'out'), //path.join(__dirname, 'dist'),
-  //  publicPath: '/out/',
-    filename: "./js/bundle.js",
-  //  chunkFilename: '[name].js'
+    filename: './js/bundle.js'
   },
+  devtool: "source-map",
   module: {
     rules: [{
-      test: /\.js$/,
-      include: [
-        path.resolve(__dirname , 'src/app/js')
-      ],
-      exclude: [
-        path.resolve(__dirname, 'node_modules')
-      ],
-      use: {
-        loader: 'babel-loader',
-        options: {
-          presets: 'env'
-        }
-      }
- //     loader: 'babel-loader',
- //     query: {        presets: [          ["@babel/env", {          "targets": {              "browsers": "last 2 chrome versions"            }
-          }]
-        ]
-      }
-    },
-    {
-      test: /\.(sass|scss)$/,
-      include: path.resolve(__dirname, 'src/scss'),
-      use: ExtractTextPlugin.extract({
-        use: [{
-            loader: "css-loader",
-            options: {
-              sourceMap: true,
-              minimize: true,
-              url: false
-            }
-          },
-          {
-            loader: "sass-loader",
-            options: {
-              sourceMap: true
-            }
+        test: /\.js$/,
+        include: path.resolve(__dirname, 'src/app'),
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: 'env'
           }
-        ]
-      })
-    },]
+        }
+      },
+      {
+        test: /\.(sass|scss)$/,
+        include: path.resolve(__dirname, 'src/style'),
+        use: ExtractTextPlugin.extract({
+          use: [{
+              loader: "css-loader",
+              options: {
+                sourceMap: true,
+                minimize: true,
+                url: false
+              }
+            },
+            {
+              loader: "sass-loader",
+              options: {
+                sourceMap: true
+              }
+            }
+          ]
+        })
+      },
+      {
+        test: /\.html$/,
+        include: path.resolve(__dirname, 'src/include'),
+        use: ['raw-loader']
+      },
+    ]
   },
-  plugins: [  // Array of plugins to apply to build chunk
-    new HtmlWebpackPlugin(), // Generates default index.html
-    new HtmlWebpackPlugin({  // Also generate a test.html
-      filename: 'test.html',
-      template: 'src/public/test.html'
-  /*  new HtmlWebpackPlugin({
-        template: "./public/index.html",
-        inject: 'body'*/
-    }),
+  plugins: [
     new ExtractTextPlugin({
       filename: './css/style.bundle.css',
       allChunks: true,
     }),
-	]
-//	  plugins: [    new ExtractTextPlugin({      filename: './css/style.bundle.css',      allChunks: true,    }),    ...  ]
- /* resolve: {
-    extensions: ['.json', '.js', '.jsx']
-  },
-  devtool: 'source-map',
-  devServer: {
-    contentBase: path.join(__dirname, './src/public'),
-    inline: true,
-    host: 'localhost',
-    port: 8080,
-  }*/
+/*    new CopyWebpackPlugin([{
+        from: './src/fonts',
+        to: './fonts'
+      },
+      {
+        from: './src/favicon',
+        to: './favicon'
+      },
+      {
+        from: './src/img',
+        to: './img'
+      },
+      {
+        from: './src/uploads',
+        to: './uploads'
+      }
+    ]),*/
+  ].concat(htmlPlugins)
 };
