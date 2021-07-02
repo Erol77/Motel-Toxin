@@ -5,8 +5,8 @@ module.exports = {
   entry: ['./src/app/init.js',
   watch: true],
   output: {
-    path:  path.resolve(__dirname, 'dist'), //path.join(__dirname, 'dist'),
-    publicPath: '/dist/',
+    path:  path.resolve(__dirname, 'out'), //path.join(__dirname, 'dist'),
+    publicPath: '/out/',
     filename: "bundle.js",
     chunkFilename: '[name].js'
   },
