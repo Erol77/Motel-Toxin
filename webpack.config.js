@@ -18,12 +18,12 @@ function generateHtmlPlugins(templateDir) {
   })
 }
 */
-const htmlPlugins = generateHtmlPlugins('./src/include');
+//const htmlPlugins = generateHtmlPlugins('./src/include');
 
 module.exports = {
   entry: [
     './src/app/index.js',
-    './src/app/init.js',
+   // './src/app/init.js',
     './src/style/app.scss'
   ],
   output: {
@@ -70,18 +70,18 @@ module.exports = {
     ]
   },
   plugins: [
-    new HtmlWebpackPlugin(), // Generates default index.html
+   // new HtmlWebpackPlugin(), // Generates default index.html
     new HtmlWebpackPlugin({  // Also generate a test.html
-      filename: 'input.html',
-      template: 'src/public/input.html'
+      filename: 'index.html',
+      template: 'src/public/index.html'
   /*  new HtmlWebpackPlugin({
         template: "./public/index.html",
         inject: 'body'*/
     }),
-    new ExtractTextPlugin({
+/*    new ExtractTextPlugin({
       filename: './css/style.bundle.css',
       allChunks: true,
-    }),
+    }),/*
 /*    new CopyWebpackPlugin([{
         from: './src/fonts',
         to: './fonts'
@@ -99,5 +99,5 @@ module.exports = {
         to: './uploads'
       }
     ]),*/
-  ].concat(htmlPlugins)
+  ]//.concat(htmlPlugins)
 };

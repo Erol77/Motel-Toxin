@@ -8,7 +8,6 @@
     "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.7.0",
     "bootstrap": "^5.0.2",
-    "html-webpack-plugin": "^5.3.2",
     "jquery": "^3.6.0",
     "popper.js": "^1.16.1",
     "webpack-cli": "^4.7.2"
@@ -17,6 +16,7 @@
     "css-loader": "^5.2.6",
     "del-cli": "^4.0.0",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "html-webpack-plugin": "^5.3.2",
     "node-sass": "^6.0.1",
     "raw-loader": "^4.0.2",
     "sass-loader": "^12.1.0",
@@ -28,7 +28,7 @@
     "build": "webpack --mode production",
     "watch": "webpack --mode development --watch",
     "start": "webpack-dev-server --mode development --open",
-	    "clear": "del-cli dist"
+    "clear": "del-cli dist"
   },
   "keywords": [
     "js",
