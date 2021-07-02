@@ -14,7 +14,7 @@ module.exports = {
     rules: [{
       test: /\.js$/,
       include: [
-        path.resolve(__dirname + './src/app/init.js')
+        path.resolve(__dirname + './src/app/index.js')
       ],
       exclude: [
         path.resolve(__dirname, 'node_modules')
