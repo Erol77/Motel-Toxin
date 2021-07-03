@@ -1,4 +1,4 @@
-console.log('a');
+console.log('a.js');
 //src/app/index.js
 class TestClass {
     constructor() {
@@ -7,3 +7,4 @@ class TestClass {
     }
 }
 let test = new TestClass();
+console.log('b.js')
