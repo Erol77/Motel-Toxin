@@ -1,8 +1,9 @@
-//import * as $ from 'jquery'
-
+import $ from 'jquery';
+//"use strict";
 function createAnalytics() {//: object
+  "use strict";
   let counter = 0;
-  var destroyed = false;
+  let destroyed = false;
 
   const listener =  counter++; //(): number =>
 
@@ -10,17 +11,17 @@ function createAnalytics() {//: object
 
   return {
     destroy() {
-      $(document).off('click', listener)
-      destroyed = true
+      $(document).off('click', listener);
+      destroyed = true;
     },
 
     getClicks() {
       if (destroyed) {
-        return `Analytics is destroyed. Total clicks = ${counter}`
+        return `Analytics is destroyed. Total clicks = ${counter}`;
       }
-      return counter
+      return counter;
     }
-  }
+  };
 }
 
-window.analytics = createAnalytics()
+window.analytics = createAnalytics();
