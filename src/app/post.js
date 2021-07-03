@@ -4,11 +4,11 @@ class Post{
       this.date = new Date()
     }
     
-        toString(){
-            return JSON.stringify( {
-                title: this.title,
-                date: this.date.toJSON(),
-            });
-        }
+    toString(){
+        return JSON.stringify( {
+            title: this.title,
+            date: this.date.toJSON(),
+        });
+    }
     
 }

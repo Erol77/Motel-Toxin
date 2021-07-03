@@ -10,6 +10,7 @@
     "bootstrap": "^5.0.2",
     "jquery": "^3.6.0",
     "popper.js": "^1.16.1",
+    "pug": "^3.0.2",
     "webpack-cli": "^4.7.2"
   },
   "devDependencies": {
