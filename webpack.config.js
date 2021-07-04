@@ -1,8 +1,8 @@
 const path = require('path');
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const { ExtractTextPlugin } = require("extract-text-webpack-plugin");
 //const CopyWebpackPlugin = require('copy-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const fs = require('fs')
+const { HtmlWebpackPlugin } = require('html-webpack-plugin');
+const fs = require('fs');
 /*
 function generateHtmlPlugins(templateDir) {
   const templateFiles = fs.readdirSync(path.resolve(__dirname, templateDir));
@@ -22,12 +22,13 @@ function generateHtmlPlugins(templateDir) {
 
 module.exports = {
   entry: [
-    './src/app/index.js',
-   // './src/app/init.js',
+   // './src/app/index.js',
+    './src/app/init.js',
     './src/style/app.scss'
   ],
   output: {
-    filename: './js/bundle.js'
+    filename:// './js/bundle.js'
+    './js/1bundle.js'
   },
   devtool: "source-map",
   module: {
@@ -72,8 +73,8 @@ module.exports = {
   plugins: [
    // new HtmlWebpackPlugin(), // Generates default index.html
     new HtmlWebpackPlugin({  // Also generate a test.html
-      filename: 'index.html',
-      template: 'src/public/index.html'
+      filename: 'index1.html',
+      template: 'src/public/index1.html'
   /*  new HtmlWebpackPlugin({
         template: "./public/index.html",
         inject: 'body'*/
