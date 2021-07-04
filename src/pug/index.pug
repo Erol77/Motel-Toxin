@@ -1,0 +1,140 @@
+//- index.pug
+doctype html
+html(lang="ru")
+    //- Include head
+    include ./components/head.pug  
+    body
+        //- Include header
+        include ./components/header.pug
+        h1 Заголовок страницы
+        p Абзац, небольшое описание
+    //- Include custom styles
+p. 
+    style
+        include ./css/custom-style.css
+
+// Include custom scripts
+    script
+        include ./js/custom-script.js
+p. 
+    Циклы
+    Циклы или итерации в Pug позволяют выполнять какие-то множественные операции, написав всего лишь несколько строк кода. Например, можно вывести список пунктов меню, написав код итерации следующим образом:
+
+nav.menu
+    ul.menu__list
+        each name in ['Главная', 'О компании', 'Услуги', 'Каталог', 'Контакты']
+            li
+                a(href="#")= name
+p. 
+    Вместо each вы можете использовать for в качестве псевдонима.
+
+    Как написано в документации, Pug поддерживает 2 основных вида итераций — это each и while. Each мы рассмотрели, теперь давайте посмотрим на while.
+
+- var i = 0;
+ul.list
+    while i < 4
+        li= i++
+p. 
+    Миксины
+    Миксины позволяют создавать многократно повторяемые блоки кода. Это практически тоже самое, что и функция в языке программирования.
+
+    Объявление миксина начинается с ключевого слова mixin, затем через пробел название миксина.
+
+//- Mixin declaration
+mixin listItems
+    ul.list-items
+        li One
+        li Two
+        li Three
+        li Four
+        li Five
+
+//- Call mixin
++listItems  
+p Аргументы
+p Миксин может принимать также и аргументы.
+
+//- Mixin declaration
+mixin listItem(name)    
+    li= name
+    
+//- Call mixin
+ul.list-items
+    +listItem("One")
+    +listItem("Two")
+    +listItem("Five")
+p У нас есть также возможность установить значения аргументов по умолчанию. Делается это примерно также, как и установка параметров функции по умолчанию в ES6 (ECMAScript 6).
+
+//- Mixin declaration
+mixin article(title="Заголовок по умолчанию")
+    article.article
+        h1= title
+
+//- Call mixin
++article()
+
+p Блоки миксинов
+p Миксины могут выступать в качестве блоков или контейнеров, которые могут содержать различный контент.
+
+//- Mixin declaration
+mixin article(title)
+    article.article
+        h1= title
+        if block
+            block
+        else
+            p Нет контента для отображения
+
+//- Call mixin
++article("Заголовок страницы")
+    p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+h2 Атрибуты
+p Помимо аргументов миксины также могут принимать и атрибуты.
+
+mixin link(href, name)
+    //- attributes == {class: "link-btn"}
+    a(class!= attributes.class href= href)= name
+
++link('/link.html', 'linkName')(class="link-btn")
+p Обратите внимание, что атрибуты выводятся через символ !=. Дело в том, что спец. символы экранируются автоматически и чтобы избежать повторного экранирования мы используем знак !=. Если вы не хотите экранировать символы, то используйте символ =. Наиболее подробнее об этом можете почитать в документации.
+h2 Неизвестное количество аргументов
+p В миксинах Pug есть возможность передавать неизвестное количество аргументов, используя синтаксис «rest arguments«.
+
+mixin list(id, ...items)
+    ul(id= id)
+        each item in items
+            li= item
+
++list('myList', 1, 2, 3, 4)
+h2 Условия
+p Pug работает на основе JavaScript поэтому есть возможность использовать условия при написании кода, как и в любом другом языке программирования.
+
+p Фигурные скобки можно опустить, как и символ - (если вы используете 2-ю версию Pug).
+
+//
+    nav.menu
+        ul.menu__list
+            - var i = 1;
+            each name in ['Главная', 'О нас', 'Контакты']
+                if i == 1
+                    li.active
+                        a(href="#")!= name
+                else
+                    li
+                        a(href="#")!= name
+
+p Можно также использовать оператор условного если unless, что является отрицанием if. Следующие условия будут эквивалентны.
+//-
+    unless user.isAnonymous
+    p You're logged in as #{user.name}
+    if !user.isAnonymous
+    p You're logged in as #{user.name}
+    pug --pretty -w index.pug   pug --pretty index.pug
+
+
+p hello 
+
+
+//- Include footer
+include ./components/footer.pug

@@ -1,0 +1,55 @@
+doctype html
+html(lang="ru")
+  head
+    meta(charset="utf-8")
+    title= "Учимся работать с шаблонизатором Pug"
+  body
+      h1 Hello, World!
+ul.list#listItems
+    li.list__item Значение 1
+    li.list__item Значение 2
+    li.list__item Значение 3
+    li.list__item Значение 4
+a(href="#", target="_blank") Для того, чтобы указать атрибут элементу разметки достаточно указать его в круглых скобках.
+a(href="#" target="_blank") Ссылка
+a.link#linkHref(href="#" target="_blank") Ссылка
+a(class="link" id="linkHref" href="#" target="_blank") Ссылка
+p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex dolorum, assumenda animi, deleniti sunt...
+p 
+    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex dolorum, assumenda animi, deleniti sunt...
+    | Еще строка текста
+    | Если у вас много текста, например, большой абзац, то есть вариант написать текст, указав точку в конце тега и через отступ вложенностью указываем текст. После точки не должно быть никаких символов и пробелов.
+
+p.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex dolorum, assumenda animi, deleniti sunt tempore quaerat nihil eveniet unde perferendis, possimus est temporibus labore minus amet et? Voluptatem, molestiae tempora. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex dolorum, assumenda animi, deleniti sunt tempore quaerat nihil eveniet unde perferendis, possimus est temporibus labore minus amet et? Voluptatem, molestiae tempora.Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+p Также можно указывать обычные html теги внутри текста.
+
+p Lorem ipsum dolor sit amet, <strong>consectetur</strong> adipisi
+// Это комментарий в коде
+//-
+    А это большой комментарий
+    Много много текста комментария и этот 
+    многострочный комментарий в html 
+    разметке не выводится.
+    Можно также указать еще один флаг -w, для слежки за изменениями в файлах *.pug.
+
+p    pug --pretty -w index.pug
+p    pug --pretty index.pug
+ p   Вообще вы можете запустить команду pug --help, чтобы посмотреть все доступные флаги и их сокращения.
+p.
+    Вообще хотелось бы отметить, что вряд ли кто-то использует данные команды в своей работе. Для того, чтобы комфортно работать с Pug используют таск-менеджеры, например Gulp + плагин gulp-pug. Но это отдельная тема для разговора. А мы давайте по подробнее разберем синтаксис pug.
+
+//
+    Синтаксис Pug
+    Код Pug достаточно прост. Он не имеет угловых скобок и закрывающих тегов. Вложенность элементов определяется отступом — Tab или пробел.
+
+    В качестве отступов следует использовать либо Tab, либо пробел! И то, и другое нельзя. Иначе мы получим ошибку интерпретатора.
+    Все это делает код лаконичным и легкочитаемым. И самое главное — ускоряется скорость написания кода.
+
+    Как было уже отмечено, синтаксис Pug чем-то напоминает синтаксис Sass:
+
+    Вложенность определяется отступом (Tab или пробел)
+    Классы задаются через точку (.)
+    Id задаются через решетку (#)
+    Однострочные комментарии задаются через //
+    Это в основном тот список, что нужно знать, чтобы начать работать с Pug. Сюда я бы добавил еще то, что атрибуты указываются в круглых скобках. Давайте теперь по порядку.
