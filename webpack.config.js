@@ -1,104 +1,53 @@
+const webpack = require('webpack');
 const path = require('path');
-const { ExtractTextPlugin } = require("extract-text-webpack-plugin");
-//const CopyWebpackPlugin = require('copy-webpack-plugin');
-const { HtmlWebpackPlugin } = require('html-webpack-plugin');
-const fs = require('fs');
-/*
-function generateHtmlPlugins(templateDir) {
-  const templateFiles = fs.readdirSync(path.resolve(__dirname, templateDir));
-  return templateFiles.map(item => {
-    const parts = item.split('.');
-    const name = parts[0];
-    const extension = parts[1];
-    return new HtmlWebpackPlugin({
-      filename: `${name}.html`,
-      template: path.resolve(__dirname, `${templateDir}/${name}.${extension}`),
-      inject: false,
-    })
-  })
-}
-*/
-//const htmlPlugins = generateHtmlPlugins('./src/include');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 
-module.exports = {
-  entry: [
-   // './src/app/index.js',
-    './src/app/init.js',
-    './src/style/app.scss'
-  ],
+const config = {
+  entry: './src/index.js',
   output: {
-    filename:// './js/bundle.js'
-    './js/1bundle.js'
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'bundle.js'
   },
-  devtool: "source-map",
   module: {
-    rules: [{
+    rules: [
+      {
+        test: /\.scss$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          'sass-loader'
+        ]
+      },
+      {
         test: /\.js$/,
-        include: path.resolve(__dirname, 'src/app'),
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: 'env'
-          }
-        }
+        use: 'babel-loader',
+        exclude: /node_modules/
       },
       {
-        test: /\.(sass|scss)$/,
-        include: path.resolve(__dirname, 'src/style'),
-        use: ExtractTextPlugin.extract({
-          use: [{
-              loader: "css-loader",
-              options: {
-                sourceMap: true,
-                minimize: true,
-                url: false
-              }
-            },
-            {
-              loader: "sass-loader",
-              options: {
-                sourceMap: true
-              }
+        test: /\.svg$/,
+        use: 'file-loader'
+      },
+      {
+        test: /\.png$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              mimetype: 'image/png'
             }
-          ]
-        })
-      },
-      {
-        test: /\.html$/,
-        include: path.resolve(__dirname, 'src/include'),
-        use: ['raw-loader']
-      },
+          }
+        ]
+      }
     ]
   },
   plugins: [
-   // new HtmlWebpackPlugin(), // Generates default index.html
-    new HtmlWebpackPlugin({  // Also generate a test.html
-      filename: 'index1.html',
-      template: 'src/public/index1.html'
-  /*  new HtmlWebpackPlugin({
-        template: "./public/index.html",
-        inject: 'body'*/
+    new HtmlWebpackPlugin({
+      appMountId: 'app',
+      filename: 'index.html'
     }),
-/*    new ExtractTextPlugin({
-      filename: './css/style.bundle.css',
-      allChunks: true,
-    }),/*
-/*    new CopyWebpackPlugin([{
-        from: './src/fonts',
-        to: './fonts'
-      },
-      {
-        from: './src/favicon',
-        to: './favicon'
-      },
-      {
-        from: './src/img',
-        to: './img'
-      },
-      {
-        from: './src/uploads',
-        to: './uploads'
-      }
-    ]),*/
-  ]//.concat(htmlPlugins)
+    new LodashModuleReplacementPlugin
+  ]
 };
+
+module.exports = config;
