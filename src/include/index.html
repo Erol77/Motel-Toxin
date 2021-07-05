@@ -1,12 +1,17 @@
-<% var data = {
-    title: "Заголовок | Проект",
-    author: "Harrix"
-  }; %>
-  <%= _.template(require('./../include/header.html'))(data) %>
-  
-  <div class="container">
-    <p>Первая страница.</p>
-    <p><img src="uploads/test.jpg"></p>
-  </div>
-  
-  <%= _.template(require('./../include/footer.html'))(data) %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpack</title>
+    <script src="analytics.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Webpack Less</h1>
+    </div>
+    <script src="post.js"></script>
+    <script src="init.js"></script>
+</body>
+</html>
