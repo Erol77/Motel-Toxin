@@ -7,7 +7,7 @@ const config = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: '[name].js'
   },
   module: {
     rules: [
@@ -18,6 +18,13 @@ const config = {
           'css-loader',
           'sass-loader'
         ]
+      },
+      {
+        test: /\.pug$/,
+        loader: 'url-loader',
+        options: {
+              pretty: true
+        }
       },
       {
         test: /\.js$/,
@@ -43,7 +50,8 @@ const config = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      appMountId: 'app',
+ //     appMountId: 'app',
+ template: path.source + '/index.pug',
       filename: 'index.html'
     }),
     new LodashModuleReplacementPlugin
