@@ -7,6 +7,7 @@
  * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
  */
 /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./src/component.js":
@@ -15,7 +16,6 @@
   \**************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function () {\n  var text = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : \"Hello world\";\n  var element = document.createElement(\"div\");\n  element.innerHTML = text;\n  return element;\n});\n\n//# sourceURL=webpack://post/./src/component.js?");
 
 /***/ }),
@@ -26,8 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scss_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./scss/style.scss */ \"./src/scss/style.scss\");\n/* harmony import */ var _script_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./script.js */ \"./src/script.js\");\n/* harmony import */ var _script_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_script_js__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./component */ \"./src/component.js\");\n//const pug = require('pug');\n//const compiledFunction = pug.compileFile('/pug/index.pug');\n\n //import \"./pug/index.pug\";\n\nconsole.log(\"hello world!\");\n\ndocument.body.appendChild((0,_component__WEBPACK_IMPORTED_MODULE_2__.default)());\n\n//# sourceURL=webpack://post/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scss_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./scss/style.scss */ \"./src/scss/style.scss\");\n/* harmony import */ var _script_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./script.js */ \"./src/script.js\");\n/* harmony import */ var _script_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_script_js__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./component */ \"./src/component.js\");\n//const pug = require('pug');\n//const compiledFunction = pug.compileFile('/pug/index.pug');\n\n //import \"./pug/index.pug\";\n\nconsole.log(\"hello world!\");\n\ndocument.body.appendChild((0,_component__WEBPACK_IMPORTED_MODULE_2__.default)());\n(0,_component__WEBPACK_IMPORTED_MODULE_2__.default)();\n\n//# sourceURL=webpack://post/./src/index.js?");
 
 /***/ }),
 
@@ -37,7 +36,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scs
   \***********************/
 /***/ (() => {
 
-eval("var _loop = function _loop(i) {\n  li[i].addEventListener('click', function () {\n    //метод слушает, присвоили ему слушать событие клик\n    li[i].classList.toggle('through'); //когда оно наступает присваиваем класс\n  });\n};\n\n//module.exports = function(){\n//  return {\n//'use strict';\nfor (var i = 0; i < li.length; i++) {\n  _loop(i);\n}\n\nfunction closeMenu() {\n  var menu = document.getElementById('nav');\n  var subm = document.getElementsByClassName('submenu');\n\n  for (var _i = 0; _i < subm.length; _i++) {\n    subm[_i].style.display = \"none\";\n  }\n\n  document.getElementById('nav').onmouseover = function (event) {\n    var target = event.target; // где был клик?\n\n    if (target.className === 'menu-item') {\n      var s = target.getElementsByClassName('submenu');\n      closeMenu();\n      s[0].style.display = 'block';\n    }\n  };\n}\n\ndocument.onmousemove = function (event) {\n  var target = event.target; // где был клик?\n\n  console.log(event.target);\n\n  if (target.className !== 'menu-item' && target.className !== 'submenu') {\n    closeMenu();\n  }\n}; //   }}\n\n//# sourceURL=webpack://post/./src/script.js?");
+eval("\n\nvar list = document.querySelector('ul'); //присвоили через тег весь список\n\nvar li = list.querySelectorAll('li'); //выбрали у присвоенного эл-та с помощью стандартной функции по ид и т.п.\n\nvar _loop = function _loop(i) {\n  li[i].addEventListener('click', function () {\n    //метод слушает, присвоили ему слушать событие клик\n    li[i].classList.toggle('through'); //когда оно наступает присваиваем класс\n  });\n};\n\nfor (var i = 0; i < li.length; i++) {\n  _loop(i);\n}\n\nfunction closeMenu() {\n  var menu = document.getElementById('nav');\n  var subm = document.getElementsByClassName('submenu');\n\n  for (var _i = 0; _i < subm.length; _i++) {\n    subm[_i].style.display = \"none\";\n  }\n\n  document.getElementById('nav').onmouseover = function (event) {\n    var target = event.target; // где был клик?\n\n    if (target.className === 'menu-item') {\n      var s = target.getElementsByClassName('submenu');\n      closeMenu();\n      s[0].style.display = 'block';\n    }\n  };\n}\n\ndocument.onmousemove = function (event) {\n  var target = event.target; // где был клик?\n\n  console.log(event.target);\n\n  if (target.className !== 'menu-item' && target.className !== 'submenu') {\n    closeMenu();\n  }\n};\n\n//# sourceURL=webpack://post/./src/script.js?");
 
 /***/ }),
 
@@ -47,7 +46,6 @@ eval("var _loop = function _loop(i) {\n  li[i].addEventListener('click', functio
   \*****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://post/./src/scss/style.scss?");
 
 /***/ })

@@ -1,10 +1,13 @@
-//module.exports = function(){
-  //  return {
-   //'use strict';
+'use strict';
+
+const list = document.querySelector('ul');//присвоили через тег весь список
+const li = list.querySelectorAll('li');//выбрали у присвоенного эл-та с помощью стандартной функции по ид и т.п.
+
 for (let i = 0; i < li.length; i++ ) {
     li[i].addEventListener('click', () => {//метод слушает, присвоили ему слушать событие клик
         li[i].classList.toggle('through');//когда оно наступает присваиваем класс
-    }    );}
+    }    );
+}
 function closeMenu(){
     let menu=document.getElementById('nav');
     let subm=document.getElementsByClassName('submenu');
@@ -27,5 +30,3 @@ document.onmousemove=function(event) {
         closeMenu();
     }
 };
-
- //   }}
