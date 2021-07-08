@@ -18,12 +18,19 @@
             height: 828px;
 
             background: #F4F5FA;
+
+            font-family: Gilroy;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 17px;
+            letter-spacing: 0em;
+            text-align: left;
+
         }
         .email
         {
             /* Email */
-
-
             position: absolute;
             width: 440px;
             height: 535px;
@@ -38,8 +45,7 @@
             box-sizing: border-box;
             padding: 35px;
             margin: 0 auto;
-
-
+           // display: none;
         }
         h2 {
             font-family: Gilroy;
@@ -65,6 +71,14 @@
             opacity: 0.8;
 
         }
+        p
+        {
+            font-family: Gilroy;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 145%;
+        /* or 23px */}
         input{
                 font-family: Gilroy;
                 font-style: normal;
@@ -85,7 +99,48 @@ border:0px;
             line-height: 22px;
             /* identical to box height */
             color: #23C967;
+            text-decoration: none;
 
+
+        }
+        .add-svg{
+            /* Иконка Добавить */
+
+            width: 13px;
+            height: 13px;
+            left: 0px;
+            top: 1px;
+        }
+        p.add-svg-blok-txt {
+
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 17px;
+                letter-spacing: 0em;
+                text-align: center;
+                color: #AFB4CC;
+        }
+        .email-form-btn-buy{
+            width: 370px;
+            height: 45px;
+            left: 790px;
+            top: 561px;
+
+            background: #23C967;
+            border-radius: 15px;
+            font-family: Gilroy;
+        }
+        .email-form-btn-buy-txt{
+            
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 10px;
+            letter-spacing: 0em;
+            text-align: center;
+            color: #FFFFFF;
+           /* padding: 5px;*/
 
         }
     .form
@@ -97,14 +152,7 @@ border:0px;
         top: 138px;
     }
    /* .conteiner, */
-    p
-    {
-        font-family: Gilroy;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 145%;
-    /* or 23px */}
+
      h1   { 
             font-family: Gilroy;
             font-style: normal;
@@ -133,18 +181,15 @@ border:0px;
                 <hr>
             <h2>Product 1</h2>            
             <p for="">Enter main keyword for the product</p>
-            <input type="text" name="product" placeholder="for example, sylicon wine cup">
-                <hr>
-
-            <p for="">Enter link to the similar product as a reference</p>
+            <input type="text" name="product" placeholder="for example, sylicon wine cup ">
+                    <hr>
+                <p for="">Enter link to the similar product as a reference</p>
             <input type="text"   name="reference" placeholder="https://...">
                 <hr>
-                <a class="more" href="#">Add more products</a>
-            <button  style="border:0px" class="more">Add more products </button>
-            <i>+
-                
-            </i>
-                <p> We offer discount up to 36% for multiple checks</p>
+                    <a class="more" href="#">Add more products <img src="img/icon1.svg" alt="+" class="add-svg"></a>
+                        <p> We offer discount up to 36% for multiple checks</p>
+                <button class="email-form-btn-buy"><p class="email-form-btn-buy-txt"> and Pay 24.99 USD</p></button>
+            <p class="add-svg-blok-txt"><img src="img/icon2.svg" alt="blok" class="add-svg-blok"> Secure payment with Stripe</p>
         </form>
     </div>
     <div class="cart-overlay"> <!-- cart-overlay-open -->
