@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preload" href="css/Gilroyextrabold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="css/Gilroylight.woff2" as="font" type="font/woff2" crossorigin>
+
+    <link rel="stylesheet" href="css/gilroy.css">
+    <link rel="stylesheet" href="">
+    <style >
+        body {
+            /* С правками */
+            position: relative;
+            width: 1336px;
+            height: 828px;
+
+            background: #F4F5FA;
+        }
+        .email
+        {
+            /* Email */
+
+
+            position: absolute;
+            width: 440px;
+            height: 535px;
+            left: 755px;
+            top: 138px;
+            background: #FFFFFF;
+            box-shadow: 10px 10px 60px #E2E7FF;
+            border-radius: 0px 50px 50px 50px;
+            /*opacity: 0.2; prozrachnost*/
+        }
+        .email-form{
+            box-sizing: border-box;
+            padding: 35px;
+            margin: 0 auto;
+
+
+        }
+        h2 {
+            font-family: Gilroy;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 24px;
+            letter-spacing: 0em;
+            text-align: left;
+
+        }
+        label {
+            /* Enter main keyword for the product */
+            font-family: Gilroy;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 145%;
+            /* or 23px */
+
+            color: #1C154E;
+
+            opacity: 0.8;
+
+        }
+        input{
+                font-family: Gilroy;
+                font-style: normal;
+                /*font-weight: 500;*/
+                font-size: 16px;
+                line-height: 19px;
+                /* identical to box height */
+border:0px;
+
+                color:#D0D3E2;
+        }
+        .more{
+            /* Add more products */
+            font-family: Gilroy;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 22px;
+            /* identical to box height */
+            color: #23C967;
+
+
+        }
+    .form
+    {
+        position: absolute;
+        width: 440px;
+        height: 535px;
+        left: 755px;
+        top: 138px;
+    }
+   /* .conteiner, */
+    p
+    {
+        font-family: Gilroy;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 145%;
+    /* or 23px */}
+     h1   { 
+            font-family: Gilroy;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 134.9%;
+            /* or 24px */
+
+
+            color: #1C154E;
+    }
+
+        
+    </style>  
+</head>
+<body>
+    <main>
+         <button class="subheader subheader__cart">Корзина</button>
+    </main>
+    <div class="email">
+        <form class="email-form" action="" method="POST">
+   
+            <h2>Info</h2>            
+            <p for="">Enter your email address</p>
+            <input type="text" name = "email" placeholder="team@checkforpatent.com ">
+                <hr>
+            <h2>Product 1</h2>            
+            <p for="">Enter main keyword for the product</p>
+            <input type="text" name="product" placeholder="for example, sylicon wine cup">
+                <hr>
+
+            <p for="">Enter link to the similar product as a reference</p>
+            <input type="text"   name="reference" placeholder="https://...">
+                <hr>
+                <a class="more" href="#">Add more products</a>
+            <button  style="border:0px" class="more">Add more products </button>
+            <i>+
+                
+            </i>
+                <p> We offer discount up to 36% for multiple checks</p>
+        </form>
+    </div>
+    <div class="cart-overlay"> <!-- cart-overlay-open -->
+        <div class="cart">
+            <h2 class="cart__title">Корзина</h2>
+            <div class="cart__table-wrapper">
+
+                <table class="cart__table">
+                    <colgroup class="cart__col">
+                        <col class="cart__col-number">
+                        <col class="cart__col-name">
+                        <col class="cart__col-color">
+                        <col class="cart__col-size">
+                        <col class="cart__col-price">
+                        <col class="cart__col-delete">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th class="cart__title-number">#</th>
+                            <th>Наименование</th>
+                            <th>Цвет</th>
+                            <th>Размер</th>
+                            <th>Цена</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody class="cart__list-goods">
+                        <tr>
+                            <td>1</td>
+                            <td>New Balance Леггинсы NB Essentials Botanical Legging</td>
+                            <td>-</td>
+                            <td>42/44</td>
+                            <td>2999 &#8381;</td>
+                            <td><button class="btn-delete">&times;</button></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Adidas Костюм спортивный W TS CO ENERGIZ</td>
+                            <td>-</td>
+                            <td>42/44</td>
+                            <td>7999 &#8381;</td>
+                            <td><button class="btn-delete">&times;</button></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Befree Топ Exclusive online</td>
+                            <td>Фиолетовый</td>
+                            <td>42</td>
+                            <td>599 &#8381;</td>
+                            <td><button class="btn-delete">&times;</button></td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th colspan="3">
+                                <div class="cart__wrapper-promo">
+                                    <label for="promo">Промо-код:</label>
+                                    <input class="cart__promo" id="promo" type="text">
+                                </div>
+
+                            </th>
+                            <th>Итого:</th>
+                            <th class="cart__total-cost" colspan="2">11597 &#8381;</th>
+                        </tr>
+                    </tfoot>
+                </table>
+
+            </div>
+            <button class="cart__btn-buy">Оформить</button>
+            <button class="cart__btn-close"></button>
+        </div>
+    </div>
+</body>
+</html>
