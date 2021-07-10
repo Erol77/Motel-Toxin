@@ -10,20 +10,23 @@
 
     <link rel="stylesheet" href="css/gilroy.css">
     <link rel="stylesheet" href="">
+    <script src="js/script.js" defer></script>
     <style >
         body {
             /* С правками */
-            position: relative;
+            display: flex;
+            /* position: absolute; */
             width: 1336px;
             height: 828px;
+            min-width: 440px;
 
             background: #F4F5FA;
 
             font-family: Gilroy;
             font-size: 14px;
             font-style: normal;
-            font-weight: 400;
-            line-height: 17px;
+            font-weight: 400px;
+            /* line-height: 17px; */
             letter-spacing: 0em;
             text-align: left;
 
@@ -34,11 +37,14 @@
             position: absolute;
             width: 440px;
             height: 535px;
-            left: 755px;
+            /* min-left: 755px; */
+           
+            right: 141px;
             top: 138px;
             background: #FFFFFF;
             box-shadow: 10px 10px 60px #E2E7FF;
             border-radius: 0px 50px 50px 50px;
+            /* align-self: flex-end; */
             /*opacity: 0.2; prozrachnost*/
         }
         .info-form{
@@ -47,7 +53,13 @@
         .info-form-open{
             box-sizing: border-box;
             padding: 35px;
-            margin: 0 auto;
+            /* margin: 35px 35px 131px 35px; */
+        }
+        .info-form__body{
+            position: static;
+width: 370px;
+height: 369px;
+left: 35px;
         }
         .adding-form{
             display: none;
@@ -56,6 +68,22 @@
             box-sizing: border-box;
             padding: 35px;
             margin: 0 auto;
+
+
+        }
+        .adding-form-open p {
+            font-family: Gilroy;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 8px;
+letter-spacing: 0em;
+text-align: left;
+
+
+        }
+        h1{
+height: 24px;
         }
         h2 {
             font-size: 18px;
@@ -66,27 +94,25 @@
             text-align: left;
 
         }
-        label {
-            /* Enter main keyword for the product */
+        /* label {
+           
             font-style: normal;
             font-weight: normal;
             font-size: 16px;
             line-height: 145%;
-            /* or 23px */
-
-            color: #1C154E;
-
+           
             opacity: 0.8;
 
-        }
-        p
+        } */
+       .info-form__body p
         {
+         
 
             font-style: normal;
             font-weight: 500;
             font-size: 16px;
-            line-height: 145%;
-        /* or 23px */}
+            line-height: 10px;
+        }
         .info-form__input{
                 font-style: normal;
                 font-weight: 500;
@@ -111,6 +137,14 @@
 
 
         }
+        /* .info-form__btn{
+            position: absolute;
+            width: 370px;
+            height: 76.4px;
+            left: 35px;
+            top: 423px;
+            bottom:34px;
+        } */
         .add-svg{
             /* Иконка Добавить */
 
@@ -120,6 +154,13 @@
             top: 1px;
         }
         p.add-svg-blok-txt {
+            position: absolute;
+            /* width: 370px;
+            height: 76.4px; */
+            /* left: 35px; */
+            /* top: 423px; */
+            bottom:1px; ;
+            margin: 35px;
 
                 font-size: 14px;
                 font-style: normal;
@@ -144,7 +185,7 @@
         }
     .form
     {
-        position: absolute;
+        position: static;
         width: 440px;
         height: 535px;
         left: 755px;
@@ -158,18 +199,9 @@
         border: 1px solid grey;
         border-collapse: collapse;
         border-radius: 0px 50px 50px 50px;
-        color: #F4F5FA, 100 %;
+        color: #F4F5FA;
         white-space:nowrap;
 
-    }
-    h3 {
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 20px;
-        letter-spacing: 0em;
-        text-align: center;
-       
     }
             /* внешние границы таблицы серого цвета толщиной 1px 
             .form_radio div {
@@ -180,7 +212,7 @@
         }
         /* границы ячеек первого ряда таблицы )8*/
         th {
-        border: 1px solid grey;     //  
+        border: 1px solid grey;  
         }
         /* границы ячеек тела таблицы */
         td {
@@ -194,31 +226,134 @@ box-sizing: border-box;
 
 }
                             .form_radio {
-                                margin-bottom: 0px;
+                                position: absolute;
+                                /* margin-bottom: 0px; */
+                                width: 370px;
+                                height: 57px;
+                                /* padding-top: 1px; */
+                              
+                                /* top: 1px; */
+                                /* border: 1.5px solid #E1E3EE;
+box-sizing: border-box; */
+                                
                             }
+                                                        .form_radio#radio_1 {
+                                position: absolute;
+                                /* width: 370px;
+                                height: 60px;
+                                text-align: center; */
+                                top: 0px;
+
+
+                                border: 1.5px solid #E1E3EE;
+                                box-sizing: border-box;
+                                border-radius: 15px 15px 0px 0px;
+                            } 
+                             .form_radio#radio_2 {
+                                position: absolute;
+                                top: 57px;
+                                border: 1.5px solid #E1E3EE;
+                                box-sizing: border-box;
+                            }
+                            .form_radio#radio_3 {
+                                position: absolute;
+                                top: 114px;
+                                border: 1.5px solid #E1E3EE;
+                                box-sizing: border-box;
+                                /* border-radius:  0px; */
+                            }
+                            .form_radio#radio_4 {
+                                position: absolute;
+                                top: 171px;
+                                border: 1.5px solid #E1E3EE;
+                                box-sizing: border-box;
+                            }
+                            .form_radio#radio_5 {
+                                position: absolute;
+                                /* width: 370px;
+                                height: 60px;
+                                text-align: center; */
+                                top: 228px;
+                                bottom:   0px;
+
+
+                                border: 1.5px solid #E1E3EE;
+                                box-sizing: border-box;
+                                border-radius: 0px 0px 15px 15px;
+                            } 
+                            
+
                             .form_radio input[type=radio] {
                                 display: none;
                                
                             }
+                            .container {
+                                position: absolute;
+                                max-height: 370px;
+                                width: 370px;
+                                height: 294px;
+                                top: 106px;
+                            }
+                            hr {
+                                border: none; /* Убираем границу для браузера Firefox */
+   
+    background-color: #E1E3EE; /* Цвет линии для браузера Firefox и Opera */
+    height: 1.5px; /* Толщина линии */
+                                color: #E1E3EE; /* Цвет линии для остальных браузеров */
+                            }
+                            /* .form_radio div {
+                                box-sizing: border-box;
+                            padding-left: 17px;
+                        } */
+
+                            .form_radio h3 {
+                                font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 7px;
+        letter-spacing: 0em;
+        /* text-align: center; */
+        margin-left: 62px;
+        top: 0px;
+                            }
+                            .form_radio p {
+font-size: 13px;
+font-weight: 400;
+line-height: 6px;
+letter-spacing: 0em;
+/* text-align: center; */
+top: 0px;
+
+margin-left: 62px;
+
+                            }
                             .form_radio label {
-                               display: inline-block;
+                               /* display: inline-block; */
                                 cursor: pointer;
-                                position: relative;
-                                /* padding-left: 25px; */
-                                margin-right: 0;
-                                /* line-height: 18px; */
+                                position: static;
+                                padding-left: 0px;
+                                margin-right: 0px;
+                                /* line-height: 13px; */
                                 user-select: none;
+                                margin-top: 0px;
+                                margin-left: 0px;
+                              
                                
                             }
                             .form_radio label:before {
                                 content: "";
                                 display: inline-block;
-                                width: 17px;
-                                height: 18px;
+                                width: 40px;
+                                height: 22px;
                                 position: absolute;
-                                left: 0;
-                                bottom: 1px;
+                                left: 0px;
+                                top: 18px;
+                                /* bottom: 20px; */
                                 background: url(/src/tz1/img/radio-1.png) 0 0 no-repeat;
+                                background-position-x: 17px;
+                                float: left;
+                                
+                                /* 0 0 no-repeat; */
                                 /* background-image: url(/src/tz1/img/radio-1.png); */
                             }
                             
@@ -226,212 +361,131 @@ box-sizing: border-box;
                             .form_radio input[type=radio]:checked + label:before {
                                 /* background: url(/src/tz1/img/radio-1.png) 0 0 no-repeat; */
                                 background: url(/src/tz1/img/radio-3.png) 0 0 no-repeat;
-                               
+                                background-position-x: 17px;
+                                /* 0 0 no-repeat; */
+                                float: left; /* Обтекание по правому краю */
                                /* background: #F4F5FA; */
                             }
                             
                             /* Hover */
                             /* .form_radio label:hover:before {
-                                filter: brightness(120%);
+
+                                 background-color: #F4F5FA;
                             } */
-                            .form_radio#radio_1 {
-                                position: absolute;
-                                width: 370px;
-                                height: 60px;
-                                text-align: center;
+                            .form_radio:hover {
+                               background-color: #F4F5FA;
+                               /* padding-top: 1px; */
+                             /* padding-bottom: 1px; */
+                            } 
+                            .radio-cheked input[type=radio]:checked::after {
+                                color: #23C967;
+cce
+                            }
+                            .radio-cheked_ok {
+                                color: #23C967;
+                            }
 
-
-                                border: 1.5px solid #E1E3EE;
-                                box-sizing: border-box;
-                                border-radius: 15px 15px 0px 0px;
-                            }
-                            .form_radio#radio_2 {
-                                position: absolute;
-width: 370px;
-height: 60px;
-top: 164.5px;
-border: 1.5px solid #E1E3EE;
-box-sizing: border-box;
-border-radius: 0px;
-                            }
-                            .form_radio#radio_3 {
-                                position: absolute;
-width: 370px;
-height: 60px;
-top: 223px;
-border: 1.5px solid #E1E3EE;
-box-sizing: border-box;
-border-radius: 0px;
-                            }
-                            .form_radio #radio_4 {
-                                position: absolute;
-width: 370px;
-height: 60px;
-top: 281px;
-border: 1.5px solid #E1E3EE;
-box-sizing: border-box;
-border-radius: 0px;
-                            }
-                            .form_radio#radio_5 {
-                                position: absolute;
-width: 370px;
-height: 60px;
-top: 340px; text-align: center;
-
-border: 1.5px solid #DDDFED;
-box-sizing: border-box;
-border-radius: 0px 0px 25px 25px;
-                            }
-        .info-form-btn-buy{
+        /* .info-form-buy{
+            width: 370px;
+            height: 45px;
+            background: #23C967;
+            border-radius: 15px;
+        } */
+        .info-form-buy {
             position: absolute;
             width: 370px;
             height: 45px;
-            left: 790px;
-            top: 561px;
+            left: 35px;
+            bottom:67px;
+            /* padding: 67px; */
 
             background: #23C967;
             border-radius: 15px;
         }
+        .radio-btn{
+            position: absolute;
+            width: 370px;
+            height: 45px;
+            left: 0px;
+            bottom:-67px;
+            /* padding: 67px; */
+
+            background: #23C967;
+            border-radius: 15px;
+        }
+        .d1 {
+width: 100px; 
+height: 100px;
+background: #23C967;
+border-radius: 50%;
+}
         
     </style>  
 </head>
 <body>
-    <main>
-         <button class="subheader subheader__cart">Корзина</button>
-    </main>
+
     <div class="info">
-        <main class="info-form" ><!-- info-form-open -->
-   
-            <h2>Info</h2>            
-                <p for="">Enter your email address</p>
-                    <input class="info-form__input" style="width:  370px;" type="text" name = "email" placeholder="team@checkforpatent.com ">
-                        <hr>
-            <h2>Product 1</h2>            
-                <p for="">Enter main keyword for the product</p>
-                        <input class="info-form__input" type="text" name="product" placeholder="for example, sylicon wine cup ">
+        <main class="info-form-open" ><!-- info-form-open -->
+            <div class="info-form__body">
+                <h2>Info</h2>            
+                    <p for="">Enter your email address</p>
+                        <input class="info-form__input" style="width:  370px;" type="text" name = "email" placeholder="team@checkforpatent.com ">
                             <hr>
-            <p for="">Enter link to the similar product as a reference</p>
-                <input class="info-form__input" type="text"   name="reference" placeholder="https://...">
-                    <hr>
-            <a class="more" href="#">Add more products <img src="img/icon1.svg" alt="+" class="add-svg"></a>
-                <p> We offer discount up to 36% for multiple checks</p>
-                    <button class="info-form-btn-buy"><p class="info-form-btn-buy-txt"> and Pay 24.99 USD</p></button>
-                        <p class="add-svg-blok-txt"><img src="img/icon2.svg" alt="blok" class="add-svg-blok"> Secure payment with Stripe</p>
+                <h2>Product 1</h2>            
+                    <p for="">Enter main keyword for the product</p>
+                            <input class="info-form__input" type="text" name="product" placeholder="for example, sylicon wine cup ">
+                                <hr>
+                <p for="">Enter link to the similar product as a reference</p>
+                    <input class="info-form__input" type="text"   name="reference" placeholder="https://...">
+                        <hr>
+                <a class="more" href="#">Add more products <img src="img/icon1.svg" alt="+" class="add-svg"></a>
+                    <p> We offer discount up to 36% for multiple checks</p>
+            </div>
+            
+                <button class="info-form-buy info-form-btn-buy-txt"> and Pay 24.99 USD</button>
+                <div class="info-form__btn"> </div>
+                    <p class="add-svg-blok-txt"><img src="img/icon2.svg" alt="blok" class="add-svg-blok"> Secure payment with Stripe</p>
+           
         </main>
-        <section class="adding-form-open" ><!-- adding-form-open -->
-            <h2>Adding more products</h2>            
+        <section class="adding-form" ><!-- adding-form-open -->
+            <h1>Adding more products</h1>            
                 <p>The more items you check, the better the price.</p>
-                    <form action="#" method="get" class="form_radio">
+                    <div  class="container">
                        
                         <div class="form_radio" id="radio_1">
-                            <input id="radio-5" type="radio" name="radio" value="5" checked>
-                            <label for="radio-5"> <h3>5 products for 80 usd / 16$ for each</h3>  <p>You safe 36% on each patent check </p> </label>
+                        <input id="radio-5" type="radio" name="radio" value="5" checked>
+                        <label for="radio-5"> <h3>5 products for 80 usd / 16$ for each</h3> <p class="radio-cheked">You safe 36% on each patent check</p> </label>  
                         </div>
-                         
+                        <td>
                         <div class="form_radio" id="radio_2">
-                            <input id="radio-4" type="radio" name="radio" value="4">
-                            <label for="radio-4"><h3>4 products for 72 usd / 18$ for each</h3> <p>You safe 28% on each patent check </p></label>
+                        <input id="radio-4" type="radio" name="radio" value="4">
+                        <label for="radio-4"><h3>4 products for 72 usd / 18$ for each</h3> <p class="radio-cheked">You safe 28% on each patent check </p></label>
                         </div>
-                         
+                    </td>
                         <div class="form_radio" id="radio_3">
-                            <input id="radio-3" type="radio" name="radio" value="3">
-                            <label for="radio-3"><h3>3 products for 60 usd / 20$ for each</h3> <p>You safe 20% on each patent check </p></label>
+                        <input id="radio-3" type="radio" name="radio" value="3" class="d1">
+                        <label for="radio-3"><h3>3 products for 60 usd / 20$ for each</h3> <p class="radio-cheked">You safe 20% on each patent check </p></label>
                         </div>
-                         
+                        <td>
                         <div class="form_radio" id="radio_4">
-                            <input id="radio-2" type="radio" name="radio" value="2">
-                            <label for="radio-2"><h3>2 products for 44 usd / 22$ for each</h3> <p>You safe 12% on each patent check </p></label>
-                        </div>
+                        <input id="radio-2" type="radio" name="radio" value="2">
+                        <label for="radio-2"><h3>2 products for 44 usd / 22$ for each</h3> <p class="radio-cheked">You safe 12% on each patent check </p></label>
+                        </div> 
+                    </td>
                         <div class="form_radio" id="radio_5">
-                            <input id="radio-1" type="radio" name="radio" value="1">
-                            <label for="radio-1"><h3>1 product for 24.99 usd</h3></label>
+                        <input id="radio-1" type="radio" name="radio" value="1">
+                        <label for="radio-1" ><h3 >1 product for 24.99 usd</h3></label>
                         </div>
-
-        
-                        <button class="info-form-btn-buy" type="submit"><p class="info-form-btn-buy-txt"> Continue</p></button>
-                    </form>
+                        <button class="radio-btn info-form-btn-buy-txt" > Continue</button>
+                        
+                    </div>
         </section>
     </div>
 
 
 
-
-
-
-
-
-
-    
-    <div class="cart-overlay"> <!-- cart-overlay-open -->
-        <div class="cart">
-            <h2 class="cart__title">Корзина</h2>
-            <div class="cart__table-wrapper">
-
-                <table class="cart__table">
-                    <colgroup class="cart__col">
-                        <col class="cart__col-number">
-                        <col class="cart__col-name">
-                        <col class="cart__col-color">
-                        <col class="cart__col-size">
-                        <col class="cart__col-price">
-                        <col class="cart__col-delete">
-                    </colgroup>
-                    <thead>
-                        <tr>
-                            <th class="cart__title-number">#</th>
-                            <th>Наименование</th>
-                            <th>Цвет</th>
-                            <th>Размер</th>
-                            <th>Цена</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody class="cart__list-goods">
-                        <tr>
-                            <td>1</td>
-                            <td>New Balance Леггинсы NB Essentials Botanical Legging</td>
-                            <td>-</td>
-                            <td>42/44</td>
-                            <td>2999 &#8381;</td>
-                            <td><button class="btn-delete">&times;</button></td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Adidas Костюм спортивный W TS CO ENERGIZ</td>
-                            <td>-</td>
-                            <td>42/44</td>
-                            <td>7999 &#8381;</td>
-                            <td><button class="btn-delete">&times;</button></td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Befree Топ Exclusive online</td>
-                            <td>Фиолетовый</td>
-                            <td>42</td>
-                            <td>599 &#8381;</td>
-                            <td><button class="btn-delete">&times;</button></td>
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <th colspan="3">
-                                <div class="cart__wrapper-promo">
-                                    <label for="promo">Промо-код:</label>
-                                    <input class="cart__promo" id="promo" type="text">
-                                </div>
-
-                            </th>
-                            <th>Итого:</th>
-                            <th class="cart__total-cost" colspan="2">11597 &#8381;</th>
-                        </tr>
-                    </tfoot>
-                </table>
-
-            </div>
-            <button class="cart__btn-buy">Оформить</button>
-            <button class="cart__btn-close"></button>
-        </div>
-    </div>
-
+    <main>
+        <button class="subheader subheader__cart">Корзина</button>
+   </main>
 </body>
 </html>
