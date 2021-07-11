@@ -98,6 +98,48 @@ text-align: left;
 overflow-y: scroll; /* прокрутка по вертикали */
             
         }
+        .success-form{
+            display: none;
+        }
+        .success-form-open {
+            
+            box-sizing: border-box;
+            padding: 35px;
+        }
+        .success-form-open p ,
+        .failed-form-open p{
+            font-family: Gilroy;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 23px;
+letter-spacing: 0em;
+text-align: left;
+
+        }
+        .success-form-open img {
+            position: absolute;
+width: 157px;
+height: 122.49px;
+left: 141px;
+top: 206px;
+        }
+        .failed-form {
+            display: none;
+        }
+        .failed-form-open {
+           
+            box-sizing: border-box;
+            padding: 35px;
+        }
+        .failed-form-open img {
+            position: absolute;
+            width: 310px;
+height: 246px;
+left: 62px ;
+top: 164px;
+        }
+        
         ::-webkit-scrollbar-button {
 background-image:url();
 background-repeat:no-repeat;
@@ -145,20 +187,8 @@ height:0px
 .edit-form__body::-webkit-scrollbar{
 width: 4px;
 
-/* right: -10px; */
-
 }
-.edit-form__element{}
-        /* .edit-form__body
-        ::-webkit-scrollbar-track {
-background-color:#23C967; */
-/* #ecedee; 
-}*/
-/* .edit-form__body::-webkit-scrollbar-thumb {
--webkit-border-radius: 0px;
-  border-radius: 0px;
-  background-color:#23C967;
-  } */
+
         h1{
 height: 24px;
         }
@@ -202,7 +232,7 @@ height: 24px;
             left: 0px;
             top: 1px;
         }
-        p.add-svg-blok-txt {
+        .add-svg-blok-txt {
             position: absolute;
             bottom:1px; ;
             margin: 35px;
@@ -213,6 +243,7 @@ height: 24px;
                 letter-spacing: 0em;
                 text-align: center;
                 color: #AFB4CC;
+                left: 90px;
         }
 
         .btn-txt{
@@ -375,7 +406,9 @@ margin-left: 62px;
             background: #23C967;
             border-radius: 15px;
         }
-        .radio-btn, .byu-btn{
+        .radio-btn,
+         .byu-btn
+        {
             position: absolute;
             width: 370px;
             height: 45px;
@@ -385,33 +418,48 @@ margin-left: 62px;
             background: #23C967;
             border-radius: 15px;
         }
+        .succsess-back {
+            position: absolute;
+            width: 370px;
+            height: 45px;
+            left: 35px;
+            bottom:67px;
+             background: #23C967;
+            border-radius: 15px;
+        }
+        .failed-back {
+             position: absolute;
+            width: 370px;
+            height: 45px;
+            left: 35px;
+            bottom:67px;
+             background: #EA717F;
+            border-radius: 15px;
+        }
         button:hover{
             background-color: #AFB4CC;
             /* width: 230px; */
             color: #9c2222;
         }
         a.btn-delete{
-           
-  /* display: inline-block; */
-  width: 13px;
+           width: 13px;
   height: 13px;
   vertical-align: middle;
   text-decoration: none;
-  /* border: .5em solid rgba(0,0,0,0);
-  border-radius: 100%;
-  background: rgb(245,245,245) linear-gradient(rgb(245,245,245), rgb(188,192,193)) 50% 50% / calc(1.5em + .5em*2) calc(1.5em + .5em*2);
-  box-shadow:
-   inset 0 -3px 10px rgba(255,255,255,1),
-   inset 0 3px 10px rgba(0,0,0,.4),
-   0 2px 4px rgba(0,0,0,.9); */
-
-        }
-        .d1 {
-width: 100px; 
-height: 100px;
-background: #23C967;
-border-radius: 50%;
+          }
+          .soon{
+    animation: spin 1s infinite linear;
 }
+      @keyframes spin {
+        0% {
+          -webkit-transform: rotate(0deg);
+        }
+        100% {
+          -webkit-transform: rotate(360deg);
+        }
+      }
+
+
         
     </style>  
 </head>
@@ -435,7 +483,8 @@ border-radius: 50%;
                     <p> We offer discount up to 36% for multiple checks</p>
             </div>
             
-                <button class="info-form-buy btn-txt"> and Pay 24.99 USD</button>
+                <button type="button"  class="info-form-buy btn-txt" id="btn1" value="and Pay 24.99 USD"> and Pay 24.99 USD </button>
+                 
                 <div class="info-form__btn"> </div>
                     <p class="add-svg-blok-txt"><img src="img/icon2.svg" alt="blok" class="add-svg-blok"> Secure payment with Stripe</p>
            
@@ -487,7 +536,32 @@ border-radius: 50%;
 
             </div>
             
-                    <button class="byu-btn btn-txt" > Continue</button>
+                    <button type="button" class="byu-btn btn-txt" id="btn2v3" value="Continue" >Continue </button>
+        </section>
+        <section class="success-form" ><!-- success-form-open -->
+            <div class="success-form__body">
+                <div>
+                <h2>Successfull payment</h2>            
+                    <p>Your request has been accepted and will be 
+                        processed within 24 working hours. We will send you a payment details 
+                        and all information to your email.</p>
+                        <img src="/src/tz1/img/succsess.png" alt="success">
+                    </div>
+
+                    <button class="succsess-back btn-txt" id="btn3v1"> Back </button>
+            </div>
+        </section>
+        <section class="failed-form" ><!-- success-form-open -->
+            <div class="failed-form__body">
+                <div>
+                <h2>Your payment failed</h2>            
+                    <p>Sorry, but we’ve having trouble processing your payment. 
+                        You have been not charged for this transaction.</p>
+                        <img src="/src/tz1/img/failed.png" alt="failed">
+                    </div>
+
+                    <input type="button"  class="failed-back btn-txt" id="btn4to1" value="Try to pay again" >  </input>
+            </div>
         </section>
 
     </div>
