@@ -11,15 +11,19 @@ const subheader= document.querySelector('.subheader');
 const editForm = document.querySelector('.edit-form');
 const byuBtn = document.querySelector('.byu-btn');
 const editFormElement = document.querySelector('.edit-form__element');
+const btnDelete = document.querySelectorAll('.btn-delete');
  let data1 = { 0 : 80 , 1 : 72, 2 : 60, 3 : 44, 4 : 24.99};
 let data = [ 0, 24.99, 44, 60 , 72, 80];
+const getLocalStorage = () => JSON.parse(localStorage.getItem('test-location')) || [];
+//получаем данные из локал сторедж/?-зажишщает от неправильных данных
+const setLocalStorage = edata => localStorage.setItem('test-location', JSON.stringify(edata));
+//передаем данные в локал сторедж
 //кнопка сколько выбрано объектов
     const radioChekedAdd =() =>{
         for (let i=0;i< (nameRadio.length); i++) {
             if (nameRadio[i].checked) {
                 radioCheked[i].classList = 'radio-cheked_ok';
-                console.log('Submit and Pay '+ data1[i]+' USD');
-                console.log(radioCheked[i].values);
+                // console.log('Submit and Pay '+ data1[i]+' USD');                console.log(radioCheked[i].values);
                 return (5-i);
             } else {
                 radioCheked[i].classList = 'radio-cheked';
@@ -28,28 +32,37 @@ let data = [ 0, 24.99, 44, 60 , 72, 80];
         // for (let i=0;i< nameRadio.length; i++) {
         //     if (nameRadio[i].checked) {console.log('Submit and Pay '+ data[i]+' USD');
         // let i =0;
-
-        const addElement = (i) =>{
-        for (let j=0;j< i; j++) {
+        const renderCart = () => {
+            editFormElement.textContent = '';//чистим класс
+            const cartItems = getLocalStorage();
+            // let totalPrice = 0;
+            //управляем корзиной, изменяем в ней эл ты
+        for (let j=0;j< cartItems; j++) {
             const div = document.createElement('div');
             div.innerHTML= `
-            <h2>Product ${j+1 }    <a class="more edit-blok" href="#">    <img src="img/x-mark 16close.svg" alt="cloce" class="edit-blok">   </a> </h2>            
-                <p for="">Enter main keyword for the product</p>
+            <h2>Product ${j+1 } 
+               <a class="btn-delete" data-id="${j}" href="#">  
+                 <img src="img/x-mark 16close.svg" alt="cloce" class="edit-blok">  
+             </a>             
+            </h2>            
+                <p>Enter main keyword for the product</p>
                         <input class="info-form__input" type="text" name="product" placeholder="for example, sylicon wine cup ">
                             <hr>
-                            <p for="">Enter link to the similar product as a reference</p>
+                            <p >Enter link to the similar product as a reference</p>
                                 <input class="info-form__input" type="text"   name="reference" placeholder="https://...">
                                     <hr>   
         </div> `;
                  editFormElement.append(div);
-        }};
+                }
+
+                byuBtn.textContent = `Submit and Pay  ${data[cartItems]} USD`;
     
+};
+
+
+
+
         radioChekedAdd();
-
-        let totalPrice = 0;
-        //управляем корзиной, изменяем в ней эл ты
-// console.log(totalPrice);
-
 
 //кнопка из 1 формы, переводит на 2 ую форму
 more.addEventListener('click', () => {
@@ -58,20 +71,44 @@ more.addEventListener('click', () => {
 });
 //кнопка из 2 формы
 radioBtn.addEventListener('click', () => {
-    // radioChekedAdd();
         addingForm.classList = ('adding-form');
         editForm.classList = 'edit-form-open';
-        byuBtn.textContent = `Submit and Pay + ${data[radioChekedAdd()]}+ USD`;
-        addElement(radioChekedAdd());
+        localStorage.setItem('test-location', radioChekedAdd());   
+        // byuBtn.textContent = `Submit and Pay  ${data[radioChekedAdd()]} USD`;
+
+        renderCart();
 
         }
 );
 
-//кнопка из 3 формы
-container.addEventListener('click', () => {
-   
-      radioChekedAdd();
-});
+//кнопка из 3 формы radioChekedAdd()
+// container.addEventListener('click', () => {      radioChekedAdd();});
+    //ydalenie iz korziny
+    const deleteItemsCard = () => {
+        const cartItems = getLocalStorage();
+        const newCartItems = cartItems-1;
+        setLocalStorage(newCartItems);
+    };
+    
+    // editFormElement.addEventListener('click', e => {
+    //         if (e.target.matches('.btn-delete')){
+    //             deleteItemsCard(e.target.dataset.id);
+    //             renderCart();
+    //         }
+    //     });
+        // кнопка из 3 формы закрывающая 1 эл-т
+        editFormElement.addEventListener('click', e => {
+            deleteItemsCard();
+                renderCart(); 
+       
+        //     if (e.target.matches('.btn-delete')){
+        //     deleteItemsCard();
+        //     renderCart();            console.log(e);
+        // }
+    });
+
+    
+
 //открыввет первую форму
 subheader.addEventListener('click', () => {
     infoFormOpen.classList = "info-form-open";
@@ -84,4 +121,7 @@ subheader.addEventListener('click', () => {
 // 4 products for 72 usd / 18$ for each
 // 3 products for 60 usd / 20$ for each
 // 2 products for 44 usd / 22$ for each
-  
+          // editFormElement.classList='';
+              // radioChekedAdd();
+        // byuBtn.textContent = `Submit and Pay  ${data[radioChekedAdd()]} USD`;
+        // addElement(radioChekedAdd());
