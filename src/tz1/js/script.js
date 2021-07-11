@@ -11,15 +11,16 @@ const subheader= document.querySelector('.subheader');
 const editForm = document.querySelector('.edit-form');
 const byuBtn = document.querySelector('.byu-btn');
 const editFormElement = document.querySelector('.edit-form__element');
-// let data1 = [ 5 = 80 ,4 = 72,2 = 60, 1 = 44, 0 = 24.99];
-let data = [ 24.99, 44, 60 , 72, 80];
+ let data1 = { 0 : 80 , 1 : 72, 2 : 60, 3 : 44, 4 : 24.99};
+let data = [ 0, 24.99, 44, 60 , 72, 80];
 //кнопка сколько выбрано объектов
     const radioChekedAdd =() =>{
-        for (let i=0;i< nameRadio.length; i++) {
+        for (let i=0;i< (nameRadio.length); i++) {
             if (nameRadio[i].checked) {
                 radioCheked[i].classList = 'radio-cheked_ok';
-                console.log('Submit and Pay '+ data[i]+' USD');
-                return i;
+                console.log('Submit and Pay '+ data1[i]+' USD');
+                console.log(radioCheked[i].values);
+                return (5-i);
             } else {
                 radioCheked[i].classList = 'radio-cheked';
             }
@@ -29,7 +30,7 @@ let data = [ 24.99, 44, 60 , 72, 80];
         // let i =0;
 
         const addElement = (i) =>{
-        for (let j=0;j< i+1; j++) {
+        for (let j=0;j< i; j++) {
             const div = document.createElement('div');
             div.innerHTML= `
             <h2>Product ${j+1 }    <a class="more edit-blok" href="#">    <img src="img/x-mark 16close.svg" alt="cloce" class="edit-blok">   </a> </h2>            
@@ -57,10 +58,10 @@ more.addEventListener('click', () => {
 });
 //кнопка из 2 формы
 radioBtn.addEventListener('click', () => {
-    radioChekedAdd();
+    // radioChekedAdd();
         addingForm.classList = ('adding-form');
         editForm.classList = 'edit-form-open';
-        byuBtn.textContent = 'Submit and Pay '+ radioChekedAdd ()+' USD';
+        byuBtn.textContent = `Submit and Pay + ${data[radioChekedAdd()]}+ USD`;
         addElement(radioChekedAdd());
 
         }
