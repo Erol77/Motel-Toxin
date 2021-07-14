@@ -6,12 +6,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style> 
+    .flex-container {
+/*генерирует flex-контейнер уровня блока*/
+display: -webkit-flex; 
+display: flex; 
+}
+.flex-container {
+/*генерирует flex-контейнер уровня строки*/
+ /* display: -webkit-inline-flex;
+ display: inline-flex;  */
+}
+      .box {
+          position: absolute;
+    width: 70px;
+    height: 70px;
+    left: 150px;
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
+    text-align: center;
+    /* border-top: 10px; */
+  }
+ .green {
+     color: #6FCF97;
+ }
     </style>
     <script src="">
-        
+
     </script>
 </head>
 <body>
-    
+    <main class="flex-container">
+        <div class="box flex-container">
+            <h5 class="box red-box">padding</h5>
+            <h5 class="box blue-box">padding</h5>
+           
+          </div flex-container>
+          <div class="box green flex-container">
+            <h2 class=""> Green</h2>
+           <p>  </p>
+          </div>
+    </main>
+    <main class="flex-container">
+        <div class="box flex-container">
+            <h5 class="box red-box">padding</h5>
+            <h5 class="box blue-box">padding</h5>
+           
+          </div flex-container>
+          <div class="box green flex-container">
+            <h2 class=""> Green</h2>
+           <p>  </p>
+          </div>
+    </main>
+
 </body>
 </html>
