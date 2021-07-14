@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,573 +10,133 @@
     <link rel="preload" href="css/Gilroylight.woff2" as="font" type="font/woff2" crossorigin>
 
     <link rel="stylesheet" href="css/gilroy.css">
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
-    <style >
-        body {
-            /* С правками */
-            display: flex;
-            /* position: absolute; */
-            width: 1336px;
-            height: 828px;
-            min-width: 440px;
-
-            background: #F4F5FA;
-
-            font-family: Gilroy;
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 400px;
-            /* line-height: 17px; */
-            letter-spacing: 0em;
-            text-align: left;
-
-        }
-        .info
-        {
-            /* Email */
-            position: absolute;
-            width: 440px;
-            height: 535px;
-            /* min-left: 755px; */
-           
-            right: 141px;
-            top: 138px;
-            background: #FFFFFF;
-            box-shadow: 10px 10px 60px #E2E7FF;
-            border-radius: 0px 50px 50px 50px;
-            /* align-self: flex-end; */
-            /*opacity: 0.2; prozrachnost*/
-        }
-        .info-form{
-            display: none;
-        }
-        .info-form-open{
-            box-sizing: border-box;
-            padding: 35px;
-            /* margin: 35px 35px 131px 35px; */
-        }
-        .info-form__body{
-            position: static;
-width: 370px;
-height: 369px;
-left: 35px;
-        }
-        .adding-form{
-            display: none;
-        }
-        .adding-form-open{
-            box-sizing: border-box;
-            padding: 35px;
-            margin: 0 auto;
-
-
-        }
-        .adding-form-open p {
-            font-family: Gilroy;
-font-size: 16px;
-font-style: normal;
-font-weight: 500;
-line-height: 8px;
-letter-spacing: 0em;
-text-align: left;
-        }
-        .edit-form{display: none;}
-        .edit-form-open{
-            position: absolute;
-            /* overflow-y:scroll; */
-            width: 370px;
-            height: 369px;
-            left: 35px;
-            padding: 35px 0 0 0;
-        }
-        .edit-form__body{
-            position: sticky;
-            width: 370px;
-            height: 369px;
-            padding-right: 16px;
-            overflow-x: hidden; /* прокрутка по горизонтали */
-overflow-y: scroll; /* прокрутка по вертикали */
-            
-        }
-        .success-form{
-            display: none;
-        }
-        .success-form-open {
-            
-            box-sizing: border-box;
-            padding: 35px;
-        }
-        .success-form-open p ,
-        .failed-form-open p{
-            font-family: Gilroy;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: 23px;
-letter-spacing: 0em;
-text-align: left;
-
-        }
-        .success-form-open img {
-            position: absolute;
-width: 157px;
-height: 122.49px;
-left: 141px;
-top: 206px;
-        }
-        .failed-form {
-            display: none;
-        }
-        .failed-form-open {
-           
-            box-sizing: border-box;
-            padding: 35px;
-        }
-        .failed-form-open img {
-            position: absolute;
-            width: 310px;
-height: 246px;
-left: 62px ;
-top: 164px;
-        }
-        
-        ::-webkit-scrollbar-button {
-background-image:url();
-background-repeat:no-repeat;
-width:5px;
-height:10px
-}
-
-::-webkit-scrollbar-track {
-background-color: #E1E3EE;
-border-radius: 5px;
-width: 4px;
-height: 10px;
-
-}
-
-/* ::-webkit-scrollbar-thumb {
-    /* background-image:url('/src/tz1/img/polzunok.svg'); 
--webkit-border-radius: 5px;
-border-radius: 5px;
-height: 10px;
-width: 4px;
-background-color:#23C967;
-} */
-::-webkit-scrollbar-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 23px;
-    height: 24px;
-    border: 0;
-    background: url('/src/tz1/img/polzunok.svg');
-    background-repeat:no-repeat;
-    cursor: pointer;
-}
-/* ::-webkit-scrollbar-thumb:hover{
-background-color:#56999f;
-} */
-
-::-webkit-resizer{
-background-image:url('/src/tz1/img/polzunok.svg');
-background-repeat:no-repeat;
-width:4px;
-height:0px
-}
-
-.edit-form__body::-webkit-scrollbar{
-width: 4px;
-
-}
-
-        h1{
-height: 24px;
-        }
-        h2 {
-            font-size: 18px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: 24px;
-            letter-spacing: 0em;
-            text-align: left;
-
-        }
-        .info-form__body p
-        {
-            font-style: normal;
-            font-weight: 500;
-            font-size: 16px;
-            line-height: 10px;
-        }
-        .info-form__input{
-                font-style: normal;
-                font-weight: 500;
-                font-size: 16px;
-                line-height: 19px;
-                  border:0px;
-                width:  370px;
-                color:#D0D3E2;
-        }
-        .more{
-            font-style: normal;
-            font-weight: 600;
-            font-size: 18px;
-            line-height: 22px;
-            color: #23C967;
-            text-decoration: none;
-            vertical-align: middle;
-        }
-        .add-svg{           /* Иконка Добавить */
-            width: 13px;
-            height: 13px;
-            left: 0px;
-            top: 1px;
-        }
-        .add-svg-blok-txt {
-            position: absolute;
-            bottom:1px; ;
-            margin: 35px;
-                font-size: 14px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: 17px;
-                letter-spacing: 0em;
-                text-align: center;
-                color: #AFB4CC;
-                left: 90px;
-        }
-
-        .btn-txt{
-            font-size: 18px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: 10px;
-            letter-spacing: 0em;
-            text-align: center;
-            color: #FFFFFF;
-        }
-    .form
-    {
-        position: static;
-        width: 440px;
-        height: 535px;
-        left: 755px;
-        top: 138px;
-    }
-    /* .adding-table {
-        width: 370px;
-        height: 294px;
-        border: 1px solid grey;
-        border-collapse: collapse;
-        border-radius: 0px 50px 50px 50px;
-        color: #F4F5FA;
-        white-space:nowrap;
-
-    } */
-                            .form_radio {
-                                position: absolute;
-                                width: 370px;
-                                height: 57px;
-                                  }
-       .form_radio#radio_1 {
-                                position: absolute;
-                                top: 0px;
-                                border: 1.5px solid #E1E3EE;
-                                box-sizing: border-box;
-                                border-radius: 15px 15px 0px 0px;
-                            } 
-                             .form_radio#radio_2 {
-                                position: absolute;
-                                top: 57px;
-                                border: 1.5px solid #E1E3EE;
-                                box-sizing: border-box;
-                            }
-                            .form_radio#radio_3 {
-                                position: absolute;
-                                top: 114px;
-                                border: 1.5px solid #E1E3EE;
-                                box-sizing: border-box;
-                                /* border-radius:  0px; */
-                            }
-                            .form_radio#radio_4 {
-                                position: absolute;
-                                top: 171px;
-                                border: 1.5px solid #E1E3EE;
-                                box-sizing: border-box;
-                            }
-                            .form_radio#radio_5 {
-                                position: absolute;
-                                /* width: 370px;
-                                height: 60px;
-                                text-align: center; */
-                                top: 228px;
-                                bottom:   0px;
-
-
-                                border: 1.5px solid #E1E3EE;
-                                box-sizing: border-box;
-                                border-radius: 0px 0px 15px 15px;
-                            } 
-                            
-
-                            .form_radio input[type=radio] {
-                                display: none;
-                               
-                            }
-                            .container {
-                                position: absolute;
-                                max-height: 370px;
-                                width: 370px;
-                                height: 294px;
-                                top: 106px;
-                            }
-                            hr {
-                                border: none; /* Убираем границу для браузера Firefox */
-       background-color: #E1E3EE; /* Цвет линии для браузера Firefox и Opera */
-    height: 1.5px; /* Толщина линии */
-                                color: #E1E3EE; /* Цвет линии для остальных браузеров */
-                            }
-                            .form_radio h3 {
-                                font-size: 16px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 7px;
-        letter-spacing: 0em;
-        margin-left: 62px;
-        top: 0px;
-                            }
-                            .form_radio p {
-font-size: 13px;
-font-weight: 400;
-line-height: 6px;
-letter-spacing: 0em;
-top: 0px;
-margin-left: 62px;
-                            }
-                            .form_radio label {
-                               /* display: inline-block; */
-                                cursor: pointer;
-                                position: static;
-                                padding-left: 0px;
-                                margin-right: 0px;
-                                /* line-height: 13px; */
-                                user-select: none;
-                                margin-top: 0px;
-                                margin-left: 0px;
-                            }
-                            .form_radio label:before {
-                                content: "";
-                                display: inline-block;
-                                width: 40px;
-                                height: 22px;
-                                position: absolute;
-                                left: 0px;
-                                top: 18px;
-                                /* bottom: 20px; */
-                                background: url(/src/tz1/img/radio-1.png) 0 0 no-repeat;
-                                background-position-x: 17px;
-                                float: left;
-                                 /* 0 0 no-repeat; */
-                                /* background-image: url(/src/tz1/img/radio-1.png); */
-                            }
-                             /* Checked */
-                            .form_radio input[type=radio]:checked + label:before {
-                                /* background: url(/src/tz1/img/radio-1.png) 0 0 no-repeat; */
-                                background: url(/src/tz1/img/radio-3.png) 0 0 no-repeat;
-                                background-position-x: 17px;
-                                /* 0 0 no-repeat; */
-                                float: left; /* Обтекание по правому краю */
-                               /* background: #F4F5FA; */
-                            }
-                            
-                            /* Hover */
-                            .form_radio:hover {
-                               background-color: #F4F5FA;
-                            } 
-                             .radio-cheked_ok {
-                                color: #23C967;
-                            }
-        .info-form-buy {
-            position: absolute;
-            width: 370px;
-            height: 45px;
-            left: 35px;
-            bottom:67px;
-            /* padding: 67px; */
-            background: #23C967;
-            border-radius: 15px;
-        }
-        .radio-btn,
-         .byu-btn
-        {
-            position: absolute;
-            width: 370px;
-            height: 45px;
-            left: 0px;
-            bottom:-67px;
-            /* padding: 67px; */
-            background: #23C967;
-            border-radius: 15px;
-        }
-        .succsess-back {
-            position: absolute;
-            width: 370px;
-            height: 45px;
-            left: 35px;
-            bottom:67px;
-             background: #23C967;
-            border-radius: 15px;
-        }
-        .failed-back {
-             position: absolute;
-            width: 370px;
-            height: 45px;
-            left: 35px;
-            bottom:67px;
-             background: #EA717F;
-            border-radius: 15px;
-        }
-        button:hover{
-            background-color: #AFB4CC;
-            /* width: 230px; */
-            color: #9c2222;
-        }
-        a.btn-delete{
-           width: 13px;
-  height: 13px;
-  vertical-align: middle;
-  text-decoration: none;
-          }
-          .soon{
-    animation: spin 1s infinite linear;
-}
-      @keyframes spin {
-        0% {
-          -webkit-transform: rotate(0deg);
-        }
-        100% {
-          -webkit-transform: rotate(360deg);
-        }
-      }
-
-
-        
-    </style>  
 </head>
+
 <body>
 
     <div class="info">
-        <main class="info-form-open" ><!-- info-form-open -->
+        <main class="info-form-open">
+            <!-- info-form-open -->
             <div class="info-form__body">
-                <h2>Info</h2>            
-                    <p for="">Enter your email address</p>
-                        <input class="info-form__input" style="width:  370px;" type="text" name = "email" placeholder="team@checkforpatent.com ">
-                            <hr>
-                <h2>Product 1</h2>            
-                    <p for="">Enter main keyword for the product</p>
-                            <input class="info-form__input" type="text" name="product" placeholder="for example, sylicon wine cup ">
-                                <hr>
+                <h2>Info</h2>
+                <p for="">Enter your email address</p>
+                <input class="info-form__input" style="width:  370px;" type="text" name="email" placeholder="team@checkforpatent.com ">
+                <hr>
+                <h2>Product 1</h2>
+                <p for="">Enter main keyword for the product</p>
+                <input class="info-form__input" type="text" name="product" placeholder="for example, sylicon wine cup ">
+                <hr>
                 <p for="">Enter link to the similar product as a reference</p>
-                    <input class="info-form__input" type="text"   name="reference" placeholder="https://...">
-                        <hr>
+                <input class="info-form__input" type="text" name="reference" placeholder="https://...">
+                <hr>
                 <a class="more" href="#">Add more products <img src="img/icon1.svg" alt="+" class="add-svg"></a>
-                    <p> We offer discount up to 36% for multiple checks</p>
+                <p> We offer discount up to 36% for multiple checks</p>
             </div>
-            
-                <button type="button"  class="info-form-buy btn-txt" id="btn1" value="and Pay 24.99 USD"> and Pay 24.99 USD </button>
-                 
-                <div class="info-form__btn"> </div>
-                    <p class="add-svg-blok-txt"><img src="img/icon2.svg" alt="blok" class="add-svg-blok"> Secure payment with Stripe</p>
-           
+
+            <button type="button" formaction="paymenterror" class="info-form-buy btn-txt" id="btn1"> and Pay 24.99 USD </button>
+
+            <div class="info-form__btn"> </div>
+            <p class="add-svg-blok-txt"><img src="img/icon2.svg" alt="blok" class="add-svg-blok"> Secure payment with Stripe</p>
+
         </main>
-        <section class="adding-form" ><!-- adding-form-open -->
-            <h1>Adding more products</h1>            
-                <p>The more items you check, the better the price.</p>
-                    <div  class="container">
-                       
-                        <div class="form_radio" id="radio_1">
-                        <input id="radio-5" type="radio" name="radio" value="5" checked>
-                        <label for="radio-5"> <h3>5 products for 80 usd / 16$ for each</h3> <p class="radio-cheked">You safe 36% on each patent check</p> </label>  
-                        </div>
-                       
-                        <div class="form_radio" id="radio_2">
-                        <input id="radio-4" type="radio" name="radio" value="4">
-                        <label for="radio-4"><h3>4 products for 72 usd / 18$ for each</h3> <p class="radio-cheked">You safe 28% on each patent check </p></label>
-                        </div>
-                    
-                        <div class="form_radio" id="radio_3">
-                        <input id="radio-3" type="radio" name="radio" value="3" >
-                        <label for="radio-3"><h3>3 products for 60 usd / 20$ for each</h3> <p class="radio-cheked">You safe 20% on each patent check </p></label>
-                        </div>
-                      
-                        <div class="form_radio" id="radio_4">
-                        <input id="radio-2" type="radio" name="radio" value="2">
-                        <label for="radio-2"><h3 >2 products for 44 usd / 22$ for each</h3> <p class="radio-cheked">You safe 12% on each patent check </p></label>
-                        </div> 
-                    
-                        <div class="form_radio" id="radio_5">
-                        <input id="radio-1" type="radio" name="radio" value="1">
-                        <label for="radio-1" ><h3 style="line-height: 20px;">1 product for 24.99 usd</h3><p class="radio-cheked"></p></label>
-                        </div>
-                        <button class="radio-btn btn-txt" > Continue</button>
-                        
-                    </div>
-        </section>
+        <section class="adding-form">
+            <!-- adding-form-open -->
+            <h1>Adding more products</h1>
+            <p>The more items you check, the better the price.</p>
+            <div class="container">
 
-        <section class="edit-form" ><!-- edit-form-open overflow-y -->
-            <div class="edit-form__body">
-                <h2>Info</h2>            
-                    <p for="">Enter your email address</p>
-                        <input class="info-form__input" style="width:  370px;" type="text" name = "email" placeholder="team@checkforpatent.com ">
-                            <hr>
-                <div class="edit-form__element">
- 
-                </div>                                              
-                                                          
+                <div class="form_radio" id="radio_1">
+                    <input id="radio-5" type="radio" name="radio" value="5" checked>
+                    <label for="radio-5">
+                        <h3>5 products for 80 usd / 16$ for each</h3>
+                        <p class="radio-cheked">You safe 36% on each patent check</p>
+                    </label>
+                </div>
+
+                <div class="form_radio" id="radio_2">
+                    <input id="radio-4" type="radio" name="radio" value="4">
+                    <label for="radio-4">
+                        <h3>4 products for 72 usd / 18$ for each</h3>
+                        <p class="radio-cheked">You safe 28% on each patent check </p>
+                    </label>
+                </div>
+
+                <div class="form_radio" id="radio_3">
+                    <input id="radio-3" type="radio" name="radio" value="3">
+                    <label for="radio-3">
+                        <h3>3 products for 60 usd / 20$ for each</h3>
+                        <p class="radio-cheked">You safe 20% on each patent check </p>
+                    </label>
+                </div>
+
+                <div class="form_radio" id="radio_4">
+                    <input id="radio-2" type="radio" name="radio" value="2">
+                    <label for="radio-2">
+                        <h3>2 products for 44 usd / 22$ for each</h3>
+                        <p class="radio-cheked">You safe 12% on each patent check </p>
+                    </label>
+                </div>
+
+                <div class="form_radio" id="radio_5">
+                    <input id="radio-1" type="radio" name="radio" value="1">
+                    <label for="radio-1">
+                        <h3 style="line-height: 20px;">1 product for 24.99 usd</h3>
+                        <p class="radio-cheked"></p>
+                    </label>
+                </div>
+                <button class="radio-btn btn-txt"> Continue</button>
 
             </div>
-            
-                    <button type="button" class="byu-btn btn-txt" id="btn2v3" value="Continue" >Continue </button>
         </section>
-        <section class="success-form" ><!-- success-form-open -->
+
+        <section class="edit-form">
+            <!-- edit-form-open overflow-y -->
+            <div class="edit-form__body">
+                <h2>Info</h2>
+                <p for="">Enter your email address</p>
+                <input class="info-form__input" style="width:  370px;" type="text" name="email" placeholder="team@checkforpatent.com ">
+                <hr>
+                <div class="edit-form__element">
+
+                </div>
+
+
+            </div>
+
+            <button type="button" class="byu-btn btn-txt" id="btn2v3" value="Continue">Continue </button>
+        </section>
+        <section class="success-form">
+            <!-- success-form-open -->
             <div class="success-form__body">
                 <div>
-                <h2>Successfull payment</h2>            
-                    <p>Your request has been accepted and will be 
-                        processed within 24 working hours. We will send you a payment details 
+                    <h2>Successfull payment</h2>
+                    <p>Your request has been accepted and will be
+                        processed within 24 working hours. We will send you a payment details
                         and all information to your email.</p>
-                        <img src="/src/tz1/img/succsess.png" alt="success">
-                    </div>
+                    <img src="img/succsess.png" alt="success">
+                </div>
 
-                    <button class="succsess-back btn-txt" id="btn3v1"> Back </button>
+                <button class="succsess-back btn-txt" id="btn3v1"> Back </button>
             </div>
         </section>
-        <section class="failed-form" ><!-- success-form-open -->
+        <section class="failed-form">
+            <!-- success-form-open -->
             <div class="failed-form__body">
                 <div>
-                <h2>Your payment failed</h2>            
-                    <p>Sorry, but we’ve having trouble processing your payment. 
+                    <h2>Your payment failed</h2>
+                    <p>Sorry, but we’ve having trouble processing your payment.
                         You have been not charged for this transaction.</p>
-                        <img src="/src/tz1/img/failed.png" alt="failed">
-                    </div>
+                    <img src="img/failed.png" alt="failed">
+                </div>
 
-                    <input type="button"  class="failed-back btn-txt" id="btn4to1" value="Try to pay again" >  </input>
+                <input type="button" class="failed-back btn-txt" id="btn4to1" value="Try to pay again">
             </div>
         </section>
 
     </div>
-                <!-- <a class="more" href="#">Add more products <img src="img/icon1.svg" alt="+" class="add-svg"></a>
-                    <p> We offer discount up to 36% for multiple checks</p> -->
-                <!-- <button class="info-form-buy info-form-btn-buy-txt"> and Pay 24.99 USD</button>
-                <div class="info-form__btn"> </div>
-                    <p class="add-svg-blok-txt"> Secure payment with Stripe</p> -->
 
-
-
-    <main>
-        <button class="subheader">открыть 1 ую форму</button>
-   </main>
-   <iframe src="rotate.html" width="220" height="200"></iframe>
 </body>
+
 </html>

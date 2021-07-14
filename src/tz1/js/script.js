@@ -3,11 +3,11 @@ const infoFormOpen = document.querySelector(".info-form-open");
 const addingForm = document.querySelector('.adding-form');
 const more = document.querySelector('.more');
 const formRadio = document.querySelectorAll('.form_radio');
-const nameRadio= document.querySelectorAll('[name="radio"]');
+const nameRadio = document.querySelectorAll('[name="radio"]');
 const radioBtn = document.querySelector('.radio-btn');
 const container = document.querySelector('.container');
 const radioCheked = document.querySelectorAll('.radio-cheked');
-const subheader= document.querySelector('.subheader');
+const subheader = document.querySelector('.subheader');
 const editForm = document.querySelector('.edit-form');
 const byuBtn = document.querySelector('.byu-btn');
 const editFormElement = document.querySelector('.edit-form__element');
@@ -17,42 +17,44 @@ const failedFormOpen = document.querySelector('.failed-form-open');
 const failedBack = document.querySelector('.failed-back');
 const failedform = document.querySelector('.failed-form');
 
-// const btnTxt = document.querySelectorAll('.btn-txt');
+const btnTxt = document.querySelectorAll('.btn-txt');
 const succsessBack = document.querySelector('.succsess-back');
- let data1 = { 0 : 80 , 1 : 72, 2 : 60, 3 : 44, 4 : 24.99};
-let data = [ 0, 24.99, 44, 60 , 72, 80];
+let data1 = {
+    0: 80,
+    1: 72,
+    2: 60,
+    3: 44,
+    4: 24.99
+};
+let data = [0, 24.99, 44, 60, 72, 80];
 const getLocalStorage = () => JSON.parse(localStorage.getItem('test-location')) || [];
 //получаем данные из локал сторедж/?-зажишщает от неправильных данных
 const setLocalStorage = edata => localStorage.setItem('test-location', JSON.stringify(edata));
 //передаем данные в локал сторедж
-    //ydalenie iz korziny
-    const deleteItemsCard = () => {
-        const cartItems = getLocalStorage();
-        const newCartItems = cartItems-1;
-        setLocalStorage(newCartItems);
-    };
+//ydalenie iz korziny
+const deleteItemsCard = () => {
+    const cartItems = getLocalStorage();
+    const newCartItems = cartItems - 1;
+    setLocalStorage(newCartItems);
+};
 //кнопка сколько выбрано объектов
-    const radioChekedAdd =() =>{
-        for (let i=0;i< (nameRadio.length); i++) {
-            if (nameRadio[i].checked) {
-                radioCheked[i].classList = 'radio-cheked_ok';
-                // console.log('Submit and Pay '+ data1[i]+' USD');                console.log(radioCheked[i].values);
-                return (5-i);
-            } else {
-                radioCheked[i].classList = 'radio-cheked';
-            }
-        }};
-        // for (let i=0;i< nameRadio.length; i++) {
-        //     if (nameRadio[i].checked) {console.log('Submit and Pay '+ data[i]+' USD');
-        // let i =0;
-        const renderCart = () => {
-            editFormElement.textContent = '';//чистим класс
-            const cartItems = getLocalStorage();
-            // let totalPrice = 0;
-            //управляем корзиной, изменяем в ней эл ты
-        for (let j=0;j< cartItems; j++) {
-            const div = document.createElement('div');
-            div.innerHTML= `
+const radioChekedAdd = () => {
+    for (let i = 0; i < (nameRadio.length); i++) {
+        if (nameRadio[i].checked) {
+            radioCheked[i].classList = 'radio-cheked_ok';
+            return (5 - i);
+        } else {
+            radioCheked[i].classList = 'radio-cheked';
+        }
+    }
+};
+const renderCart = () => {
+    editFormElement.textContent = ''; //чистим класс
+    const cartItems = getLocalStorage();
+    //управляем корзиной, изменяем в ней эл ты
+    for (let j = 0; j < cartItems; j++) {
+        const div = document.createElement('div');
+        div.innerHTML = `
             <h2>Product ${j+1 } 
                <a class="btn-delete" data-id="${j}" href="#">  
                  <img src="img/x-mark 16close.svg" alt="cloce" class="edit-blok">  
@@ -65,13 +67,13 @@ const setLocalStorage = edata => localStorage.setItem('test-location', JSON.stri
                                 <input class="info-form__input" type="text"   name="reference" placeholder="https://...">
                                     <hr>   
         </div> `;
-                 editFormElement.append(div);
-                }
+        editFormElement.append(div);
+    }
 
-                byuBtn.textContent = `Submit and Pay  ${data[cartItems]} USD`;
-    
+    byuBtn.textContent = `Submit and Pay  ${data[cartItems]} USD`;
+
 };
-        // radioChekedAdd();
+// radioChekedAdd();
 
 //кнопка из 1 формы, переводит на 2 ую форму
 more.addEventListener('click', () => {
@@ -80,81 +82,58 @@ more.addEventListener('click', () => {
 });
 //кнопка из 2 формы
 radioBtn.addEventListener('click', () => {
-        addingForm.classList = ('adding-form');
-        editForm.classList = 'edit-form-open';
-        localStorage.setItem('test-location', radioChekedAdd());   
-        renderCart();
-        }
-);
-        // кнопка из 3 формы закрывающая 1 эл-т
-        editFormElement.addEventListener('click', e => {
-            deleteItemsCard();
-                renderCart(); 
-       });
+    addingForm.classList = ('adding-form');
+    editForm.classList = 'edit-form-open';
+    localStorage.setItem('test-location', radioChekedAdd());
+    renderCart();
+});
+// кнопка из 3 формы закрывающая 1 эл-т
+editFormElement.addEventListener('click', e => {
+    deleteItemsCard();
+    renderCart();
+});
 
-    //    succsessBack.addEventListener('click',() => {
-    //        infoFormOpen.classList = "info-form";
-    //        .,
-           
-    //    });
-//iz4 v1 okno
-// failedBack.addEventListener('click',() => {
-//     infoFormOpen.classList = "info-form-open";
-//     failedFormOpen.classList = 'failed-form';
-// });
-// btn1.onclic = 
-// const 
-btn1.onclick = function() {
-    infoFormOpen.classList = "info-form";
+
+btn1.addEventListener('click', () => {
+    btn1.innerHTML = ('<img src="img/route1.svg" alt="C" class="soon">');
+    setTimeout(() => {
+        infoFormOpen.classList = "info-form";
         failedform.classList = 'failed-form-open';
-        console.log(btn1.value);
-  };
+        btn1.innerHTML = ('and Pay 24.99 USD');
+    }, 2000);
+});
 
+btn2v3.addEventListener('click', () => {
+    btn2v3.innerHTML = ('<img src="img/route1.svg" alt="C" class="soon">');
+    setTimeout(() => {
+        successFormOpen.classList = ('success-form-open');
+        editForm.classList.toggle('edit-form');
+        // console.log(btn1.value); btn2v3.innerHTML = ('and Pay 24.99 USD');
+    }, 2000);
+});
 
-  btn2v3.onclick = function() {
-    successFormOpen.classList = ('success-form-open');
-    editForm.classList.toggle('edit-form');
-     };
-     btn3v1.onclick = function() {
-        successFormOpen.classList.toggle('success-form');
-        infoFormOpen.classList = ('info-form-open');
-        // щчистить кэш
-        // deleteItemsCard();
-               
-        setLocalStorage(0); renderCart(); 
-         };
+btn3v1.onclick = function () {
+    successFormOpen.classList.toggle('success-form');
+    infoFormOpen.classList = ('info-form-open');
+    setLocalStorage(0);
+    renderCart();
+};
 
-  btn4to1.onclick = function() {
+btn4to1.onclick = function () {
     infoFormOpen.classList = "info-form-open";
     failedform.classList.toggle('failed-form');
-  }
-
-    //    btnTxt.addEventListener('click', () =>{
-        //    btnTxt.onclick= () => {btnTxt.textContent = (` <img src="/src/tz1/img/route1.svg" alt="C" class="soon">`);};
-    //    });
-
-
-//открыввет первую форму
-subheader.addEventListener('click', () => {
-    infoFormOpen.classList = "info-form-open";
-    addingForm.classList = 'adding-form';
-    editForm.classList = 'edit-form';
-});
-{/* <img src="/src/tz1/img/route1.svg" alt="C" class="soon"> */}
-
+};
 // 80 usd / 16$ for each
 // 4 products for 72 usd / 18$ for each
 // 3 products for 60 usd / 20$ for each
 // 2 products for 44 usd / 22$ for each
-          // editFormElement.classList='';
-              // radioChekedAdd();
-        // byuBtn.textContent = `Submit and Pay  ${data[radioChekedAdd()]} USD`;
-        // addElement(radioChekedAdd());
+// editFormElement.classList='';
+// radioChekedAdd();
+// byuBtn.textContent = `Submit and Pay  ${data[radioChekedAdd()]} USD`;
+// addElement(radioChekedAdd());
 
-        // при достиженни этой формы нужно дописать в url paymentsuccess
-       console.log( location.href);
-       let params = (new URL(document.location)).searchParams; 
-console.log(params.get("data"));
+// при достиженни этой формы нужно дописать в url paymentsuccess
+console.log(location.href);
 
 // function getAllUrlParams(url) {  // извлекаем строку из URL или объекта window
 //   var queryString = url ? url.split('?')[1] : window.location.search.slice(1);  // объект для хранения параметров
@@ -202,7 +181,7 @@ console.log(params.get("data"));
 //         editForm.classList = 'edit-form';
 //         infoFormOpen.classList = "info-form";
 //         failedform.classList= ('failed-form');
-        
+
 // }else if (getAllUrlParams() === 'paymenterror' ){
 //     successFormOpen.classList = ('success-form');
 //     editForm.classList = 'edit-form';
