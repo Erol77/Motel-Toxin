@@ -1,0 +1,16 @@
+//- Header.pug
+mixin divMenu(name1,name2)
+    div.menu-item=name1
+        div.submenu=name2
+header.header
+    .logo Логотип сайта
+    div#nav
+        div.menu-item Menu 1
+            div.submenu Podmenu 
+        +divMenu('Menu 2', 'Podmenu')
+        +divMenu('Menu 2', 'Podmenu')
+        +divMenu('Menu 2', 'Podmenu')
+        +divMenu('Menu 2', 'Podmenu')
+        +divMenu('Menu 2', 'Podmenu')
+        +divMenu('Menu 2', 'Podmenu')
+        +divMenu('Menu 2', 'Podmenu')
