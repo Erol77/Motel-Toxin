@@ -225,7 +225,7 @@ header a {
     vertical-align: middle;
     text-decoration: none;
 }
-input[type="button2"]{
+.btn2{
     width: 99px;
 height: 44px;
      margin-left: 20px;
@@ -243,7 +243,7 @@ border-width: 2px;
  background: white;
   border-radius: 22px;
 }
-input[type="button1"]{
+.btn1 {
             width: 99px;
 height: 44px;
      margin-left: 20px;
@@ -259,7 +259,7 @@ border: none;
  background:  linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
   border-radius: 22px;
 }
-input[type="button3"]{
+.btn3{
     /* width: 99px; #1F2041
 height: 44px; */
      margin-left: 20px;
@@ -273,11 +273,12 @@ text-align: center;
        color: #BC9CFF;
        border:none;
 }
-input[type="button4"]{
+.btn4{
             width: 320px;
 height: 44px;
      margin-left: 20px;
      /* margin-top: -5px; */
+     /* padding-left: 95px; */
 font-size: 12px;
 font-weight: 700;
 line-height: 15px;
@@ -288,35 +289,49 @@ text-align: center;
 border: none; 
  background:  linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
   border-radius: 22px;
-  text-align-last: 	\1F86A;
+  /* text-align-last: 	end; */
+   background: \2192 no-repeat 12px right;
+      
+
+}
+label#btn4{
+     cursor: pointer;
+    margin-left: -20px;
 }
 button{
-    width: 99px;
+    width: 320px;
 height: 44px;
 font-size: 12px;
 font-weight: 700;
 line-height: 15px;
 font-family: Montserrat;
 /* margin-top: -5px; */
-     /* font-style: normal; */
+     font-style: normal;
      margin-left: 20px;
      /* text-decoration-color: #BC9CFF; */
      color: white;
      border: none;
      background: #BC9CFF;
 border-radius: 22px;
+text-align: center;
 }
- input[type="button2"]:hover{
+span{
+    text-align: right;
+}
+ .btn2:hover{
     border-color: rgba(188, 156, 255, 0.5);
     /* opacity: 0.5; */
  }
- input[type="button1"]:hover{
-    /* background:  linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%); */
-    opacity: 0.5;
+ .btn1:hover{
+        opacity: 0.5;
  }
-  input[type="button3"]:hover{
+ 
+  .btn3:hover{
    color: rgba(31, 32, 65, 0.5);
     /* opacity: 0.5; */
+ }
+ .btn4:hover{
+        opacity: 0.5;
  }
  button:hover {
    background-color: rgba(188, 156, 255, 0.5);;
@@ -370,6 +385,32 @@ display: block;
   border-left: 2px solid gray;
   border-bottom: 2px solid gray;
   transform: rotate(-45deg);
+}
+.left-arrow {
+  position: relative;
+  width: 1px;
+  height: 1px;
+  /* border: 3px solid gray;
+  border-radius: 50%; */
+}
+.left-arrow label{
+   position: relative;
+    top: 20px;
+    width: 90px;
+    height: 10px;
+}
+
+.left-arrow:after {
+  position: absolute;
+  top: 8px;;
+  left: 9px;
+  content: '';
+  display: block;
+  width: 7px;
+  height: 7px;
+  border-left: 2px solid gray;
+  border-bottom: 2px solid gray;
+  transform: rotate(225deg);
 }
  
     </style>
@@ -470,19 +511,23 @@ display: block;
         </div>
         <div class="row">
             
-            <a href="#"> </a><h2> О нас </h2> 
-            <a href="#"> <p> Услуги </p></a>
-           <ul ><li> <a href="" > 	&or; v V > </a> 
-            <div class="arrow-8"></div> </li>
-               <ul class="submenu">
-                   <li class=""><a href="#">sgdfgkflg</a></li>
-                <li class=""><a href="#">sgdfgkflg</a></li>
-               </ul>
+            <h2><a href="#">  О нас </a></h2> 
+            <p> <a href="#"> Услуги </a></p>
+           <ul >
+               <li> <a href="" type="button"> 	&or; v V > 
+                    
+                </a> 
+                <div class="arrow-8"></div> 
+                </li>
+                <ul class="submenu">
+                    <li class=""><a href="#">sgdfgkflg</a></li>
+                    <li class=""><a href="#">sgdfgkflg</a></li>
+                </ul>
            </ul>
-            <a href="#"> <p> Вакансии </p></a>
-            <a href="#"> <p> Новости </p></a>
-            <a href="#"> <p class=""> Соглашения </p></a>
-            <a href="#" class="down-arrow"> <p> &#709;</p></a>
+           <p> <a href="#">  Вакансии </a></p>
+            <p> <a href="#"> Новости</a> </p>
+           <p class=""> <a href="#">  Соглашения </a></p>
+            <p> <a href="#" class="down-arrow"> &#709;</a></p>
            
             <div class="arrow-7">
                 <span></span>
@@ -491,15 +536,16 @@ display: block;
                 <span class="arrow-4-left" ></span>
                 <span class="arrow-4-right" ></span>
              </div>
-                    <label for="button4">&#129122;</label>
-                    <input type="button2" class=" " value="ВОЙТИ">
-            <button class="" type="submit" value="ВОЙТИ" > ВОЙТИ </button>
-             <input type="button1" class=" " value="ВОЙТИ">
-             <input type="button3" class=" " value="ВОЙТИ">
-             <input type="button4" class=" " value="ПЕРЕЙТИ К ОПЛАТЕ &#129122;">
+                    
+                    <input type="button" class="btn1 " value="ВОЙТИ">
+            <button class="" type="submit" value="" > ПЕРЕЙТИ К ОПЛАТЕ <span>&#129122;</span> </button>
+             <input type="button" class="btn2 " value="ВОЙТИ">
+             <input type="button" class="btn3 " value="ВОЙТИ">
+             <input type="button" id="btn4" class=" btn4" value="ПЕРЕЙТИ К ОПЛАТЕ &#129122;">
+             <label class="left-arrow" for="btn4">&#129122;</label> 
              
         </div>
-        <button class="" type="submit" value="ВОЙТИ" > ВОЙТИ </button>
+        <button class="" type="" value="ПЕРЕЙТИ К ОПЛАТЕ" > &#129122; </button>
     </header>
     <div>
         <iframe src="chekboxs.html"> </iframe>

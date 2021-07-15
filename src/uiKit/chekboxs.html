@@ -197,6 +197,153 @@ i {
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
 }
+/* .btn {
+	display: inline-block;	
+	box-sizing: border-box;
+	padding: 0 24px;
+	margin: 0 15px 15px 0;
+	outline: none;
+	border: none;    
+	border-radius: 3px;
+	height: 37px;
+	line-height: 37px;
+	font-size: 14px;
+	text-transform: uppercase;
+	font-weight: normal;
+	text-decoration: none;
+	color: #07bc4c;
+	background-color: #fff;
+	cursor: pointer;
+	user-select: none;
+	appearance: none;
+	touch-action: manipulation;  
+	transition: box-shadow .18s ease-out,background .18s ease-out,color .18s ease-out;
+}
+.btn:focus-visible {
+	box-shadow: 0 0 0 3px lightskyblue;
+}
+.btn:hover {
+	box-shadow: 0 1px 1px 0  #cfcfcf, 0 2px 5px 0  #cfcfcf;
+}
+.btn:active {
+	background-color: #efefef !important;
+}
+.btn:disabled {
+	background-color: #eee;
+	color: #444;
+	pointer-events: none;
+}
+ 
+.btn-2 {
+	display: inline-block;	
+	box-sizing: border-box;
+	padding: 0 24px;
+	margin: 0 15px 15px 0;
+	outline: none;
+	border: none;    
+	border-radius: 3px;
+	height: 37px;
+	line-height: 37px;
+	font-size: 14px; 
+	text-transform: uppercase;
+	font-weight: normal;
+	text-decoration: none;
+	color: #fff;
+	background-color: #05cd51;
+	cursor: pointer;
+	user-select: none;
+	appearance: none;
+	touch-action: manipulation;
+	transition: box-shadow .18s ease-out,background .18s ease-out,color .18s ease-out;
+}
+.btn-2:focus-visible {
+	box-shadow: 0 0 0 3px lightskyblue;
+}
+.btn-2:hover {
+	box-shadow: 0 1px 1px 0  #cfcfcf, 0 2px 5px 0  #cfcfcf;
+}
+.btn-2:active {
+	background-color: #058c38 !important;
+}
+.btn-2:disabled {
+	background-color: #aed2bc;
+	color: #444;
+	pointer-events: none;
+} */
+.btn {
+	display: inline-block;	
+	box-sizing: border-box;
+	padding: 0 13px;
+	margin: 0 15px 15px 0;
+	outline: none;
+	border: 1px solid #a4afba;  
+	border-radius: 3px;
+	height: 32px;
+	line-height: 32px;
+	font-size: 14px;
+	font-weight: 500;
+	text-decoration: none;
+	color: #838a92;
+	background-color: #fff;
+	cursor: pointer;
+	user-select: none;
+	appearance: none;
+	touch-action: manipulation;  
+}
+.btn:focus-visible {
+	box-shadow: 0 0 0 3px lightskyblue;
+}
+.btn:hover {
+	border-color: #65a3be;
+	color: #4e879c;  
+}
+.btn:active {
+	border-color: #78a2b7 !important;
+	color: #3a728b !important;
+}
+.btn:disabled {
+	background-color: #eee;
+	color: #444;
+	pointer-events: none;
+}
+	
+.btn-2 {
+	display: inline-block;	
+	box-sizing: border-box;
+	padding: 0 13px;
+	margin: 0 15px 15px 0;
+	outline: none;
+	border: 1px solid transparent;  
+	border-radius: 3px;
+	height: 32px;
+	line-height: 32px;
+	font-size: 14px;
+	font-weight: 500;
+	text-decoration: none;
+	color: #fff;
+	background-color: #65a3be;
+	cursor: pointer;
+	user-select: none;
+	appearance: none;
+	touch-action: manipulation;  
+}
+.btn-2:focus-visible {
+	box-shadow: 0 0 0 3px lightskyblue;
+}
+.btn-2:hover {
+	border-color: transparent;
+	background-color: #4986a1;
+	color: #fff;
+}
+.btn-2:active {
+	border-color: #6f9cbc !important;
+	background-color: #367089 !important;
+}
+.btn-2:disabled {
+	background-color: #558cb7;
+	color: #fff;
+	pointer-events: none;
+}
 /* .arrow-7 span:nth-child(2){
     animation-delay: -0.2s;
 }
@@ -204,17 +351,18 @@ i {
     animation-delay: -0.4s;
 } */
 </style>
-<script >
-//   document.querySelector('.arrow-4-left').addEventListener('click',() =>{
-//     strelka1.classList.add("arrow-4-left open");
-//   })
-//   ;
-// $(".arrow-4").click(function() {
-//     $(this).toggleClass("open");
-// });
-</script>
+
 </head>
 <body>
+    <a class="btn" href="##">Link</a>
+<input class="btn" type="button" value="Input">    
+<button class="btn">Button</button>
+<button class="btn" disabled>Disabled</button>
+ 
+<a class="btn-2" href="##">Link</a>
+<input class="btn-2" type="button" value="Input">    
+<button class="btn-2">Button</button>
+<button class="btn-2" disabled>Disabled</button>
 <div class="arrow-7">
     <span></span>
     <!-- <span></span>
@@ -252,5 +400,29 @@ i {
 <p>Left arrow: <i class="arrow left"></i></p>
 <p>Up arrow: <i class="arrow up"></i></p>
 <p>Down arrow: <i class="arrow down"></i></p>
+<script >
+    const buttons = document.querySelectorAll(".btn");
+buttons.forEach((button) => {
+	button.onclick = function(e){
+		let x = e.clientX - e.target.offsetLeft;
+		let y = e.clientY - e.target.offsetTop;
+		let ripple = document.createElement("span");
+		ripple.style.left = `${x}px`;
+		ripple.style.top = `${y}px`;
+		this.appendChild(ripple);
+		setTimeout(function(){
+			ripple.remove();
+		}, 600);
+	}
+});
+  const drow = document.documentElement.hasChildNodes('.arrow-4');
+  drow.onclick(function() {
+     drow.classList.toggle("open");
+  })
+  ;
+// $(".arrow-4").click(function() {   arrow-4-right addEventListener
+//     $(this).toggleClass("open");
+// });
+</script>
 </body>
 </html>
