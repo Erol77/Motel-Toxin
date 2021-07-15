@@ -13,7 +13,7 @@ display: flex;
 height: 900px;
           /* position: absolute; */
     border-style: solid;
-    border-color: black;
+    /* border-color: black; */
     border-width: 5px;
     text-align: center;
     }
@@ -40,8 +40,8 @@ flex-flow: column;
     width: 70px;
     height: 70px;
     left: 150px;
-    border-style: solid;
-    border-color: black;
+    /* border-style: solid; */
+    /* border-color: black; */
     border-width: 5px;
     text-align: center;
     border-radius: 6px;
@@ -168,7 +168,7 @@ font-size: 19px;
 font-weight: 700;
 line-height: 23px;
  }
- h3 {
+ h3 , .h3{
 font-size: 12px;
 font-weight: 700;
 line-height: 15px;
@@ -219,6 +219,159 @@ border-radius: 100%; */
 margin-left: 140px;
 /* position: relative; */
 }
+header a {
+    /* width: 13px;
+    height: 13px; */
+    vertical-align: middle;
+    text-decoration: none;
+}
+input[type="button2"]{
+    width: 99px;
+height: 44px;
+     margin-left: 20px;
+     /* margin-top: -5px; */
+font-size: 12px;
+font-weight: 700;
+line-height: 15px;
+font-family: Montserrat;
+text-align: center;
+     font-style: normal;
+       color: #BC9CFF;
+       border-color: #BC9CFF;
+border-style: solid;
+border-width: 2px;
+ background: white;
+  border-radius: 22px;
+}
+input[type="button1"]{
+            width: 99px;
+height: 44px;
+     margin-left: 20px;
+     /* margin-top: -5px; */
+font-size: 12px;
+font-weight: 700;
+line-height: 15px;
+font-family: Montserrat;
+text-align: center;
+     font-style: normal;
+       color: white;
+border: none; 
+ background:  linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  border-radius: 22px;
+}
+input[type="button3"]{
+    /* width: 99px; #1F2041
+height: 44px; */
+     margin-left: 20px;
+     /* margin-top: -5px; */
+font-size: 12px;
+font-weight: 700;
+line-height: 15px;
+font-family: Montserrat;
+text-align: center;
+     font-style: normal;
+       color: #BC9CFF;
+       border:none;
+}
+input[type="button4"]{
+            width: 320px;
+height: 44px;
+     margin-left: 20px;
+     /* margin-top: -5px; */
+font-size: 12px;
+font-weight: 700;
+line-height: 15px;
+font-family: Montserrat;
+text-align: center;
+     font-style: normal;
+       color: white;
+border: none; 
+ background:  linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  border-radius: 22px;
+  text-align-last: 	\1F86A;
+}
+button{
+    width: 99px;
+height: 44px;
+font-size: 12px;
+font-weight: 700;
+line-height: 15px;
+font-family: Montserrat;
+/* margin-top: -5px; */
+     /* font-style: normal; */
+     margin-left: 20px;
+     /* text-decoration-color: #BC9CFF; */
+     color: white;
+     border: none;
+     background: #BC9CFF;
+border-radius: 22px;
+}
+ input[type="button2"]:hover{
+    border-color: rgba(188, 156, 255, 0.5);
+    /* opacity: 0.5; */
+ }
+ input[type="button1"]:hover{
+    /* background:  linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%); */
+    opacity: 0.5;
+ }
+  input[type="button3"]:hover{
+   color: rgba(31, 32, 65, 0.5);
+    /* opacity: 0.5; */
+ }
+ button:hover {
+   background-color: rgba(188, 156, 255, 0.5);;
+    /* opacity: 0.5; */
+ }
+.menu-bar ul li {
+  display: none;
+}
+/* option:checked {
+  color: red;
+} */
+.submenu {
+display: none;
+}
+.submenu:hover {
+display: block;
+}
+.menu-bar li:hover > ul {
+  display: block;
+}
+/* .arrow-7 {
+    margin: 10px auto 10px auto;
+    width: 8px;
+    height: 10px;
+} */
+.arrow-7 span {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-bottom: 5px solid #337AB7;
+    border-right: 5px solid #337AB7;
+    transform: rotate(45deg);
+    margin: -16px 0;
+    /* animation: arrow-7 2s infinite; */
+}
+.down-arrow {
+  position: relative;
+  width: 1px;
+  height: 1px;
+  /* border: 3px solid gray;
+  border-radius: 50%; */
+}
+.down-arrow:after {
+  position: absolute;
+  top: 8px;;
+  left: 9px;
+  content: '';
+  display: block;
+  width: 7px;
+  height: 7px;
+  border-left: 2px solid gray;
+  border-bottom: 2px solid gray;
+  transform: rotate(-45deg);
+}
+ 
     </style>
     <script src="">
 
@@ -306,23 +459,50 @@ margin-left: 140px;
                             <p class="dark-shade_25" > p </p> 
                             <p class="dark-shade_75">This is the body text which is used for most
                         of the design, like paragraphs, lists, etc.</p>
-                    </div>  
+                     </div>  
             </div>    
         </main>
     </div>
-    <header class="row">
+    <header class="row ">
         <div class="logo"><img src="/src/uiKit/img/logo.svg" alt=""></div> 
             <div>
             <h2>TOXIN</h2>
         </div>
         <div class="row">
-            <a href="http://#"> <h2> О нас </h2></a>
-            <a href="http://#"> <p> Услуги </p></a>
-            <a href="http://#"> <p> Вакансии </p></a>
-            <a href="http://#"> <p> Новости </p></a>
-            <a href="http://#"> <p> Соглашения </p></a>
+            
+            <a href="#"> </a><h2> О нас </h2> 
+            <a href="#"> <p> Услуги </p></a>
+           <ul ><li> <a href="" > 	&or; v V > </a> 
+            <div class="arrow-8"></div> </li>
+               <ul class="submenu">
+                   <li class=""><a href="#">sgdfgkflg</a></li>
+                <li class=""><a href="#">sgdfgkflg</a></li>
+               </ul>
+           </ul>
+            <a href="#"> <p> Вакансии </p></a>
+            <a href="#"> <p> Новости </p></a>
+            <a href="#"> <p class=""> Соглашения </p></a>
+            <a href="#" class="down-arrow"> <p> &#709;</p></a>
+           
+            <div class="arrow-7">
+                <span></span>
+            </div>
+            <div class="arrow-4" >
+                <span class="arrow-4-left" ></span>
+                <span class="arrow-4-right" ></span>
+             </div>
+                    <label for="button4">&#129122;</label>
+                    <input type="button2" class=" " value="ВОЙТИ">
+            <button class="" type="submit" value="ВОЙТИ" > ВОЙТИ </button>
+             <input type="button1" class=" " value="ВОЙТИ">
+             <input type="button3" class=" " value="ВОЙТИ">
+             <input type="button4" class=" " value="ПЕРЕЙТИ К ОПЛАТЕ &#129122;">
+             
         </div>
-        <label for=""></label>
+        <button class="" type="submit" value="ВОЙТИ" > ВОЙТИ </button>
     </header>
+    <div>
+        <iframe src="chekboxs.html"> </iframe>
+    </div>
 </body>
 </html>
