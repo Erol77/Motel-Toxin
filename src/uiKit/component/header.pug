@@ -1,16 +1,18 @@
 //- Header.pug
 mixin divMenu(name1,name2)
-    div.menu-item=name1
-        div.submenu=name2
-header.header
-    .logo Логотип сайта
-    div#nav
-        div.menu-item Menu 1
-            div.submenu Podmenu 
-        +divMenu('Menu 2', 'Podmenu')
-        +divMenu('Menu 2', 'Podmenu')
-        +divMenu('Menu 2', 'Podmenu')
-        +divMenu('Menu 2', 'Podmenu')
-        +divMenu('Menu 2', 'Podmenu')
-        +divMenu('Menu 2', 'Podmenu')
-        +divMenu('Menu 2', 'Podmenu')
+  .menu-item= name1
+    .submenu= name2
+header.header1
+  div
+    img.logo(src='/img/logo.svg', alt="Logotip company") 
+    p Логотип сайта
+    img.logo1(src='/img/TOXIN.svg', alt="TOXIN") 
+
+    #nav
+    .menu-item Menu 1
+      .submenu Podmenu
+      +divMenu('О нас')
+      +divMenu('Услуги', 'V')
+      +divMenu('Вакансии')
+      +divMenu('Новости')
+      +divMenu('Соглашения', 'V')
