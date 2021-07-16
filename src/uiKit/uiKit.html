@@ -192,6 +192,21 @@ line-height: 24px;
         margin-left: 30px;
         margin-right: 30px;
     }
+    div::after{
+        /* content: "\f347"; */
+        content: "\2605";
+        color:  #BC9CFF;
+
+      
+    }
+        div::before{
+        /* content: "\f347"; */
+        content: "\2605"; 
+          /* border-color: #BC9CFF;
+border-style: solid;
+border-width: 2px; */
+      
+    }
     .right {
         justify-content: space-between;
     }
@@ -244,6 +259,7 @@ border-width: 2px;
   border-radius: 22px;
 }
 .btn1 {
+    content: "\f347";
             width: 99px;
 height: 44px;
      margin-left: 20px;
@@ -297,6 +313,7 @@ border: none;
 label#btn4{
      cursor: pointer;
     margin-left: -20px;
+    content: "\f347";
 }
 button{
     width: 320px;
@@ -528,6 +545,7 @@ display: block;
             <p> <a href="#"> Новости</a> </p>
            <p class=""> <a href="#">  Соглашения </a></p>
             <p> <a href="#" class="down-arrow"> &#709;</a></p>
+            <span class="dashicons dashicons-arrow-down-alt2"></span>
            
             <div class="arrow-7">
                 <span></span>
@@ -548,7 +566,7 @@ display: block;
         <button class="" type="" value="ПЕРЕЙТИ К ОПЛАТЕ" > &#129122; </button>
     </header>
     <div>
-        <iframe src="chekboxs.html"> </iframe>
+        <iframe src="chekboxs.html" style="width: 100%;" > </iframe>
     </div>
 </body>
 </html>
