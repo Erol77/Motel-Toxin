@@ -1,16 +1,17 @@
-const webpack = require('webpack');
+// const webpack = require('webpack');
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-//const pug = require('pug');
+const pug = require('pug');
+// const {CleanWebpackPlugin} = ('del-cli');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
+// const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 const PATHS = {
   source: path.join(__dirname, 'src'),
   build: path.join(__dirname, 'out')
-}
+};
 const config = {
   entry:  {
-    'index': PATHS.source + '/uikit/index.js'
+    'index': PATHS.source + '/uiKit/index.js'
     //'scss': PATHS.source + './scss/style.scss',
     //'pug': PATHS.source + './pug/index.pug',
   },
@@ -18,7 +19,7 @@ const config = {
     path: PATHS.build,
     //filename: '[name].js',
     //publicPath: '/out/',
-    filename: "bundle.js",
+    filename: "[name].bundle.js",
     chunkFilename: '[name].js'
   },
   module: {
@@ -35,7 +36,7 @@ const config = {
       },
       {
         test: /\.pug$/,
-        loader: 'url-loader',
+        loader: 'pug-loader',
         options: {
               pretty: true,
         }
@@ -62,19 +63,19 @@ const config = {
       }
     ]
   },
+  
   plugins: [
-    new HtmlWebpackPlugin({
-      //     appMountId: 'app',
-      //       filename: 'index.html',
-      // chunks: ['index'],
-      // template: PATHS.source + '/pug/index.html'
-    }),/*
+            
+    //  new CleanWebpackPlugin(),
+    
      new HtmlWebpackPlugin({
-        template: PATHS.source + '/pug/index.pug',
-        inject: 'body'
-    }),*/
+        template: PATHS.source + '/uiKit/index.pug',
+        filename: '[name].html',
+        // inject: 'body'
+    }),
    // new LodashModuleReplacementPlugin
    new MiniCssExtractPlugin({
+     filename: '[name].css'
            //filename: PATHS.source + '/scss/style.scss',
  //     linkType: 'text/css',
     })

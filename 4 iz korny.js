@@ -7,7 +7,7 @@ const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 const PATHS = {
   source: path.join(__dirname, 'src'),
   build: path.join(__dirname, 'out')
-}
+};
 const config = {
   entry:  {
     'index': PATHS.source + '/index.js'
