@@ -10,7 +10,7 @@ const PATHS = {
 }
 const config = {
   entry:  {
-    'index': PATHS.source + '/uikit/index.js'
+    'index': PATHS.source + '/index.js'
     //'scss': PATHS.source + './scss/style.scss',
     //'pug': PATHS.source + './pug/index.pug',
   },
@@ -65,9 +65,9 @@ const config = {
   plugins: [
     new HtmlWebpackPlugin({
       //     appMountId: 'app',
-      //       filename: 'index.html',
-      // chunks: ['index'],
-      // template: PATHS.source + '/pug/index.html'
+            filename: 'index.html',
+      chunks: ['index'],
+      template: PATHS.source + '/pug/index.html'
     }),/*
      new HtmlWebpackPlugin({
         template: PATHS.source + '/pug/index.pug',
