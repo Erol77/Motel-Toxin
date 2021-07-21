@@ -6,19 +6,94 @@ html(lang="ru")
   body
     //- Include header
     include ./component/header.pug
-    h1 Заголовок страницы
-    p Абзац, небольшое описание
-    //- Include custom styles
-    p.
-      style
-          include ./css/custom-style.css
+    section 
+      h1 Colors & Text
+      div
+        div 
+        div 
+          h2 Dark Shadee 100%
+          p &sharp;1F2041
+        div 
+        div 
+          h2 Dark Shadee 75%
+          p &sharp;1F2041
+        div 
+        div 
+          h2 Dark Shadee 50%
+          p &sharp;1F2041
+        div 
+        div 
+          h2 Dark Shadee 25%
+          p &sharp;1F2041
+        div 
+        div 
+          h2 Dark Shadee 5%
+          p &sharp;1F2041
+        div 
+        div 
+          h2 Purple
+          p &sharp;BC9CFF
+        div 
+        div 
+          h2 Green
+          p &sharp;6FCF97
+      div 
+        div 
+          p H1
+          h1.
+            This one is the sub-section or
+            <br>
+            widget title
+        div 
+          p H2
+          h2.
+            Next one is the item title inside
+            <br>
+            widgets
+        div 
+          p H3
+          h3 This is a label or CTA text
+        div 
+          p Body
+          p.
+            This is the body text which is used for most 
+            <br>
+            of the design, like paragraphs, lists, etc.
+    section 
+      h1 Forms elements
+      div 
+        div 
+          p TEXT FIELD
+          p DEFAULT
+          input(type="email", name="", placeholder="Email")
+        div 
+          p TEXT FIELD
+          p HOVER/FOCUS
+          input(type="email", name="", placeholder="This is pretty awecome")
+        div 
+          p DROPDOWN
+          select(name="") 
+            option(value="") Сколько гостей
+        div 
+          p MASKED TEXT FIELD
+          input(type="datetime", name="", placeholder="ДД.ММ.ГГГГ")
+        div 
+          div 
+            p DATE DROPDOWN
+            select(name="") 
+              option(value="") ДД.ММ.ГГГГ
+          div 
+            p DATE DROPDOWN
+            select(name="") 
+              option(value="") 19.08.2021
+        div 
+          p DATE DROPDOWN
+          select(name="") 
+            option(value="") 19 авг - 23 авг
+        div 
+          p SUBSCRIPTION TEXT FIELD
+          input(type="email", name="", placeholder="Email")
 
-    // Include custom scripts
-      script
-          include ./js/custom-script.js
-    p.
-      Циклы
-      Циклы или итерации в Pug позволяют выполнять какие-то множественные операции, написав всего лишь несколько строк кода. Например, можно вывести список пунктов меню, написав код итерации следующим образом:
     //- Include footer
 
     include ./component/footer.pug
