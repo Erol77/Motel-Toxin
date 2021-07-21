@@ -63,36 +63,55 @@ html(lang="ru")
       h1 Forms elements
       div 
         div 
-          p TEXT FIELD
+          h3 TEXT FIELD
           p DEFAULT
           input(type="email", name="", placeholder="Email")
         div 
-          p TEXT FIELD
+          h3 TEXT FIELD
           p HOVER/FOCUS
           input(type="email", name="", placeholder="This is pretty awecome")
         div 
-          p DROPDOWN
+          h3 DROPDOWN
           select(name="") 
             option(value="") Сколько гостей
         div 
-          p MASKED TEXT FIELD
+          h3 MASKED TEXT FIELD
           input(type="datetime", name="", placeholder="ДД.ММ.ГГГГ")
         div 
           div 
-            p DATE DROPDOWN
+            h3 DATE DROPDOWN
             select(name="") 
               option(value="") ДД.ММ.ГГГГ
           div 
-            p DATE DROPDOWN
+            h3 DATE DROPDOWN
             select(name="") 
               option(value="") 19.08.2021
         div 
-          p DATE DROPDOWN
+          h3 DATE DROPDOWN
           select(name="") 
             option(value="") 19 авг - 23 авг
         div 
-          p SUBSCRIPTION TEXT FIELD
-          input(type="email", name="", placeholder="Email")
+          h3 SUBSCRIPTION TEXT FIELD
+          input(type="email", name="", placeholder="Email    &#129122;")
+      div 
+        ul 
+          li 
+            h3 Checkbox Buttons
+          li
+            p.
+              <input type="checkbox", name="", value="Можно курить">Можно курить
+          li
+            p <input type="checkbox", name="", value="Можно с питомцами", checked>Можно с питомцами
+          li
+            p.
+              <input type="checkbox",name="",value="",checked> Можно пригласить гостей <br>
+              (до 10 человек)
+        div 
+          h3 Radio Buttons
+          p 
+            input#main(type="radio", name="", value="Мужчина", checked)
+          p 
+            input#women(type="radio", name="Женщина", text="value")
 
     //- Include footer
 
