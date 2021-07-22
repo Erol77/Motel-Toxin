@@ -238,12 +238,37 @@ html(lang="ru")
             option(value="") 2 спальни, 2 кровати...
           div 
             h3 спальни
-            button(type="button", onclick="this.nextElementSibling.stepDown()") -
-            input(type="number", min="0", max="100", value="2")
-            button(
-              type="button",
-              onclick="this.previousElementSibling.stepUp()"
-            ) +
+              button(
+                type="button",
+                onclick="this.nextElementSibling.stepDown()"
+              ) -
+              input(type="number", min="0", max="100", value="2")
+              button(
+                type="button",
+                onclick="this.previousElementSibling.stepUp()"
+              ) +
+          div 
+            h3 кровати
+              button(
+                type="button",
+                onclick="this.nextElementSibling.stepDown()"
+              ) -
+              input(type="number", min="0", max="100", value="2")
+              button(
+                type="button",
+                onclick="this.previousElementSibling.stepUp()"
+              ) +
+          div 
+            h3 ванные комнаты
+              button(
+                type="button",
+                onclick="this.nextElementSibling.stepDown()"
+              ) -
+              input(type="number", min="0", max="100", value="2")
+              button(
+                type="button",
+                onclick="this.previousElementSibling.stepUp()"
+              ) +
 
     //- Include footer
           - var n = 0;
