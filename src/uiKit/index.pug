@@ -271,9 +271,46 @@ html(lang="ru")
               ) +
         div 
           h3 dropdown
-          p Default
           select(name="") 
             option(value="") Сколько гостей
+          div 
+            h3 взрослые
+              button(
+                type="button",
+                onclick="this.nextElementSibling.stepDown()"
+              ) -
+              input(type="number", min="0", max="100", value="0")
+              button(
+                type="button",
+                onclick="this.previousElementSibling.stepUp()"
+              ) +
+          div 
+            h3 дети
+              button(
+                type="button",
+                onclick="this.nextElementSibling.stepDown()"
+              ) -
+              input(type="number", min="0", max="100", value="0")
+              button(
+                type="button",
+                onclick="this.previousElementSibling.stepUp()"
+              ) +
+          div 
+            h3 младенцы
+              button(
+                type="button",
+                onclick="this.nextElementSibling.stepDown()"
+              ) -
+              input(type="number", min="0", max="100", value="0")
+              button(
+                type="button",
+                onclick="this.previousElementSibling.stepUp()"
+              ) +
+          button применить
+        div 
+          h3 dropdown
+          select(name="") 
+            option(value="") 3 гостя
           div 
             h3 взрослые
               button(
@@ -291,7 +328,7 @@ html(lang="ru")
                 type="button",
                 onclick="this.nextElementSibling.stepDown()"
               ) -
-              input(type="number", min="0", max="100", value="2")
+              input(type="number", min="0", max="100", value="1")
               button(
                 type="button",
                 onclick="this.previousElementSibling.stepUp()"
@@ -307,7 +344,8 @@ html(lang="ru")
                 type="button",
                 onclick="this.previousElementSibling.stepUp()"
               ) +
-
+          button очистить
+          button применить
     //- Include footer
           - var n = 0;
       ul
