@@ -264,7 +264,45 @@ html(lang="ru")
                 type="button",
                 onclick="this.nextElementSibling.stepDown()"
               ) -
+              input(type="number", min="0", max="100", value="0")
+              button(
+                type="button",
+                onclick="this.previousElementSibling.stepUp()"
+              ) +
+        div 
+          h3 dropdown
+          p Default
+          select(name="") 
+            option(value="") Сколько гостей
+          div 
+            h3 взрослые
+              button(
+                type="button",
+                onclick="this.nextElementSibling.stepDown()"
+              ) -
               input(type="number", min="0", max="100", value="2")
+              button(
+                type="button",
+                onclick="this.previousElementSibling.stepUp()"
+              ) +
+          div 
+            h3 дети
+              button(
+                type="button",
+                onclick="this.nextElementSibling.stepDown()"
+              ) -
+              input(type="number", min="0", max="100", value="2")
+              button(
+                type="button",
+                onclick="this.previousElementSibling.stepUp()"
+              ) +
+          div 
+            h3 младенцы
+              button(
+                type="button",
+                onclick="this.nextElementSibling.stepDown()"
+              ) -
+              input(type="number", min="0", max="100", value="0")
               button(
                 type="button",
                 onclick="this.previousElementSibling.stepUp()"
