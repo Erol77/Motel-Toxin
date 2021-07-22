@@ -386,11 +386,26 @@ html(lang="ru")
         div 
           h3 bullet list
           ul 
-            each val, index in ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00,
-а выезд до 12:00']
+            each val, index in ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00,<br> а выезд до 12:00']
               li= index + ': ' + val
+      div 
+        div 
+          img(
+            src="../src/uiKit/img/insert_emoticonsmail.svg",
+            alt="emoticonsmail"
+          )
+          h3 Комфорт
+          br
+          p Шумопоглощающие стены
+          hr
+        div 
+          img(src="../src/uiKit/img/location_city.svg", alt="location_city")
+          h3 Удобство
+          br
+          p Окно в каждой из спален
+          hr
 
-          //- select(name="") Стул для кормления
+          //- select(name="") Стул для кормления d:\git_tutorial\work\test\src\uiKit\img\insert_emoticonsmail.svg
             option(value="")
               h3 expandable checkbox list
     //- Include footer
