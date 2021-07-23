@@ -21,7 +21,7 @@
       </ul>
       <ul>
         <li>
-          <button>Войти</button>
+          <a href="#">Войти</a>
         </li>
       </ul>
     </nav>
@@ -83,6 +83,25 @@
         <h2>Записаться</h2>
         <p>Укажите желаемую дату и время и мы свяжемся с вами для подтверждения бронирования</p>
         <!-- Здесь будет форма -->
+        <form action="#" method="post">
+          <p>
+            <label for="eсri-data">Дата</label>
+            <input type="date" name="date" value="2021-08-02" id="eсri-data">
+          </p>
+          <p>
+            <label for="eсri-time">Время</label>
+            <input type="time" name="time" value="12:00" id="eсri-time">
+          </p>
+          <p>
+            <label for="eсri-name">Ваше имя</label>
+            <input type="text" name="name" value="" placeholder="Борода" id="eсri-name">
+          </p>
+          <p>
+            <label for="eсri-phone">Телефон</label>
+            <input type="tel" name="phone" placeholder="+7 930 123-45-67" id="eсri-phone">
+          </p>
+          <button type="submit">Отправить</button>
+        </form>
     </section>
   </main>
   <footer>
@@ -107,11 +126,29 @@
   <section>
       <h2>Личный кабинет</h2>
       <p>Введиет свой логин и пароль</p>
+      <form action="#" method="post">
+        <p>
+          <label for="user-login">Логин</label>
+          <input type="email" name="email" id="user-login" placeholder="email@example.com">
+        </p>
+        <p>
+          <label for="user-password">Пароль</label>
+          <input type="password" name="password" id="user-password" placeholder="*********">
+        </p>
+        <p>
+          <label for="">
+            <input type="checkbox" name="remember" >
+            Запомните меня
+          </label>
+          <a href="#">Я забыл пароль</a>
+        </p>
+        <button type="submit">Войти</button>
+      </form>
       <button type="button">Закрыть</button>
   </section>
     <section>
       <h2>Как до нас добраться</h2>
-    <button type="button">Закрыть</button>
+    <butaton type="button">Закрыть</butaton>
   </section>
 </body>
 
