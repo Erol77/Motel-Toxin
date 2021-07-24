@@ -6,9 +6,9 @@ html(lang="ru")
   body
     //- Include header
     include ./component/header.pug
-    section 
+    section.row 
       h1 Colors & Text
-      div
+      .col 
         div 
         div 
           h2 Dark Shadee 100%
@@ -37,7 +37,7 @@ html(lang="ru")
         div 
           h2 Green
           p &sharp;6FCF97
-      div 
+      .col 
         div 
           p H1
           h1.
@@ -59,13 +59,13 @@ html(lang="ru")
             This is the body text which is used for most 
             <br>
             of the design, like paragraphs, lists, etc.
-    section 
+    section.row 
       h1 Forms elements
-      div 
-        div 
+      .col 
+        .row 
           h3 TEXT FIELD
           p DEFAULT
-          input(type="email", name="", placeholder="Email")
+        include ./component/email.pug
         div 
           h3 TEXT FIELD
           p HOVER/FOCUS
@@ -93,7 +93,7 @@ html(lang="ru")
         div 
           h3 SUBSCRIPTION TEXT FIELD
           input(type="email", name="", placeholder="Email    &#129122;")
-      div 
+      .col 
         ul 
           li 
             h3 Checkbox Buttons
@@ -230,7 +230,7 @@ html(lang="ru")
 
               button &#129122
               p 1 – 12 из 100+ вариантов аренды
-      div 
+      .col 
         div 
           h3 dropdown
           p Default
@@ -346,7 +346,7 @@ html(lang="ru")
               ) +
           button очистить
           button применить
-      div 
+      .col 
         div 
           button 
             h3 expandable checkbox list
@@ -388,7 +388,7 @@ html(lang="ru")
           ul 
             each val, index in ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00,<br> а выезд до 12:00']
               li= index + ': ' + val
-      div 
+      .col 
         div 
           img(
             src="../src/uiKit/img/insert_emoticonsmail.svg",
@@ -404,7 +404,7 @@ html(lang="ru")
           br
           p Окно в каждой из спален
           hr
-      div 
+      .col 
         div 
           img(
             src="../src/uiKit/img/image_otziv.png",

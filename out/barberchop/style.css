@@ -270,3 +270,7 @@ a {
 .restore:focus {
     text-decoration: none;
 }
+
+.modal {
+    visibility: hidden;
+}

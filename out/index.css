@@ -120,3 +120,44 @@
   color: #fff;
   pointer-events: none; }
 
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat';
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: rgba(31, 32, 65, 0.25);
+  background-color: rgba(31, 32, 65, 0.05); }
+
+img {
+  max-width: 100%; }
+
+a {
+  text-decoration: none; }
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: url(22d8566c41c8d731931b58ae64f72170.svg#Montserrat) format("svg"); }
+
+.email {
+  width: 320px;
+  height: 44px;
+  background: #FFFFFF;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 15px; }
+
+.email input:hover,
+.email input:focus {
+  content: '';
+  border: 1px solid rgba(31, 32, 65, 0.5);
+  color: rgba(31, 32, 65, 0.5); }
+
+.row {
+  display: flex; 
+  justify-content: space-between;}
+

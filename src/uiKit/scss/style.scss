@@ -1,4 +1,8 @@
+// @import 'fonts';
 @import 'btn';
+$dark-shade5:rgba(31, 32, 65, 0.05);
+$dark-shade25:rgba(31, 32, 65, 0.25);
+
 body {
     margin: 0;
     padding: 0;
@@ -7,8 +11,8 @@ body {
     font-size: 14px;
     line-height: 24px;
     font-weight: 400;
-    color: rgba(31, 32, 65, 0.75);
-   
+    color: $dark-shade25;
+   background-color:$dark-shade5;
 }
 img {
     max-width: 100%;
@@ -16,42 +20,19 @@ img {
 a {
     text-decoration: none;
 }
-/* montserrat-regular - latin_cyrillic */
+
 @font-face {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
-    src: url('../fonts/montserrat-v15-latin_cyrillic-regular.eot');
-    /* IE9 Compat Modes */
-    src: local(''),
-        url('../fonts/montserrat-v15-latin_cyrillic-regular.eot?#iefix') format('embedded-opentype'),
-        /* IE6-IE8 */
-        url('../fonts/montserrat-v15-latin_cyrillic-regular.woff2') format('woff2'),
-        /* Super Modern Browsers */
-        url('../fonts/montserrat-v15-latin_cyrillic-regular.woff') format('woff'),
-        /* Modern Browsers */
-        url('../fonts/montserrat-v15-latin_cyrillic-regular.ttf') format('truetype'),
-        /* Safari, Android, iOS */
-        url('../fonts/montserrat-v15-latin_cyrillic-regular.svg#Montserrat') format('svg');
-    /* Legacy iOS */
+    src: url('../../../fonts/montserrat-v15-latin_cyrillic-regular.svg#Montserrat') format('svg');
 }
-
-/* montserrat-700 - latin_cyrillic */
-@font-face {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 700;
-    src: url('../fonts/montserrat-v15-latin_cyrillic-700.eot');
-    /* IE9 Compat Modes */
-    src: local(''),
-        url('../fonts/montserrat-v15-latin_cyrillic-700.eot?#iefix') format('embedded-opentype'),
-        /* IE6-IE8 */
-        url('../fonts/montserrat-v15-latin_cyrillic-700.woff2') format('woff2'),
-        /* Super Modern Browsers */
-        url('../fonts/montserrat-v15-latin_cyrillic-700.woff') format('woff'),
-        /* Modern Browsers */
-        url('../fonts/montserrat-v15-latin_cyrillic-700.ttf') format('truetype'),
-        /* Safari, Android, iOS */
-        url('../fonts/montserrat-v15-latin_cyrillic-700.svg#Montserrat') format('svg');
-    /* Legacy iOS */
+@import 'email';
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+.col {
+    display: flex;
+    flex-direction: column;
 }
