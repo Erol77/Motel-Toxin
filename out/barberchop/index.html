@@ -8,21 +8,21 @@
     <title>CodePen - FCC: Technical Documentation Page</title>
 </head>
 <body>
-  <header>
+  <header class="main-header">
     <nav class="main-navigation">
-      <a href="">
-        <img src="img/index-logo.svg" alt="">
+      <a class="main-header-logo" href="">
+        <img  src="img/index-logo.svg" height="155" width="371" alt=' Логотип Барбершоп "Бородинский"'>
       </a>
       <ul class="site-navigation">
         <li><a class="nav-link" href="#">Информация</a></li>
         <li><a class="nav-link" href="#">Новости</a></li>
         <li><a class="nav-link" href="#">Прайс-лист</a></li>
-        <li><a class="nav-link" href="#">Магазин</a></li>
+        <li><a class="site-navigation-current" href="#">Магазин</a></li>
         <li><a class="nav-link" href="#">контакты</a></li>
       </ul>
-      <ul class="site-navigation">
+      <ul class="user-navigation">
         <li>
-          <a href="#">Войти</a>
+          <a class="login-link" href="">Войти</a>
         </li>
       </ul>
     </nav>
@@ -77,7 +77,7 @@
         <h2>Фотография</h2>
         <figure class="galery-content">
           <a href="#"></a>
-          <img src="" alt="Интерьер">
+          <img src="img/image.jpg" width="285px" height="165px" alt="Интерьер">
           <button type="button" class="button">Назад</button>
           <button type="button" class="button">Вперед</button>        
         </figure>
@@ -126,50 +126,55 @@
     </div> 
   </main>
   <footer class="main-footer">
-              <p>
+              <p class="footer-contacts">
             БАРБЕРШОП "БОРОДИНСКИЙ"<br>
             Адрес: г. Ярославль, Б. Конюшенная, д19.<br>
             Телефон: +7 (8452) 79-66-02
         </p>
-        <div> 
+        <div class="footer-social"> 
             <p> Давайте дружить!</p> 
             <ul class="user-navigation">
-                <li><a href="#">Вконтакте</a></li>
-                <li><a href="#">Фейсбук</a></li>
-                <li><a href="#">Инстаграм</a></li>
+                <li><a class="social-button" href="#">Вконтакте</a></li>
+                <li><a class="social-button" href="#">Фейсбук</a></li>
+                <li><a class="social-button" href="#">Инстаграм</a></li>
             </ul>
         </div>
-        <p>
+        <p class="footer-copyrigt">
             РАЗРАБОТАНО:
             <a href="#">HTML Academy</a>
         </p>
   </footer>
-  <section>
+  <section class="modal modal-login">
       <h2>Личный кабинет</h2>
       <p>Введиет свой логин и пароль</p>
-      <form action="#" method="post">
+      <form class="login-form" action="" method="post">
         <p>
           <label for="user-login">Логин</label>
           <input type="email" name="email" id="user-login" placeholder="email@example.com">
         </p>
-        <p>
-          <label for="user-password">Пароль</label>
-          <input type="password" name="password" id="user-password" placeholder="*********">
+        <p class="visually-hidden">
+          <label class="visually-hidden" for="user-password">Пароль</label>
+          <input class="login-icon-password" type="password" name="password" id="user-password" placeholder="*********">
         </p>
         <p>
-          <label for="">
-            <input type="checkbox" name="remember" >
+          <label for=""class="login-password-info">
+            <input type="checkbox" class="login-checkbox" name="remember" >
+            <span class="checkbox-indicator"></span>
             Запомните меня
           </label>
-          <a href="#">Я забыл пароль</a>
+          <a href="#" class="restore">Я забыл пароль</a>
         </p>
         <button type="submit" class="button">Войти</button>
       </form>
-      <button type="button" class="button">Закрыть</button>
+      <button type="button" class="modal-close">Закрыть</button>
   </section>
-    <section>
-      <h2>Как до нас добраться</h2>
-    <butaton type="button" class="button">Закрыть</butaton>
+
+  <section class="modal-map modal">
+      <h2 class="visually-hidden">Как до нас добраться</h2>
+      <p>
+        <img src="img/map.jpg" width="700px" height="560px" alt="Офис компании по адресу: г. Ярославль, ул. Чкалова, дом 82. офис 2">
+      </p>
+    <butaton type="button" class="modal-close">Закрыть</butaton>
   </section>
 
 
