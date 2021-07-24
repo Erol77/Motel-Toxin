@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="apple-mobile-web-app-title" content="CodePen">
-    <link href="style.css" type="text/css" rel="stylesheet">
+    
 <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
+<link href="style.css" type="text/css" rel="stylesheet">
     <title>CodePen - FCC: Technical Documentation Page</title>
 </head>
 <body>
@@ -13,22 +14,26 @@
       <a class="main-header-logo" href="">
         <img  src="img/index-logo.svg" height="155" width="371" alt=' Логотип Барбершоп "Бородинский"'>
       </a>
-      <ul class="site-navigation">
-        <li><a class="nav-link" href="#">Информация</a></li>
-        <li><a class="nav-link" href="#">Новости</a></li>
-        <li><a class="nav-link" href="#">Прайс-лист</a></li>
-        <li><a class="site-navigation-current" href="#">Магазин</a></li>
-        <li><a class="nav-link" href="#">контакты</a></li>
-      </ul>
-      <ul class="user-navigation">
-        <li>
-          <a class="login-link" href="">Войти</a>
-        </li>
-      </ul>
+      <div class="main-navigation-wrapper">
+        <div class="container">
+          <ul class="site-navigation">
+            <li><a class="nav-link" href="#">Информация</a></li>
+            <li><a class="nav-link" href="#">Новости</a></li>
+            <li><a class="nav-link" href="#">Прайс-лист</a></li>
+            <li><a class="site-navigation-current" href="#">Магазин</a></li>
+            <li><a class="nav-link" href="#">контакты</a></li>
+          </ul>
+          <ul class="user-navigation">
+            <li>
+              <a class="login-link" href="">Войти</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
         
   </header>
-  <main>
+  <main class="container">
     <h1>      Барбершоп "Бородинский"    </h1>
     <section>
       <h2>Преимущества</h2>
@@ -126,23 +131,25 @@
     </div> 
   </main>
   <footer class="main-footer">
-              <p class="footer-contacts">
-            БАРБЕРШОП "БОРОДИНСКИЙ"<br>
-            Адрес: г. Ярославль, Б. Конюшенная, д19.<br>
-            Телефон: +7 (8452) 79-66-02
-        </p>
-        <div class="footer-social"> 
-            <p> Давайте дружить!</p> 
-            <ul class="user-navigation">
-                <li><a class="social-button" href="#">Вконтакте</a></li>
-                <li><a class="social-button" href="#">Фейсбук</a></li>
-                <li><a class="social-button" href="#">Инстаграм</a></li>
-            </ul>
-        </div>
-        <p class="footer-copyrigt">
-            РАЗРАБОТАНО:
-            <a href="#">HTML Academy</a>
-        </p>
+    <div class="container">
+            <p class="footer-contacts">
+          БАРБЕРШОП "БОРОДИНСКИЙ"<br>
+          Адрес: г. Ярославль, Б. Конюшенная, д19.<br>
+          Телефон: +7 (8452) 79-66-02
+      </p>
+      <div class="footer-social"> 
+          <p> Давайте дружить!</p> 
+          <ul class="user-navigation">
+              <li><a class="social-button" href="#">Вконтакте</a></li>
+              <li><a class="social-button" href="#">Фейсбук</a></li>
+              <li><a class="social-button" href="#">Инстаграм</a></li>
+          </ul>
+      </div>
+      <p class="footer-copyrigt">
+          РАЗРАБОТАНО:
+          <a href="#">HTML Academy</a>
+      </p>
+    </div>
   </footer>
   <section class="modal modal-login">
       <h2>Личный кабинет</h2>
