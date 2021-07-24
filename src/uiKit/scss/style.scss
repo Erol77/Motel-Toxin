@@ -1,7 +1,10 @@
 // @import 'fonts';
 @import 'btn';
-$dark-shade5:rgba(31, 32, 65, 0.05);
+$dark-shade:rgba(31, 32, 65, 1);
+$dark-shade75:rgba(31, 32, 65, 0.75);
+$dark-shade50:rgba(31, 32, 65, 0.5);
 $dark-shade25:rgba(31, 32, 65, 0.25);
+$dark-shade5:rgba(31, 32, 65, 0.05);
 
 body {
     margin: 0;
@@ -11,8 +14,8 @@ body {
     font-size: 14px;
     line-height: 24px;
     font-weight: 400;
-    color: $dark-shade25;
-   background-color:$dark-shade5;
+    color: $dark-shade75;
+//    background-color:$dark-shade5;
 }
 img {
     max-width: 100%;
