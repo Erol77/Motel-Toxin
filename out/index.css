@@ -1,6 +1,26 @@
 /*!********************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/uiKit/scss/style.scss ***!
   \********************************************************************************************************************/
+/* montserrat-regular - latin_cyrillic */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: url(dc9c0830fb34ea831853.eot);
+  /* IE9 Compat Modes */
+  src: local(""), url(dc9c0830fb34ea831853.eot?#iefix) format("embedded-opentype"), url(f263cfd0a6fa311229a6.woff2) format("woff2"), url(c1ba4359982fe0cc48ec.woff) format("woff"), url(4ff99841b08686bda3f7.ttf) format("truetype"), url(22d8566c41c8d731931b58ae64f72170.svg#Montserrat) format("svg");
+  /* Legacy iOS */ }
+
+/* montserrat-700 - latin_cyrillic */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  src: url(d7874418aba069eb92e8.eot);
+  /* IE9 Compat Modes */
+  src: local(""), url(d7874418aba069eb92e8.eot?#iefix) format("embedded-opentype"), url(e9dea54ec59e29a6913f.woff2) format("woff2"), url(082762b455a3f227e8ac.woff) format("woff"), url(6cbb516e629a7542e7a8.ttf) format("truetype"), url(fac85a3030008d30b0b8faaaa0edf48d.svg#Montserrat) format("svg");
+  /* Legacy iOS */ }
+
 .btn {
   display: inline-block;
   box-sizing: border-box;
@@ -127,19 +147,13 @@ body {
   font-size: 14px;
   line-height: 24px;
   font-weight: 400;
-  color: rgba(31, 32, 65, 0.25); }
+  color: rgba(31, 32, 65, 0.75); }
 
 img {
   max-width: 100%; }
 
 a {
   text-decoration: none; }
-
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 400;
-  src: url(22d8566c41c8d731931b58ae64f72170.svg#Montserrat) format("svg"); }
 
 .email {
   width: 320px;
@@ -156,11 +170,56 @@ a {
   border: 1px solid rgba(31, 32, 65, 0.5);
   color: rgba(31, 32, 65, 0.5); }
 
+.datetime {
+  width: 320px;
+  height: 44px;
+  background: #FFFFFF;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 15px 0 0 0; }
+
+.datedropdown {
+  width: 320px;
+  height: 44px;
+  background: #FFFFFF;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-sizing: border-box;
+  border-radius: 4px;
+  text-indent: 15px;
+  text-emphasis-style: triangle;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 18px;
+  color: rgba(31, 32, 65, 0.75);
+  background-image: none; }
+
+.form-searh-number {
+  width: 380px;
+  height: 374px;
+  left: 140px;
+  top: 150px;
+  background-color: #ffffff; }
+
+.cards {
+  width: 1448;
+  height: 1350;
+  background-color: rgba(31, 32, 65, 0.5); }
+
 .row {
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-around; }
 
 .col {
   display: flex;
   flex-direction: column; }
+
+.box {
+  width: 320px;
+  height: 44px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+  padding-left: 15px; }
 

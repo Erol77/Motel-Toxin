@@ -12,28 +12,13 @@
         <div><img class="logo" src="../src/uiKit/img/logo.svg" alt="Logotip company"><img class="logo1" src="../src/uiKit/img/TOXIN.svg" alt="TOXIN"></div>
         <div id="nav"></div>
         <div class="menu-item">Menu 1
-          <div class="submenu">Podmenu</div>
-              <div class="menu-item">О нас
-                <div class="submenu"></div>
-              </div>
-              <div class="menu-item">Услуги
-                <div class="submenu">V</div>
-              </div>
-              <div class="menu-item">Вакансии
-                <div class="submenu"></div>
-              </div>
-              <div class="menu-item">Новости
-                <div class="submenu"></div>
-              </div>
-              <div class="menu-item">Соглашения
-                <div class="submenu">V</div>
-              </div>
+          <div class="submenu">Podmenu</div><a class="menu-item">О нас<a class="submenu"></a></a><a class="menu-item">Услуги<a class="submenu">V</a></a><a class="menu-item">Вакансии<a class="submenu"></a></a><a class="menu-item">Новости<a class="submenu"></a></a><a class="menu-item">Соглашения<a class="submenu">V</a></a>
         </div>
       </div>
     </header>
-    <section>
-      <h1>Colors & Text</h1>
-      <div class="col"> 
+    <section class="row">
+      <div class="col"> </div>
+      <h1 class="colors">Colors & Text
         <div> </div>
         <div> 
           <h2>Dark Shadee 100%</h2>
@@ -69,7 +54,7 @@
           <h2>Green</h2>
           <p>&sharp;6FCF97</p>
         </div>
-      </div>
+      </h1>
       <div class="col"> 
         <div> 
           <p>H1</p>
@@ -102,8 +87,8 @@
       </div>
     </section>
     <section class="row"> 
-      <h1>Forms elements</h1>
       <div class="col"> 
+        <h1>Forms elements</h1>
         <div class="row"> 
           <h3>TEXT FIELD</h3>
           <p>DEFAULT</p>
@@ -112,44 +97,48 @@
         <div> 
           <h3>TEXT FIELD</h3>
           <p>HOVER/FOCUS</p>
-          <input type="email" name="" placeholder="This is pretty awecome">
+          <input type="email" name="hover" placeholder="This is pretty awecome">
+<input class="email" type="email" name="email" placeholder="Email">
         </div>
         <div> 
           <h3>DROPDOWN</h3>
-          <select name=""> 
+          <select class="box" name=""> 
             <option value="">Сколько гостей</option>
           </select>
         </div>
         <div> 
           <h3>MASKED TEXT FIELD</h3>
-          <input type="datetime" name="" placeholder="ДД.ММ.ГГГГ">
+<input class="datetime" type="datetime" name="datetime" placeholder="ДД.ММ.ГГГГ">
         </div>
         <div> 
           <div> 
             <h3>DATE DROPDOWN</h3>
-            <select name=""> 
-              <option value="">ДД.ММ.ГГГГ</option>
-            </select>
+            <input class="datedropdown" type="date" name="date" value="2021.08.02">
+            <option value="ДД.ММ.ГГГГ">ДД.ММ.ГГГГ</option>
           </div>
           <div> 
             <h3>DATE DROPDOWN</h3>
-            <select name=""> 
-              <option value="">19.08.2021</option>
+            <input class="datedropdown" type="date" name="date" value="2021.08.02" min="2021-07-25">
+            <select class="box" name=""> 
+              <option value="">
+                <input class="datedropdown" type="date" name="date" value="2021.08.02" min="2021-07-25" multiple>
+              </option>
             </select>
           </div>
         </div>
         <div> 
           <h3>DATE DROPDOWN</h3>
-          <select name=""> 
+          <select class="box" name=""> 
             <option value="">19 авг - 23 авг</option>
           </select>
         </div>
         <div> 
           <h3>SUBSCRIPTION TEXT FIELD</h3>
-          <input type="email" name="" placeholder="Email    &amp;#129122;">
+          <input class="box" type="email" name="email" placeholder="Email    &amp;#129122">
         </div>
       </div>
-      <div class="col"> 
+      <div class="row"> 
+        <div class="col"> </div>
         <ul> 
           <li> 
             <h3>Checkbox Buttons</h3>
@@ -223,7 +212,9 @@
             <label for="star-11" title="1"> </label>
           </div>
         </div>
-        <div> 
+      </div>
+      <div class="row"> 
+        <div class="col"> 
           <h3>Range Slider</h3>
           <p>5 000₽ - 10 000₽</p>
           <div> 
@@ -278,6 +269,8 @@
           </div>
         </div>
       </div>
+    </section>
+    <section class="row"> 
       <div class="col"> 
         <div> 
           <h3>dropdown</h3>
@@ -307,7 +300,9 @@
             </h3>
           </div>
         </div>
-        <div> 
+      </div>
+      <div class="row"> 
+        <div class="col"> 
           <h3>dropdown</h3>
           <select name=""> 
             <option value="">Сколько гостей</option>
@@ -335,7 +330,9 @@
           </div>
           <button>применить</button>
         </div>
-        <div> 
+      </div>
+      <div class="row"> 
+        <div class="col"> 
           <h3>dropdown</h3>
           <select name=""> 
             <option value="">3 гостя</option>
@@ -365,6 +362,8 @@
           <button>применить</button>
         </div>
       </div>
+    </section>
+    <section class="row"> 
       <div class="col"> 
         <div> 
           <button> 
@@ -402,7 +401,9 @@
             </li>
           </ul>
         </div>
-        <div> 
+      </div>
+      <div class="row"> 
+        <div class="col"> 
           <h3>rich Checkbox Buttons</h3>
           <ul> 
             <li> 
@@ -417,7 +418,9 @@
             </li>
           </ul>
         </div>
-        <div> 
+      </div>
+      <div class="row"> 
+        <div class="col"> 
           <h3>bullet list</h3>
           <ul> 
             <li>0: Нельзя с питомцами</li>
@@ -426,6 +429,8 @@
           </ul>
         </div>
       </div>
+    </section>
+    <section class="row"> 
       <div class="col"> 
         <div> <img src="../src/uiKit/img/insert_emoticonsmail.svg" alt="emoticonsmail">
           <h3>Комфорт</h3><br>
@@ -438,6 +443,7 @@
           <hr>
         </div>
       </div>
+      <div class="row"></div>
       <div class="col"> 
         <div> <img src="../src/uiKit/img/image_otziv.png" alt="image_otziv" width=" 48px" height="48px">
           <h3>Мурад Сарафанов</h3><br>
@@ -449,6 +455,9 @@
         </div>
       </div>
     </section>
+<section class="cards">()
+  <div class="form-searh-number"></div>
+</section>
 <footer class="footer">
   <p>Copyright текст 2021</p>
 </footer>
