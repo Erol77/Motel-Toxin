@@ -459,21 +459,26 @@
 <section class="cards">
   <h1>title cards</h1>
   <div class="modal modal-searh">
-    <h1>Найдём номера под ваши пожелания</h1>
+	<div>
+    <h1>Найдём номера под <br>ваши пожелания</h1>
     <form action="" method="post"> 
-      <label for="check-in"> 
+      <div class="row">
+	  <label for="check-in"> 
         <h3>прибытие</h3>
-        <input class="datepicker-here" id="check-in" type="text" data-position="left top" value="ДД.ММ.ГГГГ">
+        <input class="datepicker-here" id="check-in" type="text" data-position="top right" value="ДД.ММ.ГГГГ">
       </label>
       <label for="exit"> 
         <h3>выезд</h3>
-        <input class="datepicker-here" id="exit" type="text" data-position="left top" value="ДД.ММ.ГГГГ">
+        <input class="datepicker-here" id="exit" type="text" data-position="right bottom" value="ДД.ММ.ГГГГ">
       </label>
+	  </div>
       <label for="guest"> 
         <h3>гости</h3>
         <input id="guest" type="text" value="" placeholder="Сколько гостей">
       </label>
+	          <button type="submit" class="btn-4" value=""> Подобрать номер </button>
     </form>
+	</div>
   </div>
 </section>
 <footer class="footer">
