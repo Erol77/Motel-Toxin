@@ -1,0 +1,38 @@
+.modal-searh {
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+    height: 374px;
+    left: 140px;
+    top: 150px;
+    background-color:#ffffff;
+    justify-content: space-between;
+    padding: 30px 30px 40px 30px;
+     justify-content: center;
+}
+
+.modal-searh h3 {
+    margin-bottom: 0;
+}
+.datepicker-here {
+
+    width: 150px;
+    height: 44px;
+    background: #FFFFFF;
+    padding-left: 15px;
+ 
+    border: 1px solid $dark-shade25;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+.modal-searh input[type="text"] {
+
+    width: 320px;
+    height: 44px;
+    background: #FFFFFF;
+    padding-left: 15px;
+
+    border: 1px solid $dark-shade25;
+    border-radius: 4px;
+
+}

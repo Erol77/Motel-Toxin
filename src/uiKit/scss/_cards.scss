@@ -1,5 +1,8 @@
 .cards {
+    display: flex;
     width:1448;
     height:1350;
-    background-color: $dark-shade50;
+    background-color: $dark-shade5;
+    padding: 30px;
+    flex-wrap: wrap;
 }

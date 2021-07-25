@@ -17,6 +17,28 @@ body {
     color: $dark-shade75;
 //    background-color:$dark-shade5;
 }
+h1,
+h2,
+h3 {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    color: $dark-shade;
+}
+h1{
+    font-size: 24px;
+    line-height: 30px;
+}
+
+h2 {
+    font-size: 19px;
+    line-height: 24px;
+}
+
+h3 {
+    font-size: 12px;
+    line-height: 15px;
+}
+
 img {
     max-width: 100%;
 }
@@ -33,8 +55,9 @@ a {
 @import 'email';
 @import 'datetime';
 @import 'datedropdown';
-@import 'form-searh-number';
+@import 'searh';
 @import 'cards';
+@import 'datepicker';
 .row {
     display: flex;
     justify-content: space-around;

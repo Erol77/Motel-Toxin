@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <title>Заголовок страницы</title>
   <!--script(src="/js/jquery.js")-->
-  <script src="/js/scripts.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="../src/uiKit/js/datepicker.js"></script>
 <script defer src="index.bundle.js"></script><link href="index.css" rel="stylesheet"></head>
   <body>
     <header class="header1">
@@ -455,8 +456,25 @@
         </div>
       </div>
     </section>
-<section class="cards">()
-  <div class="form-searh-number"></div>
+<section class="cards">
+  <h1>title cards</h1>
+  <div class="modal modal-searh">
+    <h1>Найдём номера под ваши пожелания</h1>
+    <form action="" method="post"> 
+      <label for="check-in"> 
+        <h3>прибытие</h3>
+        <input class="datepicker-here" id="check-in" type="text" data-position="left top" value="ДД.ММ.ГГГГ">
+      </label>
+      <label for="exit"> 
+        <h3>выезд</h3>
+        <input class="datepicker-here" id="exit" type="text" data-position="left top" value="ДД.ММ.ГГГГ">
+      </label>
+      <label for="guest"> 
+        <h3>гости</h3>
+        <input id="guest" type="text" value="" placeholder="Сколько гостей">
+      </label>
+    </form>
+  </div>
 </section>
 <footer class="footer">
   <p>Copyright текст 2021</p>
