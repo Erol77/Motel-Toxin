@@ -218,7 +218,7 @@ a {
 .modal-searh {
 	display: flex;
   /* display: inline-block; */
-  flex-direction: column;
+  /* flex-direction: column; */
   flex-wrap: wrap;
   width: 380px;
   height: 374px;
@@ -252,25 +252,52 @@ a {
   border: 1px solid rgba(31, 32, 65, 0.25);
   box-sizing: border-box;
   border-radius: 4px; }
- .modal-searh label:after {
+
+ .modal-searh label,
+ .modal-forms div{
+	 position:relative;
+ }
+
+
+ .modal-searh label::after {
     content: "";
     display: inline-block;
-    width: 20px;
-    height: 44px;
-    position: relative;
+    width:24px;
+    height:24px;
+    position: absolute;
+	/* flex-wrap: wrap; */
 	 /* top: 12x; */
 		 /* vertical-align: middle; */
 	/* padding-right: 20px; */
-    /* left: -20px; */
+	top:60%;
+    left: 100%;
+	margin-left:-30px;
+	 vertical-align: middle;
+	/* bottom: 22px; */
+	/* bottom: 22px; */
+	
+	/* font-size: 24px; */
+/* line-height: 24px; */
+/* display: flex; */
+/* align-items: center; */
+/* text-align: center; */
    
     /* bottom: 20px; */
     background: url(../src/uiKit/img/expand_more2.svg) 0 0 no-repeat;
     /* background-position-x: 17px; */
 	    /* background-position-y: 17px; */
-    float: left;
+    /* float: left; */
 	/* color: #000; */
     /* 0 0 no-repeat; */
     /* background-image: url(/src/tz1/img/radio-1.png); */
+}
+.modal-forms {
+	margin-top:40px;
+	width: 320px;
+height: 304px;
+/* padding:20px; */
+margin-left:30px;
+
 }
 
 
@@ -302,10 +329,11 @@ a {
 }
 
 .btn-4{
+	display: inline-block;
             width: 320px;
 height: 44px;
      /* margin-left: 30px; */
-     margin: 30px;
+     /* margin: 20px; */
      /* padding-left: 95px; */
 font-size: 12px;
 font-weight: 700;
@@ -318,26 +346,18 @@ border: none;
  background:  linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
   border-radius: 22px;
   /* text-align-last: 	end; */
+
   
       
 
 }
 
-.btn-4 span{
-	align-items: right;
-}
-
-/* .btn-4::before{
-	content:'';
-	  background: \2192 no-repeat 12px right;
-}
- */
 
  .btn-4:hover,
   .btn-4:focus,
   .btn-4:active{
         opacity: 0.5;
-		 background: \2192 no-repeat 12px right;
+		 /* background: \2192 no-repeat 12px right; */
  }
 
 .cards {

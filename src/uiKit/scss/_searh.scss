@@ -21,7 +21,7 @@
     padding-left: 15px;
  
     border: 1px solid $dark-shade25;
-    box-sizing: border-box;
+    // box-sizing: border-box;
     border-radius: 4px;
 }
 .modal-searh input#guest {
@@ -36,26 +36,48 @@
 
 }
 
- .modal-searh label:after {
-     content: "";
-     display: inline-block;
-     width: 20px;
-     height: 44px;
-     position: relative;
-     /* top: 12x; */
-     /* vertical-align: middle; */
-     /* padding-right: 20px; */
-     /* left: -20px; */
+.modal-searh label::after {
+content: "";
+display: inline-block;
+width: 24px;
+height: 24px;
+position: absolute;
+/* flex-wrap: wrap; */
+/* top: 12x; */
+/* vertical-align: middle; */
+/* padding-right: 20px; */
+top: 60%;
+left: 100%;
+margin-left: -30px;
+vertical-align: middle;
+/* bottom: 22px; */
+/* bottom: 22px; */
 
-     /* bottom: 20px; */
-     background: url(../src/uiKit/img/expand_more2.svg) 0 0 no-repeat;
-     /* background-position-x: 17px; */
-     /* background-position-y: 17px; */
-     float: left;
-     /* color: #000; */
-     /* 0 0 no-repeat; */
-     /* background-image: url(/src/tz1/img/radio-1.png); */
- }
+/* font-size: 24px; */
+/* line-height: 24px; */
+/* display: flex; */
+/* align-items: center; */
+/* text-align: center; */
+
+/* bottom: 20px; */
+background: url(../src/uiKit/img/expand_more2.svg) 0 0 no-repeat;
+/* background-position-x: 17px; */
+/* background-position-y: 17px; */
+/* float: left; */
+/* color: #000; */
+/* 0 0 no-repeat; */
+/* background-image: url(/src/tz1/img/radio-1.png); */
+}
+
+  .modal-forms {
+      margin-top: 40px;
+      width: 320px;
+      height: 304px;
+      /* padding:20px; */
+      margin-left: 30px;
+      position: relative;
+
+  }
 
 .btn-4 {
     width: 320px;

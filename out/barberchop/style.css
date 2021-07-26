@@ -22,10 +22,29 @@ body {
 }
 img {
     max-width: 100%;
+    height: auto;
 }
 
 a {
     text-decoration: none;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="chekbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+    position: absolute;
+
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+
+    clip-path: inset(100%);
+    overflow: hidden;
 }
 
 .button {
@@ -83,13 +102,23 @@ a {
     width: 620px;
 }
 
+.site-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    width: 620px;
+
+    /* background: rgba(234, 255, 45, 0.2);
+    box-shadow: inset 0 0 0 2px rgb(234, 255, 45); */
+}
+
 .user-navigation {
     width: 140px;
 }
 .site-navigation a,
 .user-navigation a {
+    display: block;
     color: #fff;
-    padding: 20px;
+    padding: 25px 20px;
 }
 
 .site-navigation a:hover ,
