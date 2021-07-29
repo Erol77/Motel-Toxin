@@ -251,7 +251,7 @@ input[type="radio"].visually-hidden {
 }
 .index-column h2 {
 
-    font-size: 30px;
+    font-size: 24px;
     line-height: 42px;
 }
 
@@ -324,25 +324,10 @@ input[type="radio"].visually-hidden {
     position: relative;
     width: 320px;
     height: 342px;
-    /* display: flex;
-    flex-wrap: wrap; */
-    /* justify-content: center; */
-    border: 1px solid red;
 }
 
 .contacts h2 {
-/* font-weight: 400; */
-    /* letter-spacing:0; */
-    /* font-weight: lighter; */
-    /* position: relative; */
-        font-stretch: -1px;
-        /* font-variation-settings: 'wdth'70; */
-       
-    /* box-sizing:content-box;
-    width: 450px;
-    border: 1px solid black; */
-    /* text-decoration: blink;
-    font: caption; */
+    white-space:nowrap;
 }
 
 .contacts p {
