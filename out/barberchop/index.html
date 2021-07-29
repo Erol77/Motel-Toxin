@@ -25,11 +25,12 @@
           </ul>
           <ul class="user-navigation">
             <li>
-              <a class="login-link" href="">Войти</a>
+              <a class="login-link" href="login.html">Войти</a>
             </li>
           </ul>
         </div>
       </div>
+    </nav>
   </header>
   <main class="container">
     <h1 class="visually-hidden">      Барбершоп "Бородинский"    </h1>
@@ -92,21 +93,21 @@
     </div> 
     <div class="index-column">
       <section class="contacts">
-          <h2>Контактная информация</h2>
-          <p>
-              БАРБЕРШОП "БОРОДИНСКИЙ"<br>
-              Адрес: г. Ярославль, Б. Конюшенная, д19.<br>
-              Телефон: +7 (8452) 79-66-02
-          </p>
-          <p>
-              Время работы:<br>
-              пн-пт: с 10:00 до 22:00<br>
-              сб-вс: с 10:00 до 19:00
-          </p>
-          <div>
-            <a class="button" href="map.html">Как до нас добраться</a>
-            <a class="button" href="contacts.html">Обратная связь</a>
-          </div>
+        <h2>Контактная информация</h2>
+        <p>
+            БАРБЕРШОП "БОРОДИНСКИЙ"<br>
+            Адрес: г. Ярославль, Б. Конюшенная, д19.<br>
+            Телефон: +7 (8452) 79-66-02
+        </p>
+        <p>
+            Время работы:<br>
+            пн-пт: с 10:00 до 22:00<br>
+            сб-вс: с 10:00 до 19:00
+        </p>
+        
+        <a class="button btn-open-modal" href="map.html">Как проехать</a>
+        <a class="button btn-form-callbac" href="contacts.html">Обратная связь</a>
+        
       </section>
       <section class="appointment">
           <h2>Записаться</h2>
@@ -177,37 +178,48 @@
   <!-- спрятать -->
   <section class="modal modal-login">
       <h2>Личный кабинет</h2>
-      <p>Введиет свой логин и пароль</p>
+      <p class="modal-description">Введиет пожалуйста свой логин и пароль</p>
       <form class="login-form" action="" method="post">
         <p>
-          <label for="user-login">Логин</label>
-          <input type="email" name="email" id="user-login" placeholder="email@example.com">
-        </p>
-        <p class="visually-hidden">
-          <label class="visually-hidden" for="user-password">Пароль</label>
-          <input class="login-icon-password" type="password" name="password" id="user-password" placeholder="*********">
+          <label for="user-login" class="visually-hidden">Логин</label>
+          <input type="text" class="login-icon-user" name="email" id="user-login" placeholder="email@example.com">
         </p>
         <p>
-          <label for=""class="login-password-info">
-            <input type="checkbox" class="login-checkbox" name="remember" >
+          <label class="visually-hidden" for="user-password">Пароль</label>
+          <input class="login-icon-password" type="password" name="password" id="user-password" >
+        </p>
+        <!-- required -->
+        <p class="login-help">
+          <label class="login-checkbox">
+            <input type="checkbox" class="visually-hidden" name="remember" >
             <span class="checkbox-indicator"></span>
             Запомните меня
           </label>
-          <a href="#" class="restore">Я забыл пароль</a>
+          <a href="#" class="restore">Я забыл пароль!</a>
         </p>
         <button type="submit" class="button">Войти</button>
       </form>
-      <button type="button" class="modal-close">Закрыть</button>
+      <button type="button" class="modal-close">
+        <span class="visually-hidden"> Закрыть</span>
+      </button>
   </section>
 
   <section class="modal-map modal">
       <h2 class="visually-hidden">Как до нас добраться</h2>
+      <!-- <div style="position:relative;overflow:hidden;">
+        <a href="https://yandex.ru/maps/16/yaroslavl/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Ярославль</a>
+        <a href="https://yandex.ru/maps/16/yaroslavl/house/ulitsa_chkalova_80/Z0AYfgZgQUUOQFttfXpyeX5jZA==/?from=tabbar&ll=39.810809%2C57.638201&source=serp_navig&utm_medium=mapframe&utm_source=maps&z=17" style="color:#eee;font-size:12px;position:absolute;top:14px;">Улица Чкалова, 80 на карте Ярославля — Яндекс.Карты</a> -->
+        <!-- <iframe src="https://yandex.ru/map-widget/v1/-/CCUiiCsw9D" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;">
+      </iframe> -->
+    <!-- </div> -->
       <p>
-        <img src="img/map.jpg" width="700px" height="560px" alt="Офис компании по адресу: г. Ярославль, ул. Чкалова, дом 82. офис 2">
+        <img src="img/map.jpg" width="750px" height="560px" alt="Офис компании по адресу: г. Ярославль, ул. Чкалова, дом 82. офис 2">
       </p>
-    <button type="button" class="modal-close">Закрыть</button>
+    <button type="button" class="modal-close">
+      <span class="visually-hidden"> Закрыть</span>
+    </button>
   </section>
-
-
+  <script src="popup.js"></script>
+  <script src="map.js"></script>
   </body>
 </html>
