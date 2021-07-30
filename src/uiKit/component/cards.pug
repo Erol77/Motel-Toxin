@@ -2,7 +2,7 @@ section.cards
   h1 title cards
   .modal.modal-searh
     h1 Найдём номера под ваши пожелания
-    form(action="", method="post") 
+    form.form-searh(action="", method="post") 
       label(for="check-in") 
         h3 прибытие
         input#check-in.datepicker-here(
@@ -20,8 +20,8 @@ section.cards
       label(for="guest") 
         h3 гости
         input#guest(type="text", value="", placeholder="Сколько гостей")
-      button.btn(type="submit", value="Подобрать номер") Подобрать номер
-        span &#129122
+      button.btn-4(type="submit", value="") Подобрать номер
+        span 
 
 //-  type="text",
   data-range="true",

@@ -131,3 +131,44 @@
   color: #fff;
   pointer-events: none;
 }
+
+.btn-4 {
+  position: relative;
+  width: 320px;
+  height: 44px;
+  // margin-left: 20px;
+   margin-top: 20px; 
+  /* padding-left: 95px; */
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 15px;
+  font-family: Montserrat;
+  text-align: center;
+  font-style: normal;
+  color: white;
+  border: none;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  border-radius: 22px;
+  /* text-align-last: 	end; */
+  // background: \2192 no-repeat 12px right;
+  text-transform: uppercase;
+
+}
+
+.btn-4:hover,
+.btn-4:focus,
+.btn-4:active {
+  opacity: 0.5;
+}
+
+.btn-4::after {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 22px;
+  background: url(../img/arrow_forward.svg) no-repeat;
+  background-position:right;
+  margin-top: -2px;
+  vertical-align: middle;
+  margin-left:40px;
+}
