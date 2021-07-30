@@ -1132,6 +1132,10 @@ input[type="radio"].visually-hidden {
   padding: 20px 30px 30px 30px;
   margin-top: 40px; }
 
+.form-registration h3 {
+  margin-bottom: 5px;
+  text-transform: uppercase; }
+
 .form-registration input[type="text"],
 .form-registration input[type="email"],
 .form-registration input[type="password"] {
@@ -1143,11 +1147,93 @@ input[type="radio"].visually-hidden {
   border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 4px; }
 
-.form-registration label:nth-child(2) {
-  margin-bottom: 5px; }
+.form-registration h3:first-of-type {
+  margin-top: 20px; }
 
 .form-registration {
   position: relative; }
+
+.form-registration input[type="radio"] + label {
+  margin-bottom: 10px;
+  padding-left: 40px;
+  cursor: pointer;
+  position: relative; }
+
+.form-registration input[type="radio"] + label::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  left: 5px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 20px;
+  margin-right: 20px;
+  top: -3px; }
+
+.form-registration input[type="radio"] + label::after {
+  content: none; }
+
+.form-registration input[type="radio"]:checked + label::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+  left: 10px;
+  top: 2px;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  border-radius: 12px; }
+
+.form-registration input[type="radio"]:checked + label::before {
+  content: "";
+  border: 1px solid #BC9CFF; }
+
+.form-registration input[type="checkbox"] + label {
+  padding-left: 50px;
+  cursor: pointer;
+  position: relative; }
+
+.form-registration input[type="checkbox"] + label::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  height: 20px;
+  width: 40px;
+  left: 5px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 20px;
+  margin-right: 20px;
+  top: -3px; }
+
+.form-registration input[type="checkbox"] + label::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+  left: 10px;
+  top: 2px;
+  background: rgba(31, 32, 65, 0.25);
+  border-radius: 12px; }
+
+.form-registration input[type="checkbox"]:checked + label::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+  left: 30px;
+  top: 2px;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  border-radius: 12px; }
+
+.form-registration input[type="checkbox"]:checked + label::before {
+  content: "";
+  border: 1px solid #BC9CFF; }
+
+.form-registration input::-webkit-input-placeholder {
+  color: rgba(31, 32, 65, 0.25); }
 
 input:hover:focus {
   border-color: rgba(31, 32, 65, 0.5); }

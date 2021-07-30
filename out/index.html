@@ -481,16 +481,16 @@
   <form class="form-registration" action="" method="post"> 
     <input type="text" name="first-name" placeholder="Имя">
     <input type="text" name="last-name" placeholder="Фамилия">
-    <input id="man" type="radio" name="human" value="man">
+    <input class="visually-hidden" id="man" type="radio" name="human" value="man" checked>
     <label for="man">Мужчина</label>
-    <input id="woman" type="radio" name="human" value="woman" checked>
+    <input class="visually-hidden" id="woman" type="radio" name="human" value="woman">
     <label for="woman">Женщина</label>
     <h3>дата рождения</h3>
     <input class="datepicker-here" id="birthday" type="text" data-position="right top" value="ДД.ММ.ГГГГ">
     <h3>данные для входа в сервис</h3>
     <input type="email" name="email" placeholder="Email">
     <input type="password" name="password" placeholder="Пароль">
-    <input id="special-offers" type="checkbox">
+    <input class="visually-hidden" id="special-offers" type="checkbox">
     <label for="special-offers">Получать спецпредложения</label>
     <button class="btn-4" type="submit" value="">перейти к оплате</button>
   </form>
