@@ -1,28 +1,7 @@
 section.cards
   h1 title cards
-  .modal.modal-searh
-    h1 Найдём номера под ваши пожелания
-    form.form-searh(action="", method="post") 
-      label(for="check-in") 
-        h3 прибытие
-        input#check-in.datepicker-here(
-          type="text",
-          data-position="left top",
-          value="ДД.ММ.ГГГГ"
-        )
-      label(for="exit") 
-        h3 выезд
-        input#exit.datepicker-here(
-          type="text",
-          data-position="left top",
-          value="ДД.ММ.ГГГГ"
-        )
-      label(for="guest") 
-        h3 гости
-        input#guest(type="text", value="", placeholder="Сколько гостей")
-      button.btn-4(type="submit", value="") Подобрать номер
-        span 
-
+  include ./form-searh.pug
+  include ./form-registration.pug
 //-  type="text",
   data-range="true",
   data-multiple-dates-separator=" - "

@@ -1125,3 +1125,30 @@ input[type="radio"].visually-hidden {
   clip-path: inset(100%);
   overflow: hidden; }
 
+.modal-registration {
+  width: 380px;
+  height: 646 374px;
+  background-color: #ffffff;
+  padding: 20px 30px 30px 30px;
+  margin-top: 40px; }
+
+.form-registration input[type="text"],
+.form-registration input[type="email"],
+.form-registration input[type="password"] {
+  width: 300px;
+  height: 40px;
+  background: #FFFFFF;
+  padding-left: 15px;
+  margin-bottom: 10px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px; }
+
+.form-registration label:nth-child(2) {
+  margin-bottom: 5px; }
+
+.form-registration {
+  position: relative; }
+
+input:hover:focus {
+  border-color: rgba(31, 32, 65, 0.5); }
+

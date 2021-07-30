@@ -1,0 +1,23 @@
+.modal.modal-registration
+  h1 Регистрация аккаунта
+  form.form-registration(action="", method="post") 
+    input(type="text", name="first-name", placeholder="Имя")
+    input(type="text", name="last-name", placeholder="Фамилия")
+    input#man(type="radio", name="human", value="man", checked)
+    label(for="man") Мужчина
+    input#woman(type="radio", name="human", value="woman")
+    label(for="woman") Женщина
+    h3 дата рождения
+    input#birthday.datepicker-here(
+      type="text",
+      data-position="right top",
+      value="ДД.ММ.ГГГГ"
+    )
+    h3 данные для входа в сервис
+    input(type="email", name="email", placeholder="Email")
+    input(type="password", name="password", placeholder="Пароль")
+    input#special-offers(type="checkbox")
+    label(for="special-offers") Получать спецпредложения
+    button.btn-4(type="submit", value="") перейти к оплате
+  p Уже есть аккаунт на Toxin
+    a.btn-2(src="login.html") войти

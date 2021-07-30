@@ -458,24 +458,44 @@
     </section>
 <section class="cards">
   <h1>title cards</h1>
-  <div class="modal modal-searh">
-    <h1>Найдём номера под ваши пожелания</h1>
-    <form class="form-searh" action="" method="post"> 
-      <label for="check-in"> 
-        <h3>прибытие</h3>
-        <input class="datepicker-here" id="check-in" type="text" data-position="left top" value="ДД.ММ.ГГГГ">
-      </label>
-      <label for="exit"> 
-        <h3>выезд</h3>
-        <input class="datepicker-here" id="exit" type="text" data-position="left top" value="ДД.ММ.ГГГГ">
-      </label>
-      <label for="guest"> 
-        <h3>гости</h3>
-        <input id="guest" type="text" value="" placeholder="Сколько гостей">
-      </label>
-      <button class="btn-4" type="submit" value="">Подобрать номер<span> </span></button>
-    </form>
-  </div>
+<div class="modal modal-searh">
+  <h1>Найдём номера под ваши пожелания</h1>
+  <form class="form-searh" action="" method="post"> 
+    <label for="check-in"> 
+      <h3>прибытие</h3>
+      <input class="datepicker-here" id="check-in" type="text" data-position="right top" value="ДД.ММ.ГГГГ">
+    </label>
+    <label for="exit"> 
+      <h3>выезд</h3>
+      <input class="datepicker-here" id="exit" type="text" data-position="left top" value="ДД.ММ.ГГГГ">
+    </label>
+    <label for="guest"> 
+      <h3>гости</h3>
+      <input id="guest" type="text" value="" placeholder="Сколько гостей">
+    </label>
+    <button class="btn-4" type="submit" value="">Подобрать номер<span> </span></button>
+  </form>
+</div>
+<div class="modal modal-registration">
+  <h1>Регистрация аккаунта</h1>
+  <form class="form-registration" action="" method="post"> 
+    <input type="text" name="first-name" placeholder="Имя">
+    <input type="text" name="last-name" placeholder="Фамилия">
+    <input id="man" type="radio" name="human" value="man">
+    <label for="man">Мужчина</label>
+    <input id="woman" type="radio" name="human" value="woman" checked>
+    <label for="woman">Женщина</label>
+    <h3>дата рождения</h3>
+    <input class="datepicker-here" id="birthday" type="text" data-position="right top" value="ДД.ММ.ГГГГ">
+    <h3>данные для входа в сервис</h3>
+    <input type="email" name="email" placeholder="Email">
+    <input type="password" name="password" placeholder="Пароль">
+    <input id="special-offers" type="checkbox">
+    <label for="special-offers">Получать спецпредложения</label>
+    <button class="btn-4" type="submit" value="">перейти к оплате</button>
+  </form>
+  <p>Уже есть аккаунт на Toxin<a class="btn-2" src="login.html">войти</a></p>
+</div>
 </section>
 <footer class="footer">
   <p>Copyright текст 2021</p>
