@@ -1,0 +1,47 @@
+.modal.modal-order
+  ul.modal-order-title 
+    li 
+      h1 №888
+      span люкс
+    li 
+      p 9 990₽
+      span в сутки
+  form.form-order(action="", method="post") 
+    label(for="") 
+      h3 прибытие
+      input.datepicker-here(
+        type="text",
+        data-position="right top",
+        value="date"
+      )
+    label(for="") 
+      h3 выезд
+      input.datepicker-here(
+        type="text",
+        data-position="left top",
+        value="date+3"
+      )
+    label(for="") 
+      h3 гости
+      input(type="text", value="3 гостя", placeholder="Сколько гостей")
+    ul.modal-order-price 
+      li 
+        p 9 990₽ х 4 суток
+      li 
+        p 39 960₽
+      li 
+        p Сбор за услуги:
+        span скидка 2 179₽
+      li 
+        p 0₽
+      li 
+        p Сбор за дополнительные услуги
+      li 
+        p 300₽
+      li 
+        h1 Итого
+      li 
+        h1 38 081₽
+
+    button.btn-4(type="submit", value="") забронировать
+  //- .modal-order-price 

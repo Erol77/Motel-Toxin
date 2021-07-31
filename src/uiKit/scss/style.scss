@@ -96,8 +96,8 @@ input[type="radio"].visually-hidden {
     overflow: hidden;
 }
 @import 'registration';
-input:hover{
-    &:focus{
-        border-color: $dark-shade50;
-    }
+@import 'order';
+input:hover,
+input:focus{
+    border-color: $dark-shade50;
 }
