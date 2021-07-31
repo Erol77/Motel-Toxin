@@ -1279,13 +1279,6 @@ input[type="radio"].visually-hidden {
   position: relative;
   list-style: none; }
 
-.modal-order-total ul {
-  display: flex;
-  flex-direction: column; }
-
-.modal-order li {
-  display: inline-block; }
-
 .modal-order-title li:nth-child(3) h3 {
   color: #BC9CFF; }
 
@@ -1308,6 +1301,7 @@ input[type="radio"].visually-hidden {
   height: 40px;
   background: #FFFFFF;
   padding-left: 15px;
+  margin-bottom: 10px;
   border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 4px; }
 
@@ -1315,8 +1309,7 @@ input[type="radio"].visually-hidden {
   float: right; }
 
 .modal-order-form label:nth-child(3) input {
-  width: 300px;
-  margin-bottom: 10px; }
+  width: 300px; }
 
 .modal-order-form label::after {
   content: "";
@@ -1338,10 +1331,16 @@ input[type="radio"].visually-hidden {
   display: inline-block; }
 
 .modal-order-price li {
-  margin-top: 25px; }
+  margin-top: 20px; }
 
 .modal-order p {
-  margin: 5px 0; }
+  margin: 10px 0; }
+
+ul.modal-order-total-price {
+  text-align: right; }
+
+.modal-order-price li:first-child h3 {
+  color: rgba(31, 32, 65, 0.5); }
 
 input:hover,
 input:focus {
