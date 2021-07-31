@@ -3,43 +3,59 @@
     height: 512px;
     background-color: #ffffff;
     padding: 20px 30px 30px 30px;
-    margin-top: 40px;        
+    margin-top: 40px;      
+    
+    left: 460px;
+    top: -1100px;
+    position: relative;
+}
+
+.modal-order .conteiner {
+    display: flex;
+    justify-content: space-between;
 }
 
 .modal-order ul{
+    padding: 0;
+    margin: 0;
+    position: relative;
+
     list-style: none;
+}
+.modal-order-total ul{
+    display: flex;
+    flex-direction: column;
+}
+.modal-order li {
+   display: inline-block;
+    // margin-top: 10px;
+}
+.modal-order-title li:nth-child(3) h3{
+    color: #BC9CFF;
 }
 // .modal-order h1 {
 //     margin-bottom: 0;
 // }
 
-.form-order h3 {
+.modal-order-form h3 {
     margin-bottom: 5px;
     text-transform: uppercase;
 }
 
-.form-order h3:first-of-type {
-    margin-top: 20px;
-}
-
-.form-order {
-    position: relative;
-}
-.form-order label {
-    display: inline-block;
-    margin-top: 10px;
-}
-.modal-order-price {
-    position: relative;
-}
-
-.modal-order-price li{
-    display: inline-block;
+.modal-order-form h3:first-of-type {
     margin-top: 10px;
 }
 
+.modal-order-form {
+    position: relative;
+}
+.modal-order-form label {
+    display: inline-block;
+    // margin-top: 10px;
+}
 
-.form-order input[type="text"] {
+
+.modal-order-form input[type="text"] {
     display: inline-block;
     width: 130px;
     height: 40px;
@@ -51,16 +67,16 @@
     border-radius: 4px;
 }
 
-.form-order label:nth-child(2) {
+.modal-order-form label:nth-child(2) {
     float: right;
 }
 
-.form-order label:nth-child(3) input {
+.modal-order-form label:nth-child(3) input {
     width: 300px;
     margin-bottom: 10px;
 }
 
-.form-order label::after {
+.modal-order-form label::after {
     content: "";
     // display: inline-block;
     width: 24px;
@@ -74,4 +90,22 @@
     background-image: url(../img/expand_more2.svg);
     background-repeat: no-repeat;
     background-position: 0;
+}
+
+.modal-order-total-price li p {
+    text-align: right;
+}
+
+.modal-order-title li,
+.modal-order-price li {
+    display: inline-block;
+
+}
+
+.modal-order-price li {
+    margin-top: 25px;
+}
+
+.modal-order p {
+    margin: 5px 0;
 }
