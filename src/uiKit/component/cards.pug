@@ -3,6 +3,14 @@ section.cards
   include ./form-searh.pug
   include ./form-registration.pug
   include ./form-order.pug
+  include ./login.pug
+  .datepicker-here
+  input.datepicker-here(
+    type="text",
+    data-position="right top",
+    value="ДД.ММ.ГГГГ",
+    inline
+  )
 //-  type="text",
   data-range="true",
   data-multiple-dates-separator=" - "

@@ -16,8 +16,7 @@
     h3 данные для входа в сервис
     input(type="email", name="email", placeholder="Email")
     input(type="password", name="password", placeholder="Пароль")
-    input#special-offers.visually-hidden(type="checkbox")
-    label(for="special-offers") Получать спецпредложения
+    include ./toggle/toggle.pug
     button.btn-4(type="submit", value="") перейти к оплате
   p Уже есть аккаунт на Toxin
     button.btn-2 войти

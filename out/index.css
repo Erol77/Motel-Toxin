@@ -46,7 +46,7 @@
   display: inline-block;
   box-sizing: border-box;
   padding: 0 13px;
-  margin: 0 15px 15px 0;
+  margin: 15px 0;
   /*20px)*/
   outline: none;
   border: none;
@@ -144,7 +144,7 @@
   position: relative;
   width: 320px;
   height: 44px;
-  margin-top: 20px;
+  margin: 15px 0;
   /* padding-left: 95px; */
   font-size: 12px;
   font-weight: 700;
@@ -233,17 +233,26 @@ img {
 a {
   text-decoration: none; }
 
-.email {
-  width: 320px;
-  height: 44px;
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 300px;
+  height: 40px;
   background: #FFFFFF;
+  padding-left: 15px;
+  margin: 5px 0;
   border: 1px solid rgba(31, 32, 65, 0.25);
-  box-sizing: border-box;
-  border-radius: 4px;
-  padding: 15px; }
+  border-radius: 4px; }
 
-.email input:hover,
-.email input:focus {
+input::-webkit-input-placeholder {
+  color: rgba(31, 32, 65, 0.25); }
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="password"]:hover,
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
   content: '';
   border: 1px solid rgba(31, 32, 65, 0.5);
   color: rgba(31, 32, 65, 0.5); }
@@ -283,6 +292,9 @@ a {
 .modal-searh h1 {
   margin-bottom: 0; }
 
+.form-searh {
+  position: relative; }
+
 .form-searh h3 {
   margin-bottom: 5px;
   text-transform: uppercase; }
@@ -295,8 +307,8 @@ a {
   display: inline-block;
   width: 130px;
   height: 40px;
-  background: #FFFFFF;
   padding-left: 15px;
+  margin: 0;
   border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 4px; }
 
@@ -318,9 +330,6 @@ a {
   background-image: url(e85954bc6e43e8dff6e057cce6ab769e.svg);
   background-repeat: no-repeat;
   background-position: 0; }
-
-.form-searh {
-  position: relative; }
 
 .cards {
   width: 1448;
@@ -447,14 +456,15 @@ a {
 .datepicker--cell.-selected- {
   color: #fff;
   border: none;
-  background: #5cc4ef; }
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  border-radius: 20px; }
 
 .datepicker--cell.-selected-.-current- {
   color: #fff;
   background: #5cc4ef; }
 
 .datepicker--cell.-selected-.-focus- {
-  background: #45bced; }
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%); }
 
 .datepicker--cell:empty {
   cursor: default; }
@@ -469,7 +479,7 @@ a {
   margin: 8px 0 3px; }
 
 .datepicker--day-name {
-  color: #FF9A19;
+  color: #BC9CFF;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -562,7 +572,8 @@ a {
   font-family: Tahoma, sans-serif;
   font-size: 14px;
   color: #4a4a4a;
-  width: 250px;
+  width: 320px;
+  height: 369px;
   position: absolute;
   left: -100000px;
   opacity: 0;
@@ -1160,28 +1171,15 @@ input[type="radio"].visually-hidden {
   margin-bottom: 5px;
   text-transform: uppercase; }
 
-.form-registration input[type="text"],
-.form-registration input[type="email"],
-.form-registration input[type="password"] {
-  width: 300px;
-  height: 40px;
-  background: #FFFFFF;
-  padding-left: 15px;
-  margin-bottom: 10px;
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  border-radius: 4px; }
-
-.form-registration h3:first-of-type {
-  margin-top: 20px; }
-
 .form-registration {
   position: relative; }
 
 .form-registration input[type="radio"] + label {
-  margin-bottom: 10px;
+  margin: 5px 0px;
   padding-left: 40px;
   cursor: pointer;
-  position: relative; }
+  position: relative;
+  display: inline-block; }
 
 .form-registration input[type="radio"] + label::before {
   content: "";
@@ -1256,9 +1254,6 @@ input[type="radio"].visually-hidden {
   content: "";
   border: 1px solid #BC9CFF; }
 
-.form-registration input::-webkit-input-placeholder {
-  color: rgba(31, 32, 65, 0.25); }
-
 .modal-order {
   width: 380px;
   height: 512px;
@@ -1301,6 +1296,7 @@ input[type="radio"].visually-hidden {
   height: 40px;
   background: #FFFFFF;
   padding-left: 15px;
+  margin: 0;
   margin-bottom: 10px;
   border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 4px; }
@@ -1351,7 +1347,7 @@ ul.modal-order-total-price {
   color: rgba(31, 32, 65, 0.25);
   width: 20px;
   height: 20px;
-  margin-left: -101px;
+  margin-left: -111px;
   margin-top: -35px;
   vertical-align: middle; }
 
@@ -1363,7 +1359,7 @@ ul.modal-order-total-price {
   width: 20px;
   border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 20px;
-  margin-left: -95px; }
+  margin-left: -105px; }
 
 .point {
   width: 182px;
@@ -1373,7 +1369,67 @@ ul.modal-order-total-price {
 .modal-order-form button {
   margin-top: 0px; }
 
+.modal-order-total-price li:first-child::before,
+.modal-order-total-price li:first-child::after {
+  display: none; }
+
+form.modal-order-form h2 {
+  margin-top: 10px; }
+
+.modal-login {
+  width: 380px;
+  height: 358px;
+  background-color: #ffffff;
+  padding: 20px 30px 30px 30px;
+  margin-top: 40px;
+  left: 460px;
+  top: -1100px;
+  position: relative; }
+
 input:hover,
 input:focus {
   border-color: rgba(31, 32, 65, 0.5); }
+
+.toggle input[type="checkbox"] + label {
+  padding-left: 50px;
+  cursor: pointer;
+  position: relative; }
+
+.toggle input[type="checkbox"] + label::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  height: 20px;
+  width: 40px;
+  left: 5px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 20px;
+  margin-right: 20px;
+  top: -3px; }
+
+.toggle input[type="checkbox"] + label::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+  left: 10px;
+  top: 2px;
+  background: rgba(31, 32, 65, 0.25);
+  border-radius: 12px; }
+
+.toggle input[type="checkbox"]:checked + label::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+  left: 30px;
+  top: 2px;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  border-radius: 12px; }
+
+.toggle input[type="checkbox"]:checked + label::before {
+  content: "";
+  border: 1px solid #BC9CFF; }
 

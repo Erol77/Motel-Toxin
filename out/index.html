@@ -168,14 +168,12 @@
         </div>
         <div> 
           <h3>Toggle</h3>
-          <label for=""> 
-            <input type="checkbox" checked><span> </span>
-            <p>Получать спецпредложения</p>
-          </label>
-          <label for=""> 
-            <input type="checkbox"><span> </span>
-            <p>Получать спецпредложения</p>
-          </label>
+          <div class="toggle">
+            <input type="checkbox" checked>
+            <label for="">Получать спецпредложения</label>
+          </div>
+          <input class="toggle" id="nehul" type="checkbox">
+          <label class="toggle" for="nehul">Получать спецпредложения</label>
         </div>
         <div> 
           <h3>like button</h3>
@@ -249,11 +247,11 @@
               <button>CLICK ME</button>
               <button>CLICK ME</button>
               <input type="button" value="CLICK ME">
-              <input type="button" value="CLICK ME">
+              <input class="btn-3" type="button" value="CLICK ME">
             </div>
-            <div> <a href="#">перейти к оплате &#129122</a>
-              <button>перейти к оплате &#129122</button>
-              <input type="button" value="перейти к оплате &amp;#129122">
+            <div> <a class="btn-4" href="#">перейти к оплате &#129122</a>
+              <button class="btn-4">перейти к оплате &#129122</button>
+              <input class="btn-4" type="button" value="перейти к оплате &amp;#129122">
             </div>
           </div>
           <div> 
@@ -490,8 +488,8 @@
     <h3>данные для входа в сервис</h3>
     <input type="email" name="email" placeholder="Email">
     <input type="password" name="password" placeholder="Пароль">
-    <input class="visually-hidden" id="special-offers" type="checkbox">
-    <label for="special-offers">Получать спецпредложения</label>
+<input class="visually-hidden toggle" id="toggle-n" type="checkbox">
+<label class="toggle" for="toggle-n">Получать спецпредложения</label>
     <button class="btn-4" type="submit" value="">перейти к оплате</button>
   </form>
   <p>Уже есть аккаунт на Toxin
@@ -565,6 +563,19 @@
     <button class="btn-4" type="submit" value="">забронировать</button>
   </form>
 </div>
+<div class="modal modal-login"> 
+  <form>
+    <h1>Войти</h1>
+    <input type="email" name="email" placeholder="Email">
+    <input type="password" name="password" placeholder="Пароль">
+    <button class="btn-4" type="submit" value="">войти</button>
+  </form>
+  <p>Нет аккаунта на Toxin?
+    <button class="btn-2">создать</button>
+  </p>
+</div>
+  <div class="datepicker-here"></div>
+  <input class="datepicker-here" type="text" data-position="right top" value="ДД.ММ.ГГГГ" inline>
 </section>
 <footer class="footer">
   <p>Copyright текст 2021</p>

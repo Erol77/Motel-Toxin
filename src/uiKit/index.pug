@@ -139,14 +139,13 @@ html(lang="ru")
             input#women(type="radio", name="huiz", text="value")
         div 
           h3 Toggle
-          label(for="") 
+          .toggle
             input(type="checkbox", checked)
-            span 
-            p Получать спецпредложения
-          label(for="") 
-            input(type="checkbox")
-            span 
-            p Получать спецпредложения
+            label(for="") Получать спецпредложения
+
+          input#nehul.toggle(type="checkbox")
+          label.toggle(for="nehul") Получать спецпредложения
+
         div 
           h3 like button
           div 
@@ -240,11 +239,11 @@ html(lang="ru")
               button CLICK ME
               button CLICK ME
               input(type="button", value="CLICK ME")
-              input(type="button", value="CLICK ME")
+              input.btn-3(type="button", value="CLICK ME")
             div 
-              a(href="#") перейти к оплате &#129122
-              button перейти к оплате &#129122
-              input(type="button", value="перейти к оплате &#129122") 
+              a.btn-4(href="#") перейти к оплате &#129122
+              button.btn-4 перейти к оплате &#129122
+              input.btn-4(type="button", value="перейти к оплате &#129122") 
           div 
             h3 pagination
             div 

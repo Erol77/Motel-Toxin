@@ -133,7 +133,9 @@
 .datepicker--cell.-selected- {
     color: #fff;
     border: none;
-    background: #5cc4ef;
+    
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    border-radius: 20px;
 }
 
 .datepicker--cell.-selected-.-current- {
@@ -142,7 +144,7 @@
 }
 
 .datepicker--cell.-selected-.-focus- {
-    background: #45bced;
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
 }
 
 .datepicker--cell:empty {
@@ -160,7 +162,7 @@
 }
 
 .datepicker--day-name {
-    color: #FF9A19;
+    color: #BC9CFF;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
@@ -271,7 +273,8 @@
     font-family: Tahoma, sans-serif;
     font-size: 14px;
     color: #4a4a4a;
-    width: 250px;
+    width: 320px;
+    height: 369px;
     position: absolute;
     left: -100000px;
     opacity: 0;

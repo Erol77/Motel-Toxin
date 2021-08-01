@@ -53,7 +53,8 @@ a {
 //     font-weight: 400;
 //     src: url('../../../fonts/montserrat-v15-latin_cyrillic-regular.svg#Montserrat') format('svg');
 // }
-@import 'email';
+@import 'email-password';
+// @import 'email';
 @import 'datetime';
 @import 'datedropdown';
 @import 'searh';
@@ -97,7 +98,11 @@ input[type="radio"].visually-hidden {
 }
 @import 'registration';
 @import 'order';
+@import 'login';
 input:hover,
 input:focus{
     border-color: $dark-shade50;
+}
+.toggle {
+    @import "../component/toggle/toggle";
 }
