@@ -132,6 +132,22 @@
   pointer-events: none;
 }
 
+.btn-3 {
+  /* width: 99px; #1F2041
+height: 44px; */
+  margin: 0 20px;
+  /* margin-top: -5px; */
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 15px;
+  font-family: Montserrat;
+  text-align: center;
+  font-style: normal;
+  color: #BC9CFF;
+  border: none;
+  text-transform: uppercase;
+}
+
 .btn-4 {
   position: relative;
   width: 320px;
@@ -153,6 +169,12 @@
   // background: \2192 no-repeat 12px right;
   text-transform: uppercase;
 
+}
+
+.btn-3:hover,
+.btn-3:focus,
+.btn-3:active {
+  color: rgba(31, 32, 65, 0.5);
 }
 
 .btn-4:hover,

@@ -140,6 +140,21 @@
   color: #fff;
   pointer-events: none; }
 
+.btn-3 {
+  /* width: 99px; #1F2041
+height: 44px; */
+  margin: 0 20px;
+  /* margin-top: -5px; */
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 15px;
+  font-family: Montserrat;
+  text-align: center;
+  font-style: normal;
+  color: #BC9CFF;
+  border: none;
+  text-transform: uppercase; }
+
 .btn-4 {
   position: relative;
   width: 320px;
@@ -158,6 +173,11 @@
   border-radius: 22px;
   /* text-align-last: 	end; */
   text-transform: uppercase; }
+
+.btn-3:hover,
+.btn-3:focus,
+.btn-3:active {
+  color: rgba(31, 32, 65, 0.5); }
 
 .btn-4:hover,
 .btn-4:focus,
@@ -1432,4 +1452,54 @@ input:focus {
 .toggle input[type="checkbox"]:checked + label::before {
   content: "";
   border: 1px solid #BC9CFF; }
+
+.position {
+  left: 980px;
+  top: -2010px;
+  position: relative;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  width: 320px;
+  height: 369px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+  .position a {
+    margin-top: -45px; }
+
+.modal-room {
+  position: relative;
+  width: 270px;
+  height: 257px;
+  left: 980px;
+  top: -1950px;
+  background: #FFFFFF;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  border-radius: 4px; }
+  .modal-room .conteiner {
+    display: flex;
+    justify-content: space-between; }
+  .modal-room ul {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    list-style: none; }
+  .modal-room li {
+    display: inline-block; }
+  .modal-room .room-parametr {
+    width: 233px;
+    height: 33px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    .modal-room .room-parametr h1 {
+      margin: 10px; }
+  .modal-room hr {
+    border: none;
+    width: 233px;
+    color: rgba(31, 32, 65, 0.05);
+    background-color: rgba(31, 32, 65, 0.05);
+    height: 1px; }
+  .modal-room .room-rating {
+    padding-left: 20px;
+    text-align: right; }
 

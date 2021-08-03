@@ -1,0 +1,50 @@
+.modal-room {
+    position: relative;
+    width: 270px;
+    height: 257px;
+    left: 980px;
+    top: -1950px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+    border-radius: 4px;
+    .conteiner {
+        display: flex;
+        justify-content: space-between;
+    }
+    ul{
+        padding: 0;
+        margin: 0;
+        position: relative;
+        list-style: none;
+    }
+    li {
+            display: inline-block;
+    }
+    .room-parametr{
+        width: 233px;
+        height: 33px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        h1{
+            margin: 10px;
+        }
+
+    } 
+    hr{
+        border: none;
+        width: 233px;
+        color: $dark-shade5;
+        background-color:$dark-shade5;
+        height: 1px;
+        // justify-content:center
+        // align-content: stretch;
+    }
+    .room-rating{
+        padding-left: 20px;
+        text-align: right;
+
+    }
+}

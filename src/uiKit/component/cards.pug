@@ -4,13 +4,9 @@ section.cards
   include ./form-registration.pug
   include ./form-order.pug
   include ./login.pug
-  .datepicker-here
-  input.datepicker-here(
-    type="text",
-    data-position="right top",
-    value="ДД.ММ.ГГГГ",
-    inline
-  )
+  include ./calendar.pug
+  include ./motel-room.pug
+
 //-  type="text",
   data-range="true",
   data-multiple-dates-separator=" - "
