@@ -1505,7 +1505,8 @@ input:focus {
 
 .header {
   height: 70px;
-  padding: 0 140px;
+  position: relative;
+  margin-bottom: 40px;
   background: #FFFFFF;
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05); }
 
@@ -1517,7 +1518,8 @@ input:focus {
   display: flex;
   justify-content: space-between;
   min-width: 400px;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  margin: 0 140px; }
   .nav .btn-2 {
     width: 87px;
     height: 34px;
@@ -1538,10 +1540,22 @@ input:focus {
 
 .nav-menu a {
   color: rgba(31, 32, 65, 0.5);
-  font: inherit;
-  margin-top: 20px; }
+  font: inherit; }
 
 .nav-menu li:first-child {
   color: rgba(31, 32, 65, 0.75);
   font-weight: 700; }
+
+.vl {
+  border-left: 1px solid rgba(31, 32, 65, 0.1);
+  height: 30px;
+  vertical-align: middle; }
+
+.nav-menu-loginned {
+  margin-top: 10px; }
+
+.header_footer {
+  position: relative;
+  background-color: rgba(31, 32, 65, 0.05);
+  top: -1500px; }
 

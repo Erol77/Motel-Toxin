@@ -6,7 +6,7 @@ $dark-shade75:rgba($dark-shade, 0.75);
 $dark-shade50:rgba($dark-shade, 0.5);
 $dark-shade25:rgba($dark-shade, 0.25);
 $dark-shade5:rgba($dark-shade, 0.05);
-
+$dark-shade10:rgba($dark-shade, 0.1);
 body {
     margin: 0;
     padding: 0;
@@ -109,3 +109,4 @@ input:focus{
 @import 'calendar';
 @import 'motel-room';
 @import 'header';
+@import 'header_footer';

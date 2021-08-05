@@ -3,7 +3,7 @@ doctype html
 html(lang="ru")
   //- Include head
   include ./component/head.pug
-  body
+  body(style="color: $dark-shade5")
     //- Include header
     include ./component/header.pug
     section.row
@@ -461,7 +461,5 @@ html(lang="ru")
           li= n++
           readonly style="display: none"
     include ./component/cards.pug
-    include ./component/header.pug
-    include ./component/header-logo.pug
-
+    include ./component/header&footer.pug
     include ./component/footer.pug
