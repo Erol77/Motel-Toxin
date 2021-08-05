@@ -1510,7 +1510,7 @@ input:focus {
   background: #FFFFFF;
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05); }
 
-.nav-logo li {
+.logo li {
   margin-top: 15px;
   vertical-align: middle; }
 
@@ -1558,4 +1558,50 @@ input:focus {
   position: relative;
   background-color: rgba(31, 32, 65, 0.05);
   top: -1500px; }
+
+.footer {
+  display: flex;
+  height: 443px;
+  background: #FFFFFF;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05); }
+  .footer ul {
+    position: relative;
+    list-style: none; }
+
+.footer-logo {
+  display: flex;
+  flex-wrap: wrap;
+  width: 260px; }
+
+.footer-menu {
+  display: flex;
+  justify-content: space-between;
+  width: 1040px; }
+
+img.network {
+  margin: 5px 10px; }
+
+.footer-copyright {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 140px;
+  border-top: 1px solid rgba(31, 32, 65, 0.1); }
+  .footer-copyright li {
+    display: inline-block; }
+  .footer-copyright a,
+  .footer-copyright p {
+    margin-top: 4px;
+    vertical-align: middle; }
+
+.logo {
+  margin-top: 10px;
+  vertical-align: middle;
+  display: inline-block;
+  margin-left: 20px; }
+
+.logo-text {
+  margin-top: 20px;
+  vertical-align: middle;
+  display: inline-block;
+  margin-left: 20px; }
 
