@@ -16,8 +16,9 @@ body {
     line-height: 24px;
     font-weight: 400;
     color: $dark-shade75;
-//    background-color:$dark-shade5;
+   background-color:$dark-shade5;
 }
+
 h1,
 h2,
 h3 {
@@ -25,6 +26,24 @@ h3 {
     font-weight: 700;
     color: $dark-shade;
 }
+.colors{
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    width:150vh;
+}
+.colors div {
+    display: inline-block;
+    min-width: 40px;
+    min-height: 40px;
+    border: 1px solid rgba(31, 32, 65, 0.05);
+      margin:20px;
+}
+
+.colors div:nth-child(2n) {
+    border: none;
+}
+
+
 h1{
     font-size: 24px;
     line-height: 30px;
@@ -113,3 +132,4 @@ input:focus{
 @import 'footer';
 // @import '';
 @import'../component/logo/logo';
+@import 'footer-creative';

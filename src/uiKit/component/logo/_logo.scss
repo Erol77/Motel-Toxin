@@ -2,12 +2,14 @@
     display: flex;
     width: 106px;
     height: 40px;
+    padding: 0px;
 }
 
 .logo li{
     display: inline-block;
-    margin-top: 15px;
+    margin: 15px 0 0;
     vertical-align: middle;
+    // margin-left: 0px;
 }
 
 .logo li:last-child {
