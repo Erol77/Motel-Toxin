@@ -1,13 +1,15 @@
-
-.logo {
-    margin-top: 10px;
-    vertical-align: middle;
-    display: inline-block;
-    margin-left: 20px;
+.logo ul{
+    display: flex;
+    width: 106px;
+    height: 40px;
 }
-.logo-text {
-    margin-top: 20px;
-    vertical-align: middle;
+
+.logo li{
     display: inline-block;
-    margin-left: 20px;
+    margin-top: 15px;
+    vertical-align: middle;
+}
+
+.logo li:last-child {
+    margin-left: 12.5px;
 }
