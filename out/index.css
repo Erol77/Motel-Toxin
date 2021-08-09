@@ -320,6 +320,8 @@ input[type="password"]:focus {
   background-image: none; }
 
 .modal-searh {
+  top: 140px;
+  left: 140px;
   width: 380px;
   height: 374px;
   background-color: #ffffff;
@@ -1520,7 +1522,7 @@ input:focus {
     text-align: right; }
 
 .header {
-  height: 70px;
+  min-height: 70px;
   position: relative;
   margin-bottom: 40px;
   background: #FFFFFF;
@@ -1668,4 +1670,19 @@ img.network {
   .footer-creative p {
     margin: 0;
     color: rgba(31, 32, 65, 0.75); }
+
+.landing .header {
+  margin-bottom: 0px; }
+
+.landing .modal-searh {
+  position: absolute; }
+
+.landing .footer {
+  margin-top: -7px; }
+
+.landing .slaider p {
+  margin-top: -80px;
+  margin-bottom: 30px;
+  margin-right: 130px;
+  text-align: right; }
 

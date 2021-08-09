@@ -77,6 +77,11 @@ type: "asset/resource"
         filename: '[name].html',
         // inject: 'body'
     }),
+         new HtmlWebpackPlugin({
+        template: PATHS.source + '/uiKit/landing/landing.pug',
+        filename: 'landing.html',
+        // inject: 'body'
+    }),
    // new LodashModuleReplacementPlugin
    new MiniCssExtractPlugin({
      filename: '[name].css'
