@@ -82,6 +82,21 @@ type: "asset/resource"
         filename: 'landing.html',
         // inject: 'body'
     }),
+             new HtmlWebpackPlugin({
+        template: PATHS.source + '/uiKit/landing/registration.pug',
+        filename: 'registration.html',
+        // inject: 'body'
+    }),
+                 new HtmlWebpackPlugin({
+        template: PATHS.source + '/uiKit/landing/signIn.pug',
+        filename: 'signIn.html',
+        // inject: 'body'
+    }),
+                     new HtmlWebpackPlugin({
+        template: PATHS.source + '/uiKit/landing/searhRoom.pug',
+        filename: 'searhRoom.html',
+        // inject: 'body'
+    }),
    // new LodashModuleReplacementPlugin
    new MiniCssExtractPlugin({
      filename: '[name].css'

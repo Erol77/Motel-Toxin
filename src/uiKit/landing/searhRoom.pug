@@ -1,0 +1,9 @@
+doctype html
+html(lang="ru")
+  include ./../component/head.pug
+  body.landing
+    include ./../component/header.pug
+    h1= title
+    p Written with love by #{ author }
+    p This will be safe: #{ theGreat }
+    include ./../component/footer.pug

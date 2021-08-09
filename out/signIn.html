@@ -33,9 +33,10 @@
     </div>
   </div>
 </header>
-    <div class="slaider"> <img src="../src/uiKit/img/landing/image.jpg" alt="" width="100%">
-      <p>Лучшие номера для вашей работы,<br> отдыха и просто вдохновения</p>
-    </div>
+    <div class="slaider"> <img src="../src/uiKit/img/landing/image 4.jpg" alt="" width="100%"></div>
+    <h1>Регистрация</h1>
+    <p>Written with love by enlore</p>
+    <p>This will be safe: &lt;span&gt;escape!&lt;/span&gt;</p>
 <footer class="footer"> 
   <div class="footer-logo">
 <ul class="logo"> 
@@ -89,42 +90,39 @@
   </ul>
 </div>
     <div class="visually-hidden">
-<div class="modal modal-searh">
-  <h1>Найдём номера под ваши пожелания</h1>
-  <form class="form-searh" action="" method="post"> 
-    <label for="check-in"> 
-      <h3>прибытие</h3>
-      <input class="datepicker-here" id="check-in" type="text" data-position="right top" value="ДД.ММ.ГГГГ">
-    </label>
-    <label for="exit"> 
-      <h3>выезд</h3>
-      <input class="datepicker-here" id="exit" type="text" data-position="left top" value="ДД.ММ.ГГГГ">
-    </label>
-    <label for="guest"> 
-      <h3>гости</h3>
-      <input id="guest" type="text" value="" placeholder="Сколько гостей">
-    </label>
-    <button class="btn-4" type="submit" value="">Подобрать номер<span> </span></button>
+<div class="modal modal-registration">
+  <h1>Регистрация аккаунта</h1>
+  <form class="form-registration" action="" method="post"> 
+    <input type="text" name="first-name" placeholder="Имя">
+    <input type="text" name="last-name" placeholder="Фамилия">
+    <input class="visually-hidden" id="man" type="radio" name="human" value="man" checked>
+    <label for="man">Мужчина</label>
+    <input class="visually-hidden" id="woman" type="radio" name="human" value="woman">
+    <label for="woman">Женщина</label>
+    <h3>дата рождения</h3>
+    <input class="datepicker-here" id="birthday" type="text" data-position="right top" value="ДД.ММ.ГГГГ">
+    <h3>данные для входа в сервис</h3>
+    <input type="email" name="email" placeholder="Email">
+    <input type="password" name="password" placeholder="Пароль">
+<input class="visually-hidden toggle" id="toggle-n" type="checkbox">
+<label class="toggle" for="toggle-n">Получать спецпредложения</label>
+    <button class="btn-4" type="submit" value="">перейти к оплате</button>
   </form>
+  <p>Уже есть аккаунт на Toxin
+    <button class="btn-2">войти</button>
+  </p>
 </div>
     </div>
-<div class="modal modal-searh">
-  <h1>Найдём номера под ваши пожелания</h1>
-  <form class="form-searh" action="" method="post"> 
-    <label for="check-in"> 
-      <h3>прибытие</h3>
-      <input class="datepicker-here" id="check-in" type="text" data-position="right top" value="ДД.ММ.ГГГГ">
-    </label>
-    <label for="exit"> 
-      <h3>выезд</h3>
-      <input class="datepicker-here" id="exit" type="text" data-position="left top" value="ДД.ММ.ГГГГ">
-    </label>
-    <label for="guest"> 
-      <h3>гости</h3>
-      <input id="guest" type="text" value="" placeholder="Сколько гостей">
-    </label>
-    <button class="btn-4" type="submit" value="">Подобрать номер<span> </span></button>
+<div class="modal modal-login"> 
+  <form>
+    <h1>Войти</h1>
+    <input type="email" name="email" placeholder="Email">
+    <input type="password" name="password" placeholder="Пароль">
+    <button class="btn-4" type="submit" value="">войти</button>
   </form>
+  <p>Нет аккаунта на Toxin?
+    <button class="btn-2">создать</button>
+  </p>
 </div>
   </body>
 </html>
