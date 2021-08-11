@@ -108,15 +108,11 @@ html(lang="ru")
                 )
         div 
           h3 DATE DROPDOWN
-          select.box(name="") 
-            option(value="") 19 авг - 23 авг
+          input(type="text", value="19 авг - 23 авг")
         div 
           h3 SUBSCRIPTION TEXT FIELD
-          input.box(
-            type="email",
-            name="email",
-            placeholder="Email    &#129122"
-          )
+          include ./elements/subscription/subscription.pug
+
       .row 
         .col 
         ul 
