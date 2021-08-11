@@ -1596,15 +1596,6 @@ input:focus {
 
 .footer-menu {
   position: relative; }
-  .footer-menu label::after {
-    position: absolute;
-    content: '';
-    width: 40px;
-    height: 22px;
-    background: url(ae9e8d9bc1e9ad88ca1c02c3ccec6d5b.svg) no-repeat;
-    background-position: right;
-    margin-top: 15px;
-    margin-left: -52px; }
   .footer-menu li {
     margin-top: 15px;
     margin-left: 40px; }
@@ -1705,4 +1696,36 @@ img.network {
   background-position: right;
   margin-top: 15px;
   margin-left: -52px; }
+
+.date-dropdown label::after {
+  content: "";
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  margin-left: -30px;
+  margin-top: 15px;
+  vertical-align: middle;
+  background-image: url(e85954bc6e43e8dff6e057cce6ab769e.svg);
+  background-repeat: no-repeat;
+  background-position: 0; }
+
+.date-dropdown h3 {
+  margin-bottom: 0px;
+  text-transform: uppercase; }
+
+.dropdown label::after {
+  content: "";
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  margin-left: -30px;
+  margin-top: 15px;
+  vertical-align: middle;
+  background-image: url(e85954bc6e43e8dff6e057cce6ab769e.svg);
+  background-repeat: no-repeat;
+  background-position: 0; }
+
+.dropdown h3 {
+  margin-bottom: 0px;
+  text-transform: uppercase; }
 

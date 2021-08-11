@@ -78,8 +78,8 @@ html(lang="ru")
           //- = (placeholder="This is pretty awecome")
         div 
           h3 DROPDOWN
-          select.box(name="") 
-            option(value="") Сколько гостей
+        include ./component/elements/dropdown/dropdown.pug
+
         div 
           h3 MASKED TEXT FIELD
           include ./component/datetime.pug
@@ -106,12 +106,10 @@ html(lang="ru")
                   min="2021-07-25",
                   multiple
                 )
-        div 
-          h3 DATE DROPDOWN
-          input(type="text", value="19 авг - 23 авг")
-        div 
-          h3 SUBSCRIPTION TEXT FIELD
-          include ./component/elements/subscription/subscription.pug
+        h3 DATE DROPDOWN
+        include ./component/elements/date-dropdown/date-dropdown.pug
+        h3 SUBSCRIPTION TEXT FIELD
+        include ./component/elements/subscription/subscription.pug
 
       .row 
         .col 

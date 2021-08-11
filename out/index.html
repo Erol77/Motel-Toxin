@@ -119,10 +119,12 @@
         </div>
         <div> 
           <h3>DROPDOWN</h3>
-          <select class="box" name=""> 
-            <option value="">Сколько гостей</option>
-          </select>
         </div>
+<div class="dropdown">
+  <label>
+    <input type="text" value=" Сколько гостей">
+  </label>
+</div>
         <div> 
           <h3>MASKED TEXT FIELD</h3>
 <input class="datetime" type="datetime" name="datetime" placeholder="ДД.ММ.ГГГГ">
@@ -143,18 +145,19 @@
             </select>
           </div>
         </div>
-        <div> 
-          <h3>DATE DROPDOWN</h3>
-          <input type="text" value="19 авг - 23 авг">
-        </div>
-        <div> 
-          <h3>SUBSCRIPTION TEXT FIELD</h3>
+        <h3>DATE DROPDOWN</h3>
+<div class="date-dropdown">
+  <h3>даты пребывания в отеле</h3>
+  <label>
+    <input type="text" value="19 авг - 23 авг">
+  </label>
+</div>
+        <h3>SUBSCRIPTION TEXT FIELD</h3>
 <div class="subscription"> 
   <label>
     <input type="email" name="email" placeholder="Email">
   </label>
 </div>
-        </div>
       </div>
       <div class="row"> 
         <div class="col"> </div>
@@ -721,9 +724,6 @@
     <input type="email" name="email" placeholder="Email">
   </label>
 </div>
-      <label> 
-        <input type="email" name="email" placeholder="Email">
-      </label>
     </li>
   </ul>
 </footer>
@@ -791,9 +791,6 @@
     <input type="email" name="email" placeholder="Email">
   </label>
 </div>
-      <label> 
-        <input type="email" name="email" placeholder="Email">
-      </label>
     </li>
   </ul>
 </footer>
