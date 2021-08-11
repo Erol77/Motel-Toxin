@@ -1696,3 +1696,13 @@ img.network {
   margin-right: 130px;
   text-align: right; }
 
+.subscription label::after {
+  position: absolute;
+  content: '';
+  width: 40px;
+  height: 22px;
+  background: url(ae9e8d9bc1e9ad88ca1c02c3ccec6d5b.svg) no-repeat;
+  background-position: right;
+  margin-top: 15px;
+  margin-left: -52px; }
+
