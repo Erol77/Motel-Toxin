@@ -1,11 +1,11 @@
 extends ./component/layout
-//- block append head
-  include ./component/head.pug
+
+block title
+  title ui Kit
+  - var titleSection = 'Здесь все элементы';
 
 block content
   body
-    include ./component/header.pug
-    +userName
     section.row
       .col 
       h1.colors Colors & Text
@@ -360,4 +360,3 @@ block content
           readonly style="display: none"
     include ./component/cards.pug
     include ./component/header&footer.pug
-    include ./component/footer.pug
