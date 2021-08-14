@@ -189,3 +189,4 @@ console.log(location.href);
 //     failedform.classList= ('failed-form-open');
 
 // } else{ console.log(getAllUrlParams());}
+

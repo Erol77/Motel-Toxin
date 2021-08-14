@@ -135,8 +135,9 @@
 .btn-3 {
   /* width: 99px; #1F2041
 height: 44px; */
-  margin: 0 20px;
+  margin: 13px 0 8px;
   /* margin-top: -5px; */
+  padding: 0;
   font-size: 12px;
   font-weight: 700;
   line-height: 15px;
@@ -146,6 +147,7 @@ height: 44px; */
   color: #BC9CFF;
   border: none;
   text-transform: uppercase;
+  background-color:white;
 }
 
 .btn-4 {
@@ -214,9 +216,38 @@ height: 44px; */
   text-transform: uppercase;
 }
 
- .btn-2:hover,
- .btn-2:focus,
- .btn-2:active {
+.btn-2:hover,
+.btn-2:focus,
+.btn-2:active {
    border-color: rgba(188, 156, 255, 0.5);
    /* opacity: 0.5; */
  }
+.btn-5 {
+  width: 30px;
+  height: 30px;
+  margin-left: 0px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 15px;
+  font-family: Montserrat;
+  text-align: center;
+  font-style: normal;
+  color: $dark-shade50;
+  border-color: $dark-shade50;
+  border-style: solid;
+  border-width: 1px;
+  background: white;
+  border-radius: 22px;
+  text-transform: uppercase;
+ }
+
+ .btn-5:hover,
+ .btn-5:focus,
+ .btn-5:active {
+   border-color: $dark-shade50;
+   /* opacity: 0.5; */
+ }
+
+  .btn-5:disabled{
+    border-color:$dark-shade25;
+  }

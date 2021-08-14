@@ -1,10 +1,9 @@
-//- index.pug
-doctype html
-html(lang="ru")
-  //- Include head
+extends ./component/layout
+//- block append head
   include ./component/head.pug
+
+block content
   body
-    //- Include header
     include ./component/header.pug
     section.row
       .col 
@@ -79,6 +78,7 @@ html(lang="ru")
         div 
           h3 DROPDOWN
         include ./component/elements/dropdown/dropdown.pug
+        +dropdown("3 гостя")
 
         div 
           h3 MASKED TEXT FIELD
@@ -254,120 +254,23 @@ html(lang="ru")
         div 
           h3 dropdown
           p Default
-          select(name="") 
-            option(value="") 2 спальни, 2 кровати...
-          div 
-            h3 спальни
-              button(
-                type="button",
-                onclick="this.nextElementSibling.stepDown()"
-              ) -
-              input(type="number", min="0", max="100", value="2")
-              button(
-                type="button",
-                onclick="this.previousElementSibling.stepUp()"
-              ) +
-          div 
-            h3 кровати
-              button(
-                type="button",
-                onclick="this.nextElementSibling.stepDown()"
-              ) -
-              input(type="number", min="0", max="100", value="2")
-              button(
-                type="button",
-                onclick="this.previousElementSibling.stepUp()"
-              ) +
-          div 
-            h3 ванные комнаты
-              button(
-                type="button",
-                onclick="this.nextElementSibling.stepDown()"
-              ) -
-              input(type="number", min="0", max="100", value="0")
-              button(
-                type="button",
-                onclick="this.previousElementSibling.stepUp()"
-              ) +
+          +dropdown("2 спальни, 2 кровати...")
+          +dropdown-container("спальни","2", "кровати","4", "ванные комнаты","1")
       .row 
         .col 
           h3 dropdown
-          select(name="") 
-            option(value="") Сколько гостей
-          div 
-            h3 взрослые
-              button(
-                type="button",
-                onclick="this.nextElementSibling.stepDown()"
-              ) -
-              input(type="number", min="0", max="100", value="0")
-              button(
-                type="button",
-                onclick="this.previousElementSibling.stepUp()"
-              ) +
-          div 
-            h3 дети
-              button(
-                type="button",
-                onclick="this.nextElementSibling.stepDown()"
-              ) -
-              input(type="number", min="0", max="100", value="0")
-              button(
-                type="button",
-                onclick="this.previousElementSibling.stepUp()"
-              ) +
-          div 
-            h3 младенцы
-              button(
-                type="button",
-                onclick="this.nextElementSibling.stepDown()"
-              ) -
-              input(type="number", min="0", max="100", value="0")
-              button(
-                type="button",
-                onclick="this.previousElementSibling.stepUp()"
-              ) +
-          button применить
+          +dropdown("Сколько гостей") 
+          +dropdown-container("взрослые", "0", "дети","0", "младенцы",0) 
+            button.btn-3 применить
+          //- (применить)
+
       .row 
         .col 
           h3 dropdown
-          select(name="") 
-            option(value="") 3 гостя
-          div 
-            h3 взрослые
-              button(
-                type="button",
-                onclick="this.nextElementSibling.stepDown()"
-              ) -
-              input(type="number", min="0", max="100", value="2")
-              button(
-                type="button",
-                onclick="this.previousElementSibling.stepUp()"
-              ) +
-          div 
-            h3 дети
-              button(
-                type="button",
-                onclick="this.nextElementSibling.stepDown()"
-              ) -
-              input(type="number", min="0", max="100", value="1")
-              button(
-                type="button",
-                onclick="this.previousElementSibling.stepUp()"
-              ) +
-          div 
-            h3 младенцы
-              button(
-                type="button",
-                onclick="this.nextElementSibling.stepDown()"
-              ) -
-              input(type="number", min="0", max="100", value="0")
-              button(
-                type="button",
-                onclick="this.previousElementSibling.stepUp()"
-              ) +
-          button очистить
-          button применить
+          +dropdown("3 гостя")
+          +dropdown-container("взрослые","2", "дети","1", "младенцы","0")
+            button.btn-3 применить
+            button.btn-3 очистить
     section.row 
       .col 
         div 

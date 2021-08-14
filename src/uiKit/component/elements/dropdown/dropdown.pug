@@ -1,3 +1,48 @@
-.dropdown
-  label
-    input(type="text", value=" Сколько гостей")
+mixin dropdown(name)
+  .dropdown
+    label
+      input(type="text", value=name)
+mixin dropdown-container(param1,value1 ,param2,value2,param3,value3)
+  .dropdown-conteiner 
+    .dropdown-content
+      label 
+        button.btn-5(
+          type="button",
+          onclick="this.nextElementSibling.stepDown()"
+        ) -
+        input(type="number", min="0", max="100", value=value1)
+        button.btn-5(
+          type="button",
+          onclick="this.previousElementSibling.stepUp()"
+        ) +
+      h3= param1
+    .dropdown-content
+      label
+        button.btn-5(
+          type="button",
+          onclick="this.nextElementSibling.stepDown()"
+        ) -
+        input(type="number", min="0", max="100", value=value2)
+        button.btn-5(
+          type="button",
+          onclick="this.previousElementSibling.stepUp()"
+        ) +
+      h3= param2
+    .dropdown-content
+      label
+        button.btn-5(
+          type="button",
+          onclick="this.nextElementSibling.stepDown()"
+        ) -
+        input(type="number", min="0", max="100", value=value3)
+        button.btn-5(
+          type="button",
+          onclick="this.previousElementSibling.stepUp()"
+        ) +
+      h3= param3
+    if block
+      .dropdown-content
+        block
+    //- else
+    //-   p No content provided
+      //- button.btn-3(value=block)

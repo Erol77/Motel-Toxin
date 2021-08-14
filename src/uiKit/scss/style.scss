@@ -1,12 +1,11 @@
-@import 'fonts';
-@import 'btn';
 $dark-shade:rgba(31, 32, 65, 1);
-
 $dark-shade75:rgba($dark-shade, 0.75);
 $dark-shade50:rgba($dark-shade, 0.5);
 $dark-shade25:rgba($dark-shade, 0.25);
 $dark-shade5:rgba($dark-shade, 0.05);
 $dark-shade10:rgba($dark-shade, 0.1);
+@import 'fonts';
+@import 'btn';
 body {
     margin: 0;
     padding: 0;
