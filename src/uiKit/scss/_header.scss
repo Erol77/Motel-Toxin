@@ -24,6 +24,8 @@
     .btn-4{
        width: 196px;
        height: 34px;
+       margin-top: 0px;
+       margin-bottom: 0px;
        ::after{
            display: none;
        }
@@ -43,7 +45,11 @@
 
 }
 .nav-menu{
+    margin-top: 18px;
+    margin-bottom: 18px;
+
     a{
+
         color:$dark-shade50;
         font: inherit;
     }
@@ -57,7 +63,4 @@
     border-left: 1px solid $dark-shade10;
     height: 30px;
     vertical-align:middle;
-}
-.nav-menu-loginned{
-    margin-top: 20px;
 }
