@@ -246,14 +246,19 @@ block content
               input.btn-4(type="button", value="перейти к оплате &#129122") 
           div 
             h3 pagination
-            div 
-            - var n = 0;
-              ul
-                while n < 4
-                  li
-                    a(href="#")= n++
+              //- div 
+                - var n = 0;
+                  ul
+                    while n < 4
+                      li
+                        a(href="#")= n++
 
-              button &#129122
+              button.button.button_pagination.active 1
+              button.button.button_pagination 2
+              button.button.button_pagination 3
+              button.button.button_pagination ...
+              button.button.button_pagination 15
+              button.button.button_pagination_next.button_icon_arrow_right 
               p 1 – 12 из 100+ вариантов аренды
     section.row 
       .col 

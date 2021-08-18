@@ -22,18 +22,21 @@
   /* Legacy iOS */ }
 
 .button {
+  min-width: 20px;
+  min-height: 20px;
   font-family: Montserrat;
   font-size: 12px;
   font-weight: 700;
   text-decoration: none;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  border: none;
+  background-color: inherit; }
 
 .button_flooded {
   position: relative;
   width: 99px;
   height: 44px;
   color: white;
-  border: none;
   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
   border-radius: 22px; }
 
@@ -52,12 +55,32 @@
   margin-top: -3px;
   right: -15px; }
 
+.button_pagination {
+  width: 40px;
+  height: 40px;
+  font-weight: 400; }
+
+.button_pagination_next {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  border-radius: 22px; }
+
+.active,
+.button_pagination:focus,
+.button_pagination:hover {
+  position: relative;
+  color: white;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  border-radius: 22px;
+  font-weight: bold; }
+
 .button_size_w {
   width: 320px; }
 
 .button_no_border {
   color: #BC9CFF;
-  border: none;
   background-color: white; }
 
 .button_border {
