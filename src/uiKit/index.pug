@@ -215,18 +215,23 @@ block content
           div 
             h3 buttons
             div 
-              a(href="#") CLICK ME
-              a(href="#") CLICK ME
-              button CLICK ME
-              button CLICK ME
-              input(type="button", value="CLICK ME")
-              input(type="button", value="CLICK ME")
+              a.button.button_no_border(href="#") CLICK ME
+              a.button.button_border(href="#") CLICK ME
+              a.button.button_flooded click me
+              button.button.button_no_border CLICK ME
+              button.button.button_border CLICK ME
+              button.button.button_flooded CLICK ME
+              button.button.button_flooded.button_size_w CLICK ME
+                span.button_icon_arrow_right 
+              button.button.button_flooded.button_size_w.button_icon_arrow_right CLICK ME
+              input.button.button_no_border(type="button", value="CLICK ME")
+              input.button.button_flooded(type="button", value="CLICK ME")
             div 
               a(href="#") CLICK ME
               a(href="#") CLICK ME
               button CLICK ME
               button CLICK ME
-              input(type="button", value="CLICK ME")
+              input.button.button_border(type="button", value="CLICK ME")
               input(type="button", value="CLICK ME")
             div 
               a(href="#") CLICK ME

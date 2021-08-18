@@ -21,6 +21,64 @@
   src: local(""), url(d7874418aba069eb92e8.eot?#iefix) format("embedded-opentype"), url(e9dea54ec59e29a6913f.woff2) format("woff2"), url(082762b455a3f227e8ac.woff) format("woff"), url(6cbb516e629a7542e7a8.ttf) format("truetype"), url(fac85a3030008d30b0b8faaaa0edf48d.svg#Montserrat) format("svg");
   /* Legacy iOS */ }
 
+.button {
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase; }
+
+.button_flooded {
+  position: relative;
+  width: 99px;
+  height: 44px;
+  color: white;
+  border: none;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  border-radius: 22px; }
+
+.button_flooded:hover,
+.button_flooded:focus,
+.button_flooded:active {
+  opacity: 0.5; }
+
+.button_icon_arrow_right::after {
+  content: '';
+  position: absolute;
+  width: 44px;
+  height: 22px;
+  background: url(d4701dff7a6e939030dcf05d97a876b9.svg) no-repeat;
+  background-position: 0;
+  margin-top: -3px;
+  right: -15px; }
+
+.button_size_w {
+  width: 320px; }
+
+.button_no_border {
+  color: #BC9CFF;
+  border: none;
+  background-color: white; }
+
+.button_border {
+  width: 99px;
+  height: 44px;
+  color: #BC9CFF;
+  border-color: #BC9CFF;
+  border-style: solid;
+  border-width: 2px;
+  background: white;
+  border-radius: 22px; }
+
+.button_border:hover,
+.button_border:focus,
+.button_border:active {
+  border-color: rgba(188, 156, 255, 0.5); }
+
+.button_no_border:hover,
+.button_no_border:focus {
+  color: rgba(31, 32, 65, 0.5); }
+
 .btn {
   display: inline-block;
   box-sizing: border-box;

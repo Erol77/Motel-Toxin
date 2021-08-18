@@ -1,3 +1,72 @@
+.button {
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.button_flooded {
+  position: relative;
+  width: 99px;
+  height: 44px;
+  color: white;
+  border: none;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  border-radius: 22px;
+
+}
+
+.button_flooded:hover,
+.button_flooded:focus,
+.button_flooded:active {
+  opacity: 0.5;
+}
+
+.button_icon_arrow_right::after {
+  content: '';
+  position: absolute;
+  width: 44px;
+  height: 22px;
+  background: url(../img/arrow_forward.svg) no-repeat;
+  background-position: 0;
+  margin-top: -3px;
+  right: -15px;
+  // margin-left: 40px;
+}
+
+.button_size_w {
+  width: 320px;
+}
+
+.button_no_border{
+  color: #BC9CFF;
+  border: none;
+  background-color: white;
+}
+
+.button_border {
+  width: 99px;
+  height: 44px;
+  color: #BC9CFF;
+  border-color: #BC9CFF;
+  border-style: solid;
+  border-width: 2px;
+  background: white;
+  border-radius: 22px;
+}
+
+.button_border:hover,
+.button_border:focus,
+.button_border:active {
+  border-color: rgba(188, 156, 255, 0.5);
+}
+
+.button_no_border:hover,
+.button_no_border:focus {
+  color:$dark-shade50;
+}
+
 .btn {
   display: inline-block;
   box-sizing: border-box;
