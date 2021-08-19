@@ -1,0 +1,9 @@
+mixin pagination(n)
+  button.button.button_pagination.active= n
+  button.button.button_pagination= n + 1
+  button.button.button_pagination= n + 2
+  button.button.button_pagination ...
+  button.button.button_pagination= n + 12
+  button.button.button_pagination_next.button_icon_arrow_right 
+  p= `${n} – ${n + 11} из 100+ вариантов аренды`
+//-   

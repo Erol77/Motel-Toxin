@@ -1,10 +1,10 @@
-input[type="checkbox"]+label {
+input.toggle[type="checkbox"]+label {
     padding-left: 50px;
     cursor: pointer;
     position: relative;
 }
 
-input[type="checkbox"]+label::before {
+input.toggle[type="checkbox"]+label::before {
     content: "";
     display: inline-block;
     position: absolute;
@@ -17,7 +17,7 @@ input[type="checkbox"]+label::before {
     top: -3px;
 }
 
-input[type="checkbox"]+label::after {
+input.toggle[type="checkbox"]+label::after {
     content: "";
     position: absolute;
     display: inline-block;
@@ -29,7 +29,7 @@ input[type="checkbox"]+label::after {
     border-radius: 12px;
 }
 
-input[type="checkbox"]:checked+label::after {
+input.toggle[type="checkbox"]:checked+label::after {
     content: "";
     position: absolute;
     display: inline-block;
@@ -41,7 +41,11 @@ input[type="checkbox"]:checked+label::after {
     border-radius: 12px;
 }
 
-input[type="checkbox"]:checked+label::before {
+input.toggle[type="checkbox"]:checked+label::before {
     content: "";
     border: 1px solid #BC9CFF;
+}
+.toggle {
+    user-select: none;
+    /* Google Chrome, Opera Next, Safari */
 }

@@ -119,11 +119,7 @@
           <div> 
             <h3>DROPDOWN</h3>
           </div>
-                    <div class="dropdown">
-                      <label>
-                        <input type="text" value="3 гостя">
-                      </label>
-                    </div>
+                    <button class="button button_dropdown people button_icon_arrow_down">3 гостя</button>
           <div> 
             <h3>MASKED TEXT FIELD</h3>
 <input class="datetime" type="datetime" name="datetime" placeholder="ДД.ММ.ГГГГ">
@@ -179,21 +175,15 @@
           </ul>
           <div> 
             <h3>Radio Buttons</h3>
-            <p> 
-              <input id="main" type="radio" name="huiz" value="Мужчина" checked>
-            </p>
-            <p> 
-              <input id="women" type="radio" name="huiz" text="value">
-            </p>
+                        <input class="visually-hidden" id="first1" type="radio" name="noForm" value="man" checked>
+                        <label for="first1">Мужчина</label>
+                        <input class="visually-hidden" id="first2" type="radio" name="noForm" value="woman">
+                        <label for="first2">Женщина</label>
           </div>
           <div> 
             <h3>Toggle</h3>
-            <div class="toggle">
-              <input type="checkbox" checked>
-              <label for="">Получать спецпредложения</label>
-            </div>
-            <input class="toggle" id="nehul" type="checkbox">
-            <label class="toggle" for="nehul">Получать спецпредложения</label>
+                        <input class="visually-hidden toggle" type="checkbox" id="togle-ui-Kit">
+                        <label class="toggle" for="togle-ui-Kit">Получать спецпредложения</label>
           </div>
           <div> 
             <h3>like button</h3>
@@ -278,15 +268,21 @@
               </div>
             </div>
             <div> 
-              <h3>pagination
-                <button class="button button_pagination active">1</button>
-                <button class="button button_pagination">2</button>
-                <button class="button button_pagination">3</button>
-                <button class="button button_pagination">...</button>
-                <button class="button button_pagination">15</button>
-                <button class="button button_pagination_next button_icon_arrow_right"> </button>
-                <p>1 – 12 из 100+ вариантов аренды</p>
-              </h3>
+              <h3>pagination</h3>
+                            <button class="button button_pagination active">1</button>
+                            <button class="button button_pagination">2</button>
+                            <button class="button button_pagination">3</button>
+                            <button class="button button_pagination">...</button>
+                            <button class="button button_pagination">13</button>
+                            <button class="button button_pagination_next button_icon_arrow_right"> </button>
+                            <p>1 – 12 из 100+ вариантов аренды</p>
+                            <button class="button button_pagination active">13</button>
+                            <button class="button button_pagination">14</button>
+                            <button class="button button_pagination">15</button>
+                            <button class="button button_pagination">...</button>
+                            <button class="button button_pagination">25</button>
+                            <button class="button button_pagination_next button_icon_arrow_right"> </button>
+                            <p>13 – 24 из 100+ вариантов аренды</p>
             </div>
           </div>
         </div>
@@ -296,6 +292,7 @@
           <div> 
             <h3>dropdown</h3>
             <p>Default</p>
+                      <button class="button button_dropdown room button_icon_arrow_down">2 спальни, 2 кровати...</button>
                       <div class="dropdown">
                         <label>
                           <input type="text" value="2 спальни, 2 кровати...">
@@ -332,11 +329,7 @@
         <div class="row"> 
           <div class="col"> 
             <h3>dropdown</h3>
-                      <div class="dropdown">
-                        <label>
-                          <input type="text" value="Сколько гостей">
-                        </label>
-                      </div>
+                      <button class="button button_dropdown people button_icon_arrow_down">Сколько гостей</button>
                       <div class="dropdown-conteiner"> 
                         <div class="dropdown-content">
                           <label> 
@@ -363,7 +356,7 @@
                           <h3>младенцы</h3>
                         </div>
                         <div class="dropdown-content"> 
-                          <button class="btn-3">применить</button>
+                          <button class="button button_no_border">применить</button>
                         </div>
                       </div>
           </div>
@@ -371,11 +364,7 @@
         <div class="row"> 
           <div class="col"> 
             <h3>dropdown</h3>
-                      <div class="dropdown">
-                        <label>
-                          <input type="text" value="3 гостя">
-                        </label>
-                      </div>
+                      <button class="button button_dropdown people button_icon_arrow_down">3 гостя</button>
                       <div class="dropdown-conteiner"> 
                         <div class="dropdown-content">
                           <label> 
@@ -402,8 +391,8 @@
                           <h3>младенцы</h3>
                         </div>
                         <div class="dropdown-content">
-                          <button class="btn-3">применить</button>
-                          <button class="btn-3">очистить</button>
+                          <button class="button button_no_border">применить</button>
+                          <button class="button button_no_border">очистить</button>
                         </div>
                       </div>
           </div>
@@ -501,8 +490,8 @@
           </div>
         </div>
       </section>
-<section class="cards">
-  <h1>title cards</h1>
+      <section class="cards">
+        <h1>title cards</h1>
 <div class="modal modal-searh">
   <h1>Найдём номера под ваши пожелания</h1>
   <form class="form-searh" action="" method="post"> 
@@ -518,31 +507,35 @@
       <h3>гости</h3>
       <input id="guest" type="text" value="" placeholder="Сколько гостей">
     </label>
-    <button class="btn-4" type="submit" value="">Подобрать номер<span> </span></button>
+    <button class="button button_flooded button_size_w button_icon_arrow_right" type="submit" value="">Подобрать номер<span> </span></button>
   </form>
 </div>
-<div class="modal modal-registration">
-  <h1>Регистрация аккаунта</h1>
-  <form class="form-registration" action="" method="post"> 
-    <input type="text" name="first-name" placeholder="Имя">
-    <input type="text" name="last-name" placeholder="Фамилия">
-    <input class="visually-hidden" id="man" type="radio" name="human" value="man" checked>
-    <label for="man">Мужчина</label>
-    <input class="visually-hidden" id="woman" type="radio" name="human" value="woman">
-    <label for="woman">Женщина</label>
-    <h3>дата рождения</h3>
-    <input class="datepicker-here" id="birthday" type="text" data-position="right top" value="ДД.ММ.ГГГГ">
-    <h3>данные для входа в сервис</h3>
-    <input type="email" name="email" placeholder="Email">
-    <input type="password" name="password" placeholder="Пароль">
-<input class="visually-hidden toggle" id="toggle-n" type="checkbox">
-<label class="toggle" for="toggle-n">Получать спецпредложения</label>
-    <button class="btn-4" type="submit" value="">перейти к оплате</button>
-  </form>
-  <p>Уже есть аккаунт на Toxin
-    <button class="btn-2">войти</button>
-  </p>
-</div>
+        <div class="modal modal-registration">
+          <h1>Регистрация аккаунта</h1>
+          <form class="form-registration" action="" method="post"> 
+            <input type="text" name="first-name" placeholder="Имя">
+            <input type="text" name="last-name" placeholder="Фамилия">
+                        <input class="visually-hidden" id="reg1" type="radio" name="humen2" value="man" checked>
+                        <label for="reg1">Мужчина</label>
+                        <input class="visually-hidden" id="reg2" type="radio" name="humen2" value="woman">
+                        <label for="reg2">Женщина</label>
+            <input class="visually-hidden" id="man" type="radio" name="human" value="man" checked>
+            <label for="man">Мужчина</label>
+            <input class="visually-hidden" id="woman" type="radio" name="human" value="woman">
+            <label for="woman">Женщина</label>
+            <h3>дата рождения</h3>
+            <input class="datepicker-here" id="birthday" type="text" data-position="right top" value="ДД.ММ.ГГГГ">
+            <h3>данные для входа в сервис</h3>
+            <input type="email" name="email" placeholder="Email">
+            <input type="password" name="password" placeholder="Пароль">
+                        <input class="visually-hidden toggle" type="checkbox" id="togle-registration">
+                        <label class="toggle" for="togle-registration">Получать спецпредложения</label>
+            <button class="button button_flooded button_size_w button_icon_arrow_right" type="submit" value="">перейти к оплате</button>
+          </form>
+          <p>Уже есть аккаунт на Toxin
+            <button class="button button_border">войти</button>
+          </p>
+        </div>
 <div class="modal modal-order">
   <div class="conteiner"> 
     <ul class="modal-order-title"> 
@@ -607,7 +600,7 @@
       <div class="point"></div>
       <h2>38 081₽</h2>
     </div>
-    <button class="btn-4" type="submit" value="">забронировать</button>
+    <button class="button button_flooded button_size_w button_icon_arrow_right" type="submit" value="">забронировать</button>
   </form>
 </div>
 <div class="modal modal-login"> 
@@ -615,14 +608,16 @@
     <h1>Войти</h1>
     <input type="email" name="email" placeholder="Email">
     <input type="password" name="password" placeholder="Пароль">
-    <button class="btn-4" type="submit" value="">войти</button>
+    <button class="button button_flooded button_size_w button_icon_arrow_right" type="submit" value="">войти</button>
   </form>
   <p>Нет аккаунта на Toxin?
-    <button class="btn-2">создать</button>
+    <button class="button button_border">создать</button>
   </p>
 </div>
 <div class="position">
-  <div class="datepicker-here"></div><a class="btn-3">очистить</a><a class="btn-3">применить</a>
+  <div class="datepicker-here"></div>
+  <button class="button button_no_border">очистить</button>
+  <button class="button button_no_border">применить</button>
 </div>
 <div class="modal modal-room">
   <div class="conteiner"><img src="../src/uiKit/img/room1.jpg" alt="room">
@@ -667,7 +662,7 @@
     </li>
   </ul>
 </div>
-</section>
+      </section>
       <section class="header_footer"> 
                 <header class="header">
                   <div class="nav"> 

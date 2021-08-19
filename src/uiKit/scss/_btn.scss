@@ -1,4 +1,5 @@
 .button {
+  position: relative;
   min-width: 20px;
   min-height: 20px;
   font-family: Montserrat;
@@ -7,11 +8,10 @@
   text-decoration: none;
   text-transform: uppercase;
   border: none;
-    background-color:inherit;
+  background-color:inherit;
 }
 
 .button_flooded {
-  position: relative;
   width: 99px;
   height: 44px;
   color: white;
@@ -37,6 +37,21 @@
   right: -15px;
 }
 
+.button_icon_arrow_down::after {
+  content: "";
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  // margin-left: -30px;
+  // margin-top: 15px;
+  // vertical-align: middle;
+  background-image: url(../img/expand_more2.svg);
+  background-repeat: no-repeat;
+  background-position: 0;
+  top: 10px;
+  right: 0px;
+}
+
 .button_pagination {
   width: 40px;
   height: 40px;
@@ -46,17 +61,14 @@
 .button_pagination_next {
   width: 40px;
   height: 40px;
-  position: relative;
   background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
   border-radius: 22px;
+  vertical-align: top;
 }
-
-// .button_size_s
 
 .active,
 .button_pagination:focus,
 .button_pagination:hover {
-  position: relative;
   color: white;
   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
   border-radius: 22px;
@@ -68,8 +80,7 @@
 
 .button_no_border{
   color: #BC9CFF;
-  // border: none;
-  background-color: white;
+  background-color: inherit;
 }
 
 .button_border {
@@ -92,6 +103,33 @@
 .button_no_border:hover,
 .button_no_border:focus {
   color:$dark-shade50;
+}
+
+.button_dropdown{
+  height: 44px;
+  border: 1px solid $dark-shade25;
+  border-radius: 4px;
+  font-weight: 400;
+  text-transform: unset;
+  text-align: left;
+  padding-left: 15px;
+}
+
+.room {
+  width: 266px;
+}
+
+.people {
+    width: 320px;
+}
+
+
+
+.button_dropdown:hover,
+.button_dropdown:focus,
+.button_dropdown:active {
+  border-color:$dark-shade50;
+  border-radius: 4px 4px 0 0;
 }
 
 .btn {

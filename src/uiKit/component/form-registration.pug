@@ -3,6 +3,8 @@
   form.form-registration(action="", method="post") 
     input(type="text", name="first-name", placeholder="Имя")
     input(type="text", name="last-name", placeholder="Фамилия")
+    include ./elements/human/human
+    +human("reg1",'reg2','humen2')
     input#man.visually-hidden(type="radio", name="human", value="man", checked)
     label(for="man") Мужчина
     input#woman.visually-hidden(type="radio", name="human", value="woman")
@@ -17,6 +19,10 @@
     input(type="email", name="email", placeholder="Email")
     input(type="password", name="password", placeholder="Пароль")
     include ./toggle/toggle.pug
-    button.btn-4(type="submit", value="") перейти к оплате
+    +toggle("togle-registration")
+    button.button.button_flooded.button_size_w.button_icon_arrow_right(
+      type="submit",
+      value=""
+    ) перейти к оплате
   p Уже есть аккаунт на Toxin
-    button.btn-2 войти
+    button.button.button_border войти

@@ -1,7 +1,10 @@
-mixin dropdown(name)
+mixin dropdown-room(name)
+  button.button.button_dropdown.room.button_icon_arrow_down= name
   .dropdown
     label
       input(type="text", value=name)
+mixin dropdown-people(name)
+  button.button.button_dropdown.people.button_icon_arrow_down= name
 mixin dropdown-container(param1,value1 ,param2,value2,param3,value3)
   .dropdown-conteiner 
     .dropdown-content

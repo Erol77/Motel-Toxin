@@ -1,2 +1,3 @@
-input#toggle-n.visually-hidden.toggle(type="checkbox")
-label.toggle(for="toggle-n") Получать спецпредложения
+mixin toggle(n)
+  input.visually-hidden.toggle(type="checkbox", id=n)
+  label.toggle(for=n) Получать спецпредложения
