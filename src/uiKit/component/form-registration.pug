@@ -4,11 +4,7 @@
     input(type="text", name="first-name", placeholder="Имя")
     input(type="text", name="last-name", placeholder="Фамилия")
     include ./elements/human/human
-    +human("reg1",'reg2','humen2')
-    input#man.visually-hidden(type="radio", name="human", value="man", checked)
-    label(for="man") Мужчина
-    input#woman.visually-hidden(type="radio", name="human", value="woman")
-    label(for="woman") Женщина
+    +human("reg1",'reg2','humen')
     h3 дата рождения
     input#birthday.datepicker-here(
       type="text",

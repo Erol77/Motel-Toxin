@@ -175,10 +175,12 @@
           </ul>
           <div> 
             <h3>Radio Buttons</h3>
-                        <input class="visually-hidden" id="first1" type="radio" name="noForm" value="man" checked>
-                        <label for="first1">Мужчина</label>
-                        <input class="visually-hidden" id="first2" type="radio" name="noForm" value="woman">
-                        <label for="first2">Женщина</label>
+                        <div class="human">
+                          <input class="visually-hidden" id="first1" type="radio" name="noForm" value="man" checked>
+                          <label for="first1">Мужчина</label>
+                          <input class="visually-hidden" id="first2" type="radio" name="noForm" value="woman">
+                          <label for="first2">Женщина</label>
+                        </div>
           </div>
           <div> 
             <h3>Toggle</h3>
@@ -515,14 +517,12 @@
           <form class="form-registration" action="" method="post"> 
             <input type="text" name="first-name" placeholder="Имя">
             <input type="text" name="last-name" placeholder="Фамилия">
-                        <input class="visually-hidden" id="reg1" type="radio" name="humen2" value="man" checked>
-                        <label for="reg1">Мужчина</label>
-                        <input class="visually-hidden" id="reg2" type="radio" name="humen2" value="woman">
-                        <label for="reg2">Женщина</label>
-            <input class="visually-hidden" id="man" type="radio" name="human" value="man" checked>
-            <label for="man">Мужчина</label>
-            <input class="visually-hidden" id="woman" type="radio" name="human" value="woman">
-            <label for="woman">Женщина</label>
+                        <div class="human">
+                          <input class="visually-hidden" id="reg1" type="radio" name="humen" value="man" checked>
+                          <label for="reg1">Мужчина</label>
+                          <input class="visually-hidden" id="reg2" type="radio" name="humen" value="woman">
+                          <label for="reg2">Женщина</label>
+                        </div>
             <h3>дата рождения</h3>
             <input class="datepicker-here" id="birthday" type="text" data-position="right top" value="ДД.ММ.ГГГГ">
             <h3>данные для входа в сервис</h3>

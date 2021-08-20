@@ -1,13 +1,13 @@
-.form-registration input[type="radio"]+label {
-    margin: 5px 0px;
+.human input[type="radio"]+label {
+    // margin: 5px 0px;
     padding-left: 40px;
     cursor: pointer;
     position: relative;
-    display: inline-block;
+    // display: inline-block;
 }
 
 
-.form-registration input[type="radio"]+label::before {
+.human input[type="radio"]+label::before {
     content: "";
     display: inline-block;
     position: absolute;
@@ -21,11 +21,11 @@
 }
 
 
-.form-registration input[type="radio"]+label::after {
+.human input[type="radio"]+label::after {
     content: none;
 }
 
-.form-registration input[type="radio"]:checked+label::after {
+.human input[type="radio"]:checked+label::after {
     content: "";
     position: absolute;
     display: inline-block;
@@ -37,7 +37,7 @@
     border-radius: 12px;
 }
 
-.form-registration input[type="radio"]:checked+label::before {
+.human input[type="radio"]:checked+label::before {
     content: "";
     border: 1px solid #BC9CFF;
 }
