@@ -123,48 +123,24 @@ block content
             br
             span (до 10 человек)
             //- p (до 10 человек)
-        div 
-          h3 Radio Buttons
-          include ./component/elements/human/human
-          +human('first1','first2','noForm')
-          //- p 
-          //-   input#main(type="radio", name="huiz", value="Мужчина", checked)
-          //- p 
-          //-   input#women(type="radio", name="huiz", text="value")
-        div 
-          h3 Toggle
-          include ./component/toggle/toggle.pug
-          +toggle("togle-ui-Kit")
-        div 
-          h3 like button
           div 
-            button ♥ 1
+            h3 Radio Buttons
+            include ./component/elements/human/human
+            +human('first1','first2','noForm')
           div 
-            button ♥ 12
-        div 
-          h3 rate button
+            h3 Toggle
+            include ./component/toggle/toggle.pug
+            +toggle("togle-ui-Kit")
           div 
-            input#star-5(type="radio", name="rating-1", value="5")
-            label(for="star-5", title="5") 
-            input#star-4(type="radio", name="rating-1", value="4", checked)
-            label(for="star-4", title="4") 
-            input#star-3(type="radio", name="rating-1", value="3")
-            label(for="star-3", title="3") 
-            input#star-2(type="radio", name="rating-1", value="2")
-            label(for="star-2", title="2") 
-            input#star-1(type="radio", name="rating-1", value="1")
-            label(for="star-1", title="1") 
+            h3 like button
+            include ./component/elements/like/like
+            +like(1)
+            +like(12,'chek')
           div 
-            input#star-15(type="radio", name="rating-2", value="5", checked)
-            label(for="star-15", title="5") 
-            input#star-14(type="radio", name="rating-2", value="4")
-            label(for="star-14", title="4") 
-            input#star-13(type="radio", name="rating-2", value="3")
-            label(for="star-13", title="3") 
-            input#star-12(type="radio", name="rating-2", value="2")
-            label(for="star-12", title="2") 
-            input#star-11(type="radio", name="rating-2", value="1")
-            label(for="star-11", title="1") 
+            h3 rate button
+            include ./component/elements/rate/rate
+            +rate-button(4)
+            +rate-button(5)
       .row 
         .col 
           h3 Range Slider
