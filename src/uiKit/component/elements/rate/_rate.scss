@@ -20,16 +20,17 @@
         left: 0px;
 
     }
-    ul {
-        padding: 0;
-        margin: 0;
-        position: relative;
-        list-style: none;
-    }
+
+}
+
+.rate{
+    padding: 0;
+    margin: 0;
+    position: relative;
+    list-style: none;
+
 
     li {
-        display: inline-block;
-        // margin-left: 20px;
-
+    display: inline-block;
     }
 }

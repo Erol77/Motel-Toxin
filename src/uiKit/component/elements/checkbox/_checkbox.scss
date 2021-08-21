@@ -15,7 +15,7 @@ input.checkbox-button[type="checkbox"]+label::before {
     border: 1px solid $dark-shade25;
     border-radius: 4px;
     // margin-right: 20px;
-    top: -3px;
+    top: 0px;
 }
 
 
@@ -25,7 +25,7 @@ input.checkbox-button[type="checkbox"]:checked+label::after {
     height: 10px;
     width: 10px;
     left: 5px;
-    top: 2px;
+    top: 4px;
     background-image: url(../img/Vector.svg);
     background-repeat: no-repeat;
     background-position: 0;

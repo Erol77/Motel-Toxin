@@ -1933,7 +1933,7 @@ input.checkbox-button[type="checkbox"] + label::before {
   left: 0px;
   border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 4px;
-  top: -3px; }
+  top: 0px; }
 
 input.checkbox-button[type="checkbox"]:checked + label::after {
   content: "";
@@ -1941,7 +1941,7 @@ input.checkbox-button[type="checkbox"]:checked + label::after {
   height: 10px;
   width: 10px;
   left: 5px;
-  top: 2px;
+  top: 4px;
   background-image: url(ad694aafe15811be341489a1dd946ba2.svg);
   background-repeat: no-repeat;
   background-position: 0; }
@@ -2001,11 +2001,12 @@ input.checkbox-button[type="checkbox"]:checked + label::before {
     background-position: 0;
     top: -5px;
     left: 0px; }
-  .button-rate ul {
-    padding: 0;
-    margin: 0;
-    position: relative;
-    list-style: none; }
-  .button-rate li {
+
+.rate {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  list-style: none; }
+  .rate li {
     display: inline-block; }
 
