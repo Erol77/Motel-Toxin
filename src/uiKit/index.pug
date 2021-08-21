@@ -115,18 +115,14 @@ block content
 
       .row 
         .col 
-        ul 
-          li 
-            h3 Checkbox Buttons
-          li
-            p.
-              <input type="checkbox", name="", value="Можно курить">Можно курить
-          li
-            p <input type="checkbox", name="", value="Можно с питомцами", checked>Можно с питомцами
-          li
-            p.
-              <input type="checkbox",name="",value="",checked> Можно пригласить гостей <br>
-              (до 10 человек)
+          include ./component/elements/checkbox/checkbox.pug
+          h3 Checkbox Buttons
+          +checkbox-button('smoke','Можно курить') 
+          +checkbox-button('animals','Можно с питомцами','checked') 
+          +checkbox-button('guests','Можно пригласить гостей', 'checked') 
+            br
+            span (до 10 человек)
+            //- p (до 10 человек)
         div 
           h3 Radio Buttons
           include ./component/elements/human/human

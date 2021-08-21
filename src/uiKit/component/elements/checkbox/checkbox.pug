@@ -1,0 +1,7 @@
+mixin checkbox-button(n, value,c)
+  if c
+    input.visually-hidden.checkbox-button(type="checkbox", id=n, name=n, checked)
+  else
+    input.visually-hidden.checkbox-button(type="checkbox", id=n, name=n)
+  label.checkbox-button(for=n)= value
+    block

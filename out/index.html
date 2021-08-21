@@ -155,24 +155,18 @@
 </div>
         </div>
         <div class="row"> 
-          <div class="col"> </div>
-          <ul> 
-            <li> 
-              <h3>Checkbox Buttons</h3>
-            </li>
-            <li>
-              <p><input type="checkbox", name="", value="Можно курить">Можно курить</p>
-            </li>
-            <li>
-              <p><input type="checkbox", name="", value="Можно с питомцами", checked>Можно с питомцами</p>
-            </li>
-            <li>
-              <p>
-                <input type="checkbox",name="",value="",checked> Можно пригласить гостей <br>
-                (до 10 человек)
-              </p>
-            </li>
-          </ul>
+          <div class="col"> 
+            <h3>Checkbox Buttons</h3>
+                        <input class="visually-hidden checkbox-button" type="checkbox" id="smoke" name="smoke">
+                        <label class="checkbox-button" for="smoke">Можно курить 
+                        </label>
+                        <input class="visually-hidden checkbox-button" type="checkbox" id="animals" name="animals" checked>
+                        <label class="checkbox-button" for="animals">Можно с питомцами 
+                        </label>
+                        <input class="visually-hidden checkbox-button" type="checkbox" id="guests" name="guests" checked>
+                        <label class="checkbox-button" for="guests">Можно пригласить гостей <br><span>(до 10 человек)</span>
+                        </label>
+          </div>
           <div> 
             <h3>Radio Buttons</h3>
                         <div class="human">
