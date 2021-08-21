@@ -249,43 +249,23 @@ block content
             button.button.button_no_border очистить
     section.row 
       .col 
-        div 
-          button 
-            h3 expandable checkbox list
-        div 
-          button 
-            h3 expandable checkbox list
-          ul 
-            li 
-              input(type="checkbox")
-              p Завтрак
-            li 
-              input(type="checkbox", checked)
-              p Письменный стол
-            li 
-              input(type="checkbox", checked)
-              p Стул для кормления
-            li 
-              input(type="checkbox", checked)
-              p Кроватка
-            li 
-              input(type="checkbox")
-              p Телевизор
-            li 
-              input(type="checkbox")
-              p Шампунь
+        include ./component/elements/expandable/expandable
+        +expandable('expandable checkbox list')
+        +checkbox-button('breakfast','Завтрак') 
+        +checkbox-button('desk','Письменный стол','checked') 
+        +checkbox-button('feeding','Стул для кормления','checked') 
+        +checkbox-button('crib','Кроватка','checked') 
+        +checkbox-button('tv','Телевизор') 
+        +checkbox-button('shampoo','Шампунь') 
+
       .row 
         .col 
           h3 rich Checkbox Buttons
-          ul 
-            li 
-              input(type="checkbox")
-              h3 Широкий коридор
-              p Ширина коридоров в номере не менее 91 см.
-            li 
-              input(type="checkbox")
-              h3 Помощник для инвалидов
-              p На 1 этаже вас встретит специалист и проводит до номера.
+          +checkbox-button-rich('korridor','Широкий коридор') 
+            p Ширина коридоров в номере не менее 91 см.
+          +checkbox-button-rich('assistant','Помощник для инвалидов') 
+            p На 1 этаже вас встретит специалист и проводит до номера.
+
       .row 
         .col 
           h3 bullet list

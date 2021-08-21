@@ -1,6 +1,6 @@
 mixin dropdown-room(name)
   button.button.button_dropdown.room.button_icon_arrow_down= name
-  .dropdown
+  //- .dropdown
     label
       input(type="text", value=name)
 mixin dropdown-people(name)
@@ -9,36 +9,36 @@ mixin dropdown-container(param1,value1 ,param2,value2,param3,value3)
   .dropdown-conteiner 
     .dropdown-content
       label 
-        button.btn-5(
+        button.button-dropdown-next(
           type="button",
           onclick="this.nextElementSibling.stepDown()"
         ) -
         input(type="number", min="0", max="100", value=value1)
-        button.btn-5(
+        button.button-dropdown-next(
           type="button",
           onclick="this.previousElementSibling.stepUp()"
         ) +
       h3= param1
     .dropdown-content
       label
-        button.btn-5(
+        button.button-dropdown-next(
           type="button",
           onclick="this.nextElementSibling.stepDown()"
         ) -
         input(type="number", min="0", max="100", value=value2)
-        button.btn-5(
+        button.button-dropdown-next(
           type="button",
           onclick="this.previousElementSibling.stepUp()"
         ) +
       h3= param2
     .dropdown-content
       label
-        button.btn-5(
+        button.button-dropdown-next(
           type="button",
           onclick="this.nextElementSibling.stepDown()"
         ) -
         input(type="number", min="0", max="100", value=value3)
-        button.btn-5(
+        button.button-dropdown-next(
           type="button",
           onclick="this.previousElementSibling.stepUp()"
         ) +

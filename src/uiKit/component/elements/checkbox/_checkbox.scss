@@ -3,6 +3,7 @@ input.checkbox-button[type="checkbox"]+label {
     cursor: pointer;
     position: relative;
     font: inherit;
+    margin: 5px 0px;
 }
 
 input.checkbox-button[type="checkbox"]+label::before {
@@ -40,4 +41,7 @@ input.checkbox-button[type="checkbox"]:checked+label::before {
 .checkbox-button {
     user-select: none;
     /* Google Chrome, Opera Next, Safari */
+    h3{
+        margin: 5px;
+    }
 }

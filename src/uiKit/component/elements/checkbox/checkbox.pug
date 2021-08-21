@@ -5,3 +5,8 @@ mixin checkbox-button(n, value,c)
     input.visually-hidden.checkbox-button(type="checkbox", id=n, name=n)
   label.checkbox-button(for=n)= value
     block
+mixin checkbox-button-rich(j, k)
+  input.visually-hidden.checkbox-button(type="checkbox", id=j, name=j)
+  label.checkbox-button(for=j)
+    h3= k
+    block

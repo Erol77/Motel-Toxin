@@ -29,7 +29,7 @@
 .dropdown-conteiner{
     display: flex;
     flex-direction: column;
-    width: 266px;
+    width: inherit;
     border: 1px solid $dark-shade50;
     border-radius: 0 0 4px 4px;
     background-color:white;
@@ -70,4 +70,30 @@
         -moz-appearance: textfield;
     } 
 
+}
+
+.button-dropdown-next {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    font-weight: 400;
+    font: inherit;
+    color: $dark-shade50;
+    border-color: $dark-shade50;
+    border-style: solid;
+    border-width: 1px;
+    background: inherit;
+    border-radius: 22px;
+    text-transform: uppercase;
+
+    &:hover,
+    &:focus,
+        {
+        border-color: $dark-shade50;
+        /* opacity: 0.5; */
+    }
+
+    &:disabled {
+        border-color: $dark-shade25;
+    }
 }

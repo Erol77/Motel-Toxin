@@ -42,14 +42,11 @@
   width: 24px;
   height: 24px;
   position: absolute;
-  // margin-left: -30px;
-  // margin-top: 15px;
-  // vertical-align: middle;
   background-image: url(../img/expand_more2.svg);
   background-repeat: no-repeat;
   background-position: 0;
   top: 10px;
-  right: 0px;
+  right: 10px;
 }
 
 .button_pagination {
@@ -373,15 +370,16 @@ height: 44px; */
   background: white;
   border-radius: 22px;
   text-transform: uppercase;
+
+   &:hover,
+   &:focus
+    {
+     border-color: $dark-shade50;
+     /* opacity: 0.5; */
+   }
+
+   &:disabled {
+     border-color: $dark-shade25;
+   }
  }
 
- .btn-5:hover,
- .btn-5:focus,
- .btn-5:active {
-   border-color: $dark-shade50;
-   /* opacity: 0.5; */
- }
-
-  .btn-5:disabled{
-    border-color:$dark-shade25;
-  }

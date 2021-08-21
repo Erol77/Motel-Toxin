@@ -64,7 +64,7 @@
   background-repeat: no-repeat;
   background-position: 0;
   top: 10px;
-  right: 0px; }
+  right: 10px; }
 
 .button_pagination {
   width: 40px;
@@ -350,15 +350,11 @@ height: 44px; */
   background: white;
   border-radius: 22px;
   text-transform: uppercase; }
-
-.btn-5:hover,
-.btn-5:focus,
-.btn-5:active {
-  border-color: rgba(31, 32, 65, 0.5);
-  /* opacity: 0.5; */ }
-
-.btn-5:disabled {
-  border-color: rgba(31, 32, 65, 0.25); }
+  .btn-5:hover, .btn-5:focus {
+    border-color: rgba(31, 32, 65, 0.5);
+    /* opacity: 0.5; */ }
+  .btn-5:disabled {
+    border-color: rgba(31, 32, 65, 0.25); }
 
 body {
   margin: 0;
@@ -1839,7 +1835,7 @@ img.network {
 .dropdown-conteiner {
   display: flex;
   flex-direction: column;
-  width: 266px;
+  width: inherit;
   border: 1px solid rgba(31, 32, 65, 0.5);
   border-radius: 0 0 4px 4px;
   background-color: white; }
@@ -1870,6 +1866,25 @@ img.network {
     -webkit-appearance: none; }
   .dropdown-content input[type=number] {
     -moz-appearance: textfield; }
+
+.button-dropdown-next {
+  width: 30px;
+  height: 30px;
+  font-size: 18px;
+  font-weight: 400;
+  font: inherit;
+  color: rgba(31, 32, 65, 0.5);
+  border-color: rgba(31, 32, 65, 0.5);
+  border-style: solid;
+  border-width: 1px;
+  background: inherit;
+  border-radius: 22px;
+  text-transform: uppercase; }
+  .button-dropdown-next:hover, .button-dropdown-next:focus {
+    border-color: rgba(31, 32, 65, 0.5);
+    /* opacity: 0.5; */ }
+  .button-dropdown-next:disabled {
+    border-color: rgba(31, 32, 65, 0.25); }
 
 input.toggle[type="checkbox"] + label {
   padding-left: 50px;
@@ -1922,7 +1937,8 @@ input.checkbox-button[type="checkbox"] + label {
   padding-left: 30px;
   cursor: pointer;
   position: relative;
-  font: inherit; }
+  font: inherit;
+  margin: 5px 0px; }
 
 input.checkbox-button[type="checkbox"] + label::before {
   content: "";
@@ -1953,6 +1969,8 @@ input.checkbox-button[type="checkbox"]:checked + label::before {
 .checkbox-button {
   user-select: none;
   /* Google Chrome, Opera Next, Safari */ }
+  .checkbox-button h3 {
+    margin: 5px; }
 
 .button-like {
   width: 40px;
@@ -2009,4 +2027,13 @@ input.checkbox-button[type="checkbox"]:checked + label::before {
   list-style: none; }
   .rate li {
     display: inline-block; }
+
+.expandable {
+  width: 266px;
+  height: 44px;
+  text-align: left; }
+
+.rotate::after {
+  transform: rotate(180deg);
+  right: 20px; }
 
