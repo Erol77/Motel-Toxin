@@ -1,0 +1,9 @@
+.rotate-left::after {
+    transform: rotate(270deg);
+    right: 20px;
+}
+
+.rotate-right::after {
+    transform: rotate(90deg);
+    right: 20px;
+}

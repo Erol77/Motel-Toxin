@@ -1,10 +1,9 @@
+include ./elements/expandable/expandable
 .modal.modal-room
   .conteiner
-    img(src="../src/uiKit/img/room1.jpg", alt="room")
-    input(type="button", value="")
-    label(for="") 
-    input(type="button", value="")
-    label(for="") 
+    +slider-room('perv','vtor')
+    button.button.button_icon_arrow_down.rotate-left 
+    button.button.button_icon_arrow_down.rotate-richt
   .room-parametr 
     ul.modal-order-title 
       li 
