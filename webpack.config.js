@@ -6,14 +6,15 @@ const pug = require('pug');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 // const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 const PATHS = {
-  source: path.join(__dirname, 'src'),
-  build: path.join(__dirname, 'out')
+  source: path.join(__dirname, 'barberchop/src'),//'src'
+  build: path.join(__dirname, 'barberchop/out') //'out'
 };
 const config = {
   entry:  {
-    'index': PATHS.source + '/uiKit/index.js'
+    //'index': PATHS.source + '/uiKit/index.js'
     //'scss': PATHS.source + './scss/style.scss',
     //'pug': PATHS.source + './pug/index.pug',
+	'index': PATHS.source + '/index.js'
   },
   output: {
     path: PATHS.build,
@@ -82,8 +83,13 @@ type: "asset/resource"
             
     //  new CleanWebpackPlugin(),
     
-     new HtmlWebpackPlugin({
-        template: PATHS.source + '/uiKit/index.pug',
+    // new HtmlWebpackPlugin({
+    //    template: PATHS.source + '/uiKit/index.pug',
+     //   filename: '[name].html',
+        // inject: 'body'
+    //}),
+	     new HtmlWebpackPlugin({
+        template: PATHS.source + '/index.pug',
         filename: '[name].html',
         // inject: 'body'
     }),

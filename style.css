@@ -1,0 +1,16 @@
+@media (min-width: 762px) {
+  .page-header__logo {
+    height: 648px;
+  }
+}
+.stats {
+  background-color: #1f2041;
+  color: #fff;
+}
+
+.stats__header {
+  background-color: #fff;
+  color: #000;
+}
+
+/*# sourceMappingURL=style.css.map */
