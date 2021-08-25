@@ -89,7 +89,7 @@ type: "asset/resource"
         // inject: 'body'
     //}),
 	     new HtmlWebpackPlugin({
-        template: PATHS.source + '/index.pug',
+        template: PATHS.source + '/index.html',
         filename: '[name].html',
         // inject: 'body'
     }),
