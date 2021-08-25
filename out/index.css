@@ -1591,7 +1591,23 @@ input:focus {
   border-radius: 4px; }
   .modal-room .conteiner {
     display: flex;
-    justify-content: space-between; }
+    justify-content: space-between;
+    position: relative; }
+    .modal-room .conteiner button {
+      position: absolute;
+      color: #FFFFFF; }
+    .modal-room .conteiner input {
+      display: none; }
+    .modal-room .conteiner label {
+      position: absolute;
+      border-radius: 5px;
+      display: inline-block;
+      width: 7.5px;
+      height: 7.5px;
+      border: 1px solid #FFFFFF;
+      background: none; }
+      .modal-room .conteiner label:checked {
+        background: #FFFFFF; }
   .modal-room ul {
     padding: 0;
     margin: 0;
@@ -2035,5 +2051,19 @@ input.checkbox-button[type="checkbox"]:checked + label::before {
 
 .rotate::after {
   transform: rotate(180deg);
+  right: 20px; }
+
+.rotate-left::after {
+  position: absolute;
+  top: 70px;
+  left: 22px;
+  transform: rotate(90deg);
+  right: 20px; }
+
+.rotate-right::after {
+  position: absolute;
+  top: 70px;
+  right: 22px;
+  transform: rotate(270deg);
   right: 20px; }
 

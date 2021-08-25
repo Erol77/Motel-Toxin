@@ -11,6 +11,26 @@
     .conteiner {
         display: flex;
         justify-content: space-between;
+        position: relative;
+        button{
+            position: absolute;
+            color:#FFFFFF;
+        }
+        input{
+            display: none;
+        }
+        label{
+            position: absolute;
+            border-radius: 5px;
+            display: inline-block;
+            width: 7.5px;
+            height: 7.5px;
+            border: 1px solid #FFFFFF;
+            background: none;
+            &:checked{
+                background: #FFFFFF;
+            }
+        }
     }
     ul{
         padding: 0;
