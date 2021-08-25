@@ -1,0 +1,22 @@
+@charset 'utf-8';
+$darkgrey:rgba(31, 32, 65, 1);
+$desktop-width:762px;
+$mobail-width:300px;
+@import 'global/global';
+
+@media (min-width: $desktop-width) {
+    .page-header__logo {
+        height: 648px;
+    }
+}
+
+.stats {
+    background-color: $darkgrey;
+    color: #fff;
+}
+
+.stats__header {
+    background-color: #fff;
+    color:#000;
+}
+
