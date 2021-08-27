@@ -1573,30 +1573,18 @@ input:focus {
   background: #FFFFFF;
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
   border-radius: 4px; }
-  .modal-room ul {
-    padding: 0;
-    margin: 0;
-    position: relative;
-    list-style: none; }
-  .modal-room .room-parametr {
-    width: 233px;
-    height: 33px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; }
-    .modal-room .room-parametr h1 {
-      margin: 10px; }
   .modal-room hr {
     border: none;
     width: 233px;
     color: rgba(31, 32, 65, 0.05);
     background-color: rgba(31, 32, 65, 0.05);
-    height: 1px; }
-  .modal-room .room-rating {
+    height: 1px;
+    margin-top: 10px; }
+  .modal-room .order-list {
     padding-left: 20px;
-    text-align: right; }
-    .modal-room .room-rating li {
-      display: inline-block; }
+    padding-right: 20px; }
+  .modal-room h1 {
+    font-size: 19px; }
 
 .header {
   min-height: 70px;
@@ -1997,7 +1985,8 @@ input.checkbox-button[type="checkbox"]:checked + label::before {
     position: absolute;
     background-image: url(d6f803db6e2d4c949d36a736465ff506.svg);
     background-repeat: no-repeat;
-    background-position: 0; }
+    background-position: 0;
+    left: -3px; }
 
 .rate {
   padding: 0;
@@ -2090,7 +2079,6 @@ input.checkbox-button[type="checkbox"]:checked + label::before {
 .slider .slider-wrapper {
   width: 100%;
   overflow: hidden;
-  border-radius: 5px;
   box-shadow: 1px 1px 4px #666;
   background: #fff;
   background: #fcfff4;
@@ -2101,7 +2089,8 @@ input.checkbox-button[type="checkbox"]:checked + label::before {
   transform: translateZ(0);
   -webkit-transition: all .5s ease-out;
   -moz-transition: all .5s ease-out;
-  transition: all .5s ease-out; }
+  transition: all .5s ease-out;
+  margin-bottom: 15px; }
 
 .slider .slider-wrapper .inner {
   -webkit-transform: translateZ(0);
@@ -2193,14 +2182,15 @@ input.checkbox-button[type="checkbox"]:checked + label::before {
 .order-title li:nth-child(3) h3 {
   color: #BC9CFF; }
 
-.order-list ul {
-  padding: 0;
-  margin: 0;
-  position: relative;
-  list-style: none; }
-
-.order-list h1 {
-  margin: 0; }
+.order-list {
+  line-height: 0px; }
+  .order-list ul {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    list-style: none; }
+  .order-list h1 {
+    margin: 0; }
 
 .order-price li:first-child h3 {
   color: rgba(31, 32, 65, 0.5); }

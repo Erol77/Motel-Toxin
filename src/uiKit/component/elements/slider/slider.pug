@@ -1,4 +1,4 @@
-mixin slider-room(n,j)
+mixin slider-room-next(n,j)
   article.slider 
     .wrapper
       input(type="radio", name=n, id=j + 1, checked) 
@@ -20,6 +20,28 @@ mixin slider-room(n,j)
         label(for=j + 2) 
         label(for=j + 3) 
         label(for=j + 4) 
+      .slider-dot-control 
+        label(for=j + 1) 
+        label(for=j + 2) 
+        label(for=j + 3) 
+        label(for=j + 4)
+mixin slider-room(n,j)
+  article.slider 
+    .wrapper
+      input(type="radio", name=n, id=j + 1, checked) 
+      input(type="radio", name=n, id=j + 2) 
+      input(type="radio", name=n, id=j + 3) 
+      input(type="radio", name=n, id=j + 4) 
+      .slider-wrapper
+        .inner 
+          article 
+            img(src="../src/uiKit/img/room1.jpg", alt="")
+          article 
+            img(src="../src/uiKit/img/rum2.jpg", alt="")
+          article 
+            img(src="../src/uiKit/img/rum.jpg", alt="")
+          article 
+            img(src="../src/uiKit/img/room1.jpg", alt="")
       .slider-dot-control 
         label(for=j + 1) 
         label(for=j + 2) 

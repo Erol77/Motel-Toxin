@@ -2,7 +2,7 @@ include ./elements/slider/slider
 include ./elements/room-number/room-number
 include ./elements/rate/rate
 .modal.modal-room
-  +slider-room('perv','slide')
+  +slider-room-next('perv','slide')
   +room-number(888,'9 800','люкс') 
   hr 
   .order-list 
@@ -10,5 +10,16 @@ include ./elements/rate/rate
     ul.order-price
       li
         h3 145
+      li
+        p Отзывов
+.modal.modal-room
+  +slider-room('vtor','slide1')
+  +room-number(889,'9 100','') 
+  hr 
+  .order-list 
+    +rate-button(4)
+    ul.order-price
+      li
+        h3 45
       li
         p Отзывов

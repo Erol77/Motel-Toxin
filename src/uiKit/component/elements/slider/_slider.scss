@@ -125,7 +125,6 @@
 .slider .slider-wrapper {
     width: 100%;
     overflow: hidden;
-    border-radius: 5px;
     box-shadow: 1px 1px 4px #666;
     background: #fff;
     background: #fcfff4;
@@ -136,7 +135,8 @@
     transform: translateZ(0);
     -webkit-transition: all .5s ease-out;
     -moz-transition: all .5s ease-out;
-    transition: all .5s ease-out
+    transition: all .5s ease-out;
+    margin-bottom:15px;
 }
 
 .slider .slider-wrapper .inner {
