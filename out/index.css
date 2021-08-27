@@ -2214,5 +2214,6 @@ input.checkbox-button[type="checkbox"]:checked + label::before {
 
 .order-list {
   display: grid;
-  grid-template-columns: 1.5fr 1fr; }
+  grid-template-columns: 120px 1fr;
+  height: 30px; }
 
