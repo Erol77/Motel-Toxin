@@ -23,9 +23,6 @@
     list-style: none;
 }
 
-.modal-order-title li:nth-child(3) h3{
-    color: #BC9CFF;
-}
 
 .modal-order-form h3 {
     margin-bottom: 5px;
@@ -86,16 +83,6 @@
     text-align: right;
 }
 
-.modal-order-title li,
-.modal-order-price li {
-    display: inline-block;
-
-}
-
-.modal-order-price li {
-    margin-top: 20px;
-}
-
 .modal-order p {
     margin: 10px 0;
 }
@@ -104,13 +91,7 @@ ul.modal-order-total-price {
     text-align: right;
 }
 
-.modal-order-price li:first-child h3 {
-    color: rgba(31, 32, 65, 0.5);
-}
 
-.modal-order h1 {
-    margin-bottom: 0;
-}
 
 .modal-order-total-price li::after {
     content: "i";

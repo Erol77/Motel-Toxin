@@ -1,17 +1,7 @@
+include ./elements/room-number/room-number
 .modal.modal-order
-  .conteiner 
-    ul.modal-order-title 
-      li 
-        h3 №
-      li 
-        h1 888
-      li
-        h3 люкс
-    ul.modal-order-price
-      li
-        h3 9 990₽
-      li
-        p в сутки
+  +room-number(889,'9 800','люкс') 
+  +room-number(888,'9 800') 
   form.modal-order-form(action="", method="post") 
     label(for="") 
       h3 прибытие
