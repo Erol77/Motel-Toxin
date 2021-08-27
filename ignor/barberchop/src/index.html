@@ -12,7 +12,7 @@
         <a class="page-header__logo">
             <img src="img/logotype-mobile.svg" width="226" height="30" alt="Барбершоп Бородинский">
         </a>
-        <nav class="main-nav">
+        <nav class="main-nav main-nav--closed main-nav--nojs">
             <button class="main-nav_toggle" type="button">
                 <span class="visually-hidden">
                     Открыть меню
@@ -283,10 +283,10 @@
                             <a href="" class="social__link social__link--vlontante">Мы в контакте</a>
                         </li>
                         <li class="social__item">
-                            <a href="" class="social__link social__link--facebook">Мы в контакте</a>
+                            <a href="" class="social__link social__link--facebook">Мы в фуйсбук</a>
                         </li>
                         <li class="social__item">
-                            <a href="" class="social__link social__link--instagram">Мы в контакте</a>
+                            <a href="" class="social__link social__link--instagram">Мы в инстаграм</a>
                         </li>
 
                     </ul>
@@ -356,6 +356,22 @@
                                 </section>
                                 </div>  -->
     </main>
+	<script>
+		var mainNav = document.querySelector('.main-nav');
+		var navToggle = document.querySelector('.main-nav__toggle');
+		
+		mainNav.classList.remove('main-nav--nojs');
+		
+		navToggle.addEventListener('click', function() {
+			if (mainNav.classList.contains('main-nav--closed')) {
+				mainNav.classList.remove('main-nav--closed');
+				mainNav.classList.add('main-nav--opened');
+				} else {
+				mainNav.classList.add('main-nav--closed');
+				mainNav.classList.remove('main-nav--opened');
+				}		
+		});		
+	</script>
     
 </body>
 </html>
