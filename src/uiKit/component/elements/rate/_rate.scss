@@ -1,6 +1,6 @@
 .button-rate {
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
 
     &.star {
         &::before {
@@ -16,9 +16,6 @@
         background-image: url(../img/star_border.svg);
         background-repeat: no-repeat;
         background-position: 0;
-        top: -5px;
-        left: 0px;
-
     }
 
 }

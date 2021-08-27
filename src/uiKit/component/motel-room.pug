@@ -1,58 +1,14 @@
 include ./elements/slider/slider
+include ./elements/room-number/room-number
+include ./elements/rate/rate
 .modal.modal-room
   +slider-room('perv','slide')
-  .room-parametr 
-    ul.modal-order-title 
-      li 
-        h3 №
-      li 
-        h1 888
+  +room-number(888,'9 800','люкс') 
+  hr 
+  .order-list 
+    +rate-button(5)
+    ul.order-price
       li
-        h3 люкс
-    ul.modal-order-price
+        h3 145
       li
-        h3 9 990₽
-      li
-        p в сутки
-  hr
-  ul.room-rating
-    li
-      img(
-        src="../src/uiKit/img/star.svg",
-        alt="star",
-        width="24px",
-        height="24px"
-      )
-    li
-      img(
-        src="../src/uiKit/img/star.svg",
-        alt="star",
-        width="24px",
-        height="24px"
-      )
-    li
-      img(
-        src="../src/uiKit/img/star.svg",
-        alt="star",
-        width="24px",
-        height="24px"
-      )
-    li
-      img(
-        src="../src/uiKit/img/star.svg",
-        alt="star",
-        width="24px",
-        height="24px"
-      )
-    li
-      img(
-        src="../src/uiKit/img/star_border.svg",
-        alt="star",
-        width="24px",
-        height="24px"
-      )
-
-    li
-      h3 145
-    li
-      p Отзывов
+        p Отзывов

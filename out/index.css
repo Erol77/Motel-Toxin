@@ -1593,9 +1593,10 @@ input:focus {
     background-color: rgba(31, 32, 65, 0.05);
     height: 1px; }
   .modal-room .room-rating {
-    display: inline-block;
     padding-left: 20px;
     text-align: right; }
+    .modal-room .room-rating li {
+      display: inline-block; }
 
 .header {
   min-height: 70px;
@@ -1985,8 +1986,8 @@ input.checkbox-button[type="checkbox"]:checked + label::before {
     left: 5px; }
 
 .button-rate {
-  width: 24px;
-  height: 24px; }
+  width: 20px;
+  height: 20px; }
   .button-rate.star::before {
     background-image: url(5a1fce0bd521840614e152e3a0e5a8d0.svg); }
   .button-rate::before {
@@ -1996,9 +1997,7 @@ input.checkbox-button[type="checkbox"]:checked + label::before {
     position: absolute;
     background-image: url(d6f803db6e2d4c949d36a736465ff506.svg);
     background-repeat: no-repeat;
-    background-position: 0;
-    top: -5px;
-    left: 0px; }
+    background-position: 0; }
 
 .rate {
   padding: 0;
@@ -2215,5 +2214,5 @@ input.checkbox-button[type="checkbox"]:checked + label::before {
 
 .order-list {
   display: grid;
-  grid-template-columns: 1fr 1fr; }
+  grid-template-columns: 1.5fr 1fr; }
 
