@@ -1,10 +1,19 @@
-doctype html
-html(lang="ru")
-  include ./../component/head.pug
-  body.landing
-    include ./../component/header.pug
-    include ./../component/elements/date-dropdaun/date-dropdaun.pug
-    h1 Номера, которые мы для вас подобрали
-    p Written with love by #{ author }
-    p This will be safe: #{ theGreat }
-    include ./../component/footer.pug
+extends ./component/layout
+//- include ./component/elements/subscription/subscription.pug
+
+block title
+  title Filter
+  - var titleSection = 'Поиск номера';
+
+block content
+  body
+    //- doctype html
+      html(lang="ru")
+        include ./../component/head.pug
+        body.landing
+          include ./../component/header.pug
+          include ./../component/elements/date-dropdaun/date-dropdaun.pug
+          h1 Номера, которые мы для вас подобрали
+          p Written with love by #{ author }
+          p This will be safe: #{ theGreat }
+          include ./../component/footer.pug
