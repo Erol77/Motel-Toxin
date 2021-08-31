@@ -1,5 +1,13 @@
 extends ../component/layout
 //- include ./component/elements/subscription/subscription.pug
+include ./../component/elements/dropdown/dropdown.pug
+include ./../component/elements/checkbox/checkbox.pug
+include ./../component/elements/expandable/expandable
+include ./../component/elements/pagination/pagination
+
+include ./../component/elements/slider/slider
+include ./../component/elements/room-number/room-number
+include ./../component/elements/rate/rate
 
 block title
   title Filter
@@ -9,7 +17,48 @@ block content
   body
     .wrapper-searh 
       .parametry 
+        include ./../component/elements/date-dropdown/date-dropdown.pug
+        h3 Гости
+        +dropdown-people("3 гостя, 1 младенец")
+        h3 Правила дома
+        +checkbox-button('smoke','Можно курить') 
+        +checkbox-button('animals','Можно с питомцами','checked') 
+        +checkbox-button('guests','Можно пригласить гостей', 'checked') 
+          br
+          span (до 10 человек)
+        h3 Доступность
+        +checkbox-button-rich('korridor','Широкий коридор') 
+          p Ширина коридоров в номере не менее 91 см.
+        +checkbox-button-rich('assistant','Помощник для инвалидов') 
+          p На 1 этаже вас встретит специалист и проводит до номера.
+        h3 Удобства номера
+        +dropdown-people("2 спальни, 2 кровати...")
+        +expandable('дополнительные удобства')
       .searh-room
+        h1 Номера, которые мы для вас подобрали
+        .room-list
+          .modal.modal-room
+            +slider-room-next(888,'9 800','люкс')
+            hr 
+            .order-list 
+              +rate-button(5)
+              ul.order-price
+                li
+                  h3 145
+                li
+                  p Отзывов
+          .modal.modal-room
+            +slider-room(889,'9 100','') 
+            hr 
+            .order-list 
+              +rate-button(4)
+              ul.order-price
+                li
+                  h3 45
+                li
+                  p Отзывов
+
+        +pagination(1)
     //- doctype html
       html(lang="ru")
         include ./../component/head.pug

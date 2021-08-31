@@ -1,49 +1,76 @@
-mixin slider-room-next(n,j)
+mixin slider-room-next(i,j,k)
   article.slider 
     .wrapper
-      input(type="radio", name=n, id=j + 1, checked) 
-      input(type="radio", name=n, id=j + 2) 
-      input(type="radio", name=n, id=j + 3) 
-      input(type="radio", name=n, id=j + 4) 
+      input(type="radio", name=i, id=i + '-' + 1, checked) 
+      input(type="radio", name=i, id=i + '-' + 2) 
+      input(type="radio", name=i, id=i + '-' + 3) 
+      input(type="radio", name=i, id=i + '-' + 4) 
       .slider-wrapper
         .inner 
           article 
-            img(src="../src/uiKit/img/room1.jpg", alt="")
+            img(src=`../src/uiKit/img/room/room${i}.jpg`, alt="")
           article 
-            img(src="../src/uiKit/img/rum2.jpg", alt="")
+            img(src=`../src/uiKit/img/room/room${i}.jpg`, alt="")
           article 
-            img(src="../src/uiKit/img/rum.jpg", alt="")
+            img(src=`../src/uiKit/img/room/room${i}.jpg`, alt="")
           article 
-            img(src="../src/uiKit/img/room1.jpg", alt="")
+            img(src=`../src/uiKit/img/room/room${i}.jpg`, alt="")
       .slider-prev-next-control 
-        label(for=j + 1) 
-        label(for=j + 2) 
-        label(for=j + 3) 
-        label(for=j + 4) 
+        label(for=i + '-' + 1) 
+        label(for=i + '-' + 2) 
+        label(for=i + '-' + 3) 
+        label(for=i + '-' + 4) 
       .slider-dot-control 
-        label(for=j + 1) 
-        label(for=j + 2) 
-        label(for=j + 3) 
-        label(for=j + 4)
-mixin slider-room(n,j)
+        label(for=i + '-' + 1) 
+        label(for=i + '-' + 2) 
+        label(for=i + '-' + 3) 
+        label(for=i + '-' + 4)
+    .order-list
+      ul.order-title 
+        li 
+          h3 №
+        li 
+          h1= i
+        li
+          h3= k
+      ul.order-price
+        li
+          h3= j + '₽'
+        li
+          p в сутки
+
+mixin slider-room(i,j,k)
   article.slider 
     .wrapper
-      input(type="radio", name=n, id=j + 1, checked) 
-      input(type="radio", name=n, id=j + 2) 
-      input(type="radio", name=n, id=j + 3) 
-      input(type="radio", name=n, id=j + 4) 
+      input(type="radio", name=i, id=i + '-' + 1, checked) 
+      input(type="radio", name=i, id=i + '-' + 2) 
+      input(type="radio", name=i, id=i + '-' + 3) 
+      input(type="radio", name=i, id=i + '-' + 4) 
       .slider-wrapper
         .inner 
           article 
-            img(src="../src/uiKit/img/room1.jpg", alt="")
+            img(src=`../src/uiKit/img/room/room${i}.jpg`, alt="")
           article 
-            img(src="../src/uiKit/img/rum2.jpg", alt="")
+            img(src=`../src/uiKit/img/room/room${i}.jpg`, alt="")
           article 
-            img(src="../src/uiKit/img/rum.jpg", alt="")
+            img(src=`../src/uiKit/img/room/room${i}.jpg`, alt="")
           article 
-            img(src="../src/uiKit/img/room1.jpg", alt="")
+            img(src=`../src/uiKit/img/room/room${i}.jpg`, alt="")
       .slider-dot-control 
-        label(for=j + 1) 
-        label(for=j + 2) 
-        label(for=j + 3) 
-        label(for=j + 4)
+        label(for=i + '-' + 1) 
+        label(for=i + '-' + 2) 
+        label(for=i + '-' + 3) 
+        label(for=i + '-' + 4)
+    .order-list
+      ul.order-title 
+        li 
+          h3 №
+        li 
+          h1= i
+        li
+          h3= k
+      ul.order-price
+        li
+          h3= j + '₽'
+        li
+          p в сутки
