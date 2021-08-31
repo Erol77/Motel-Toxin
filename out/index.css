@@ -2196,3 +2196,20 @@ input.checkbox-button[type="checkbox"]:checked + label::before {
   grid-template-columns: 120px 1fr;
   height: 30px; }
 
+.wrapper-searh {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  padding: 0 140px; }
+
+.parametry {
+  display: flex;
+  flex-direction: column; }
+
+.room-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+
+.searh-room:last-child {
+  text-align: center; }
+

@@ -88,6 +88,10 @@ type: "asset/resource"
         filename: '[name].html',
         // inject: 'body'
     }),
+      new HtmlWebpackPlugin({
+        template: PATHS.source + '/uiKit/landing/searhRoom.pug',
+        filename: 'searhRoom.html',
+    }),
     //      new HtmlWebpackPlugin({
     //     template: PATHS.source + '/uiKit/landing/landing.pug',
     //     filename: 'landing.html',
