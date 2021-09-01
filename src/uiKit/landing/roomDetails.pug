@@ -1,15 +1,16 @@
 extends ../component/layout
 
 block title
-  title Toxin
+  title Toxin detail page
   - var titleSection = 'Детальная страница';
 
 block content
-  body.landing
-    include ./../component/header.pug
-    .slaider 
-      img(src="../src/uiKit/img/landing/image.jpg", alt="", width="100%")
-      p Лучшие номера для вашей работы,<br> отдыха и просто вдохновения
+  body
+    .room-detail 
+      img(src="../src/uiKit/img/landing/image.jpg", alt="", width="68%")
+      img(src="../src/uiKit/img/landing/image.jpg", alt="", width="32%")
+      img(src="../src/uiKit/img/landing/image.jpg", alt="", width="32%")
     .visually-hidden
       include ./../component/form-searh.pug
-    include ./../component/form-searh.pug
+    .room-list
+      include ./../component/form-order.pug

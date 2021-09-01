@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toxin detail page</title>
+  <script defer src="index.bundle.js"></script><link href="index.css" rel="stylesheet"></head>
+  <body>
+        <header class="header">
+          <div class="nav"> 
+<ul class="logo"> 
+  <li> <img src="../src/uiKit/img/logo.svg" alt="Logotip company"></li>
+  <li> <img src="../src/uiKit/img/TOXIN.svg" alt="TOXIN"></li>
+</ul>
+            <div class="nav-menu">
+              <ul> 
+                <li> <a href="http://">О нас</a></li>
+                <li> <a href="http://">Услуги <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.5938 0.578125L12 1.98438L6 7.98438L0 1.98438L1.40625 0.578125L6 5.17188L10.5938 0.578125Z" fill="#1F2041" fill-opacity="0.5"/></svg></a></li>
+                <li> <a href="http://">Вакансии</a></li>
+                <li> <a href="http://">Новости</a></li>
+                <li> <a href="http://">Соглашения <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.5938 0.578125L12 1.98438L6 7.98438L0 1.98438L1.40625 0.578125L6 5.17188L10.5938 0.578125Z" fill="#1F2041" fill-opacity="0.5"/></svg></a></li>
+                <li> 
+                  <button class="btn-2">войти</button>
+                </li>
+                <li> 
+                  <button class="btn-4">зарегистрироваться</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </header>
+    <h1 class="visually-hidden">Детальная страница</h1>
+    <body>
+      <div class="room-detail"> <img src="../src/uiKit/img/landing/image.jpg" alt="" width="68%"><img src="../src/uiKit/img/landing/image.jpg" alt="" width="32%"><img src="../src/uiKit/img/landing/image.jpg" alt="" width="32%"></div>
+      <div class="visually-hidden">
+<div class="modal modal-searh">
+  <h1>Найдём номера под ваши пожелания</h1>
+  <form class="form-searh" action="" method="post"> 
+    <label for="check-in"> 
+      <h3>прибытие</h3>
+      <input class="datepicker-here" id="check-in" type="text" data-position="right top" value="ДД.ММ.ГГГГ">
+    </label>
+    <label for="exit"> 
+      <h3>выезд</h3>
+      <input class="datepicker-here" id="exit" type="text" data-position="left top" value="ДД.ММ.ГГГГ">
+    </label>
+    <label for="guest"> 
+      <h3>гости</h3>
+      <input id="guest" type="text" value="" placeholder="Сколько гостей">
+    </label>
+    <button class="button button_flooded button_size_w button_icon_arrow_right" type="submit" value="">Подобрать номер<span> </span></button>
+  </form>
+</div>
+      </div>
+      <div class="room-list">
+        <div class="modal modal-order">
+                  <div class="order-list">
+                    <ul class="order-title"> 
+                      <li> 
+                        <h3>№</h3>
+                      </li>
+                      <li> 
+                        <h1>889</h1>
+                      </li>
+                      <li>
+                        <h3>люкс</h3>
+                      </li>
+                    </ul>
+                    <ul class="order-price">
+                      <li>
+                        <h3>9 800₽</h3>
+                      </li>
+                      <li>
+                        <p>в сутки</p>
+                      </li>
+                    </ul>
+                  </div>
+          <form class="modal-order-form" action="" method="post"> 
+            <label for=""> 
+              <h3>прибытие</h3>
+              <input class="datepicker-here" type="text" data-position="right top" value="date">
+            </label>
+            <label for=""> 
+              <h3>выезд</h3>
+              <input class="datepicker-here" type="text" data-position="left top" value="date+3">
+            </label>
+            <label for=""> 
+              <h3>гости</h3>
+              <input type="text" value="3 гостя" placeholder="Сколько гостей">
+            </label>
+            <div class="conteiner">
+              <ul class="modal-order-total-services"> 
+                <li> 
+                  <p>9 990₽ х 4 суток</p>
+                </li>
+                <li> 
+                  <p>Сбор за услуги:<span>скидка 2 179₽</span></p>
+                </li>
+                <li> 
+                  <p>Сбор за дополнительные <br> услуги</p>
+                </li>
+              </ul>
+              <ul class="modal-order-total-price"> 
+                <li> 
+                  <p>39 960₽</p>
+                </li>
+                <li> 
+                  <p>0₽</p>
+                </li>
+                <li> 
+                  <p>300₽</p>
+                </li>
+              </ul>
+            </div>
+            <div class="conteiner">
+              <h2>Итого</h2>
+              <div class="point"></div>
+              <h2>38 081₽</h2>
+            </div>
+            <button class="button button_flooded button_size_w button_icon_arrow_right" type="submit" value="">забронировать</button>
+          </form>
+        </div>
+      </div>
+    </body>
+<footer class="footer"> 
+  <div class="footer-logo">
+<ul class="logo"> 
+  <li> <img src="../src/uiKit/img/logo.svg" alt="Logotip company"></li>
+  <li> <img src="../src/uiKit/img/TOXIN.svg" alt="TOXIN"></li>
+</ul>
+    <p>Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»</p>
+  </div>
+  <ul class="footer-menu"> 
+    <li> <a href="">навигация</a></li>
+    <li> <a href="">О нас</a></li>
+    <li> <a href="">Новости</a></li>
+    <li> <a href="">Служба поддержки</a></li>
+    <li> <a href="">Услуги</a></li>
+  </ul>
+  <ul class="footer-menu"> 
+    <li> <a href="">о нас</a></li>
+    <li> <a href="">О сервисе</a></li>
+    <li> <a href="">Наша команда</a></li>
+    <li> <a href="">Вакансии</a></li>
+    <li> <a href="">Инвесторы</a></li>
+  </ul>
+  <ul class="footer-menu"> 
+    <li> <a href="">Служба поддержки</a></li>
+    <li> <a href="">Соглашения</a></li>
+    <li> <a href="">Сообщества</a></li>
+    <li> <a href="">Связь с нами</a></li>
+  </ul>
+  <ul class="footer-menu"> 
+    <li> <a href="">Подписка</a></li>
+    <li> 
+      <p>Получайте специальные<br /> предложения и новости сервиса</p>
+    </li>
+    <li>
+<div class="subscription"> 
+  <label>
+    <input type="email" name="email" placeholder="Email">
+  </label>
+</div>
+    </li>
+  </ul>
+</footer>
+<div class="footer-copyright">
+  <ul> 
+    <li> 
+      <p>Copyright © 2018 Toxin отель. Все права защищены.</p>
+    </li>
+  </ul>
+  <ul> 
+    <li> <a href=""> <img class="network" src="../src/uiKit/img/tvitter.svg" alt="Logotip tvitter"></a></li>
+    <li> <a href=""> <img class="network" src="../src/uiKit/img/facebook.svg" alt="Logotip facebook"></a></li>
+    <li> <a href=""> <img class="network" src="../src/uiKit/img/instagram.svg" alt="Logotip instagram"></a></li>
+  </ul>
+</div>
+  </body>
+</html>
