@@ -1721,7 +1721,9 @@ img.network {
   margin-bottom: 0px; }
 
 .landing .modal-searh {
-  position: absolute; }
+  position: absolute;
+  top: 25%;
+  margin-left: 10%; }
 
 .landing .modal-registration {
   position: absolute;

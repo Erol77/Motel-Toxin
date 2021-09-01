@@ -83,14 +83,14 @@ type: "asset/resource"
             
     //  new CleanWebpackPlugin(),
     
-     new HtmlWebpackPlugin({
-        template: PATHS.source + '/uiKit/index.pug',
-        filename: '[name].html',
-        // inject: 'body'
-    }),
-      new HtmlWebpackPlugin({
-        template: PATHS.source + '/uiKit/landing/searhRoom.pug',
-        filename: 'searhRoom.html',
+    //  new HtmlWebpackPlugin({
+    //     template: PATHS.source + '/uiKit/index.pug',
+    //     filename: '[name].html',
+    //     // inject: 'body'
+    // }),
+         new HtmlWebpackPlugin({
+        template: PATHS.source + '/uiKit/landing/roomDetails.pug',
+        filename: 'roomDetails.html',
     }),
     //      new HtmlWebpackPlugin({
     //     template: PATHS.source + '/uiKit/landing/landing.pug',

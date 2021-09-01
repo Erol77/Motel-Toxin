@@ -1,42 +1,76 @@
 <!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Заголовок страницы - </title>
-  <!--script(src="/js/jquery.js")-->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="../src/uiKit/js/datepicker.js"></script>
-<script defer src="index.bundle.js"></script><link href="index.css" rel="stylesheet"></head>
-  <body class="landing">
-<header class="header">
-  <div class="nav"> 
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+  <script defer src="index.bundle.js"></script><link href="index.css" rel="stylesheet"></head>
+  <body>
+        <header class="header">
+          <div class="nav"> 
 <ul class="logo"> 
   <li> <img src="../src/uiKit/img/logo.svg" alt="Logotip company"></li>
   <li> <img src="../src/uiKit/img/TOXIN.svg" alt="TOXIN"></li>
 </ul>
-    <div class="nav-menu">
-      <ul> 
-        <li> <a href="http://">О нас</a></li>
-        <li> <a href="http://">Услуги <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.5938 0.578125L12 1.98438L6 7.98438L0 1.98438L1.40625 0.578125L6 5.17188L10.5938 0.578125Z" fill="#1F2041" fill-opacity="0.5"/></svg></a></li>
-        <li> <a href="http://">Вакансии</a></li>
-        <li> <a href="http://">Новости</a></li>
-        <li> <a href="http://">Соглашения <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.5938 0.578125L12 1.98438L6 7.98438L0 1.98438L1.40625 0.578125L6 5.17188L10.5938 0.578125Z" fill="#1F2041" fill-opacity="0.5"/></svg></a></li>
-        <li> 
-          <button class="btn-2">войти</button>
-        </li>
-        <li> 
-          <button class="btn-4">зарегистрироваться</button>
-        </li>
-      </ul>
-    </div>
-  </div>
-</header>
-    <div class="slaider"> <img src="../src/uiKit/img/landing/image 4.jpg" alt="" width="100%"></div>
-    <h1>Регистрация</h1>
-    <p>Written with love by enlore</p>
-    <p>This will be safe: &lt;span&gt;escape!&lt;/span&gt;</p>
+            <div class="nav-menu">
+              <ul> 
+                <li> <a href="http://">О нас</a></li>
+                <li> <a href="http://">Услуги <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.5938 0.578125L12 1.98438L6 7.98438L0 1.98438L1.40625 0.578125L6 5.17188L10.5938 0.578125Z" fill="#1F2041" fill-opacity="0.5"/></svg></a></li>
+                <li> <a href="http://">Вакансии</a></li>
+                <li> <a href="http://">Новости</a></li>
+                <li> <a href="http://">Соглашения <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.5938 0.578125L12 1.98438L6 7.98438L0 1.98438L1.40625 0.578125L6 5.17188L10.5938 0.578125Z" fill="#1F2041" fill-opacity="0.5"/></svg></a></li>
+                <li> 
+                  <button class="btn-2">войти</button>
+                </li>
+                <li> 
+                  <button class="btn-4">зарегистрироваться</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </header>
+    <h1 class="visually-hidden">Вход</h1>
+    <body class="landing">
+      <div class="slaider"> <img src="../src/uiKit/img/landing/image 4.jpg" alt="" width="100%"></div>
+      <div class="visually-hidden">
+        <div class="modal modal-registration">
+          <h1>Регистрация аккаунта</h1>
+          <form class="form-registration" action="" method="post"> 
+            <input type="text" name="first-name" placeholder="Имя">
+            <input type="text" name="last-name" placeholder="Фамилия">
+                        <div class="human">
+                          <input class="visually-hidden" id="reg1" type="radio" name="humen" value="man" checked>
+                          <label for="reg1">Мужчина</label>
+                          <input class="visually-hidden" id="reg2" type="radio" name="humen" value="woman">
+                          <label for="reg2">Женщина</label>
+                        </div>
+            <h3>дата рождения</h3>
+            <input class="datepicker-here" id="birthday" type="text" data-position="right top" value="ДД.ММ.ГГГГ">
+            <h3>данные для входа в сервис</h3>
+            <input type="email" name="email" placeholder="Email">
+            <input type="password" name="password" placeholder="Пароль">
+                        <input class="visually-hidden toggle" type="checkbox" id="togle-registration">
+                        <label class="toggle" for="togle-registration">Получать спецпредложения</label>
+            <button class="button button_flooded button_size_w button_icon_arrow_right" type="submit" value="">перейти к оплате</button>
+          </form>
+          <p>Уже есть аккаунт на Toxin
+            <button class="button button_border">войти</button>
+          </p>
+        </div>
+      </div>
+<div class="modal modal-login"> 
+  <form>
+    <h1>Войти</h1>
+    <input type="email" name="email" placeholder="Email">
+    <input type="password" name="password" placeholder="Пароль">
+    <button class="button button_flooded button_size_w button_icon_arrow_right" type="submit" value="">войти</button>
+  </form>
+  <p>Нет аккаунта на Toxin?
+    <button class="button button_border">создать</button>
+  </p>
+</div>
+    </body>
 <footer class="footer"> 
   <div class="footer-logo">
 <ul class="logo"> 
@@ -71,9 +105,11 @@
       <p>Получайте специальные<br /> предложения и новости сервиса</p>
     </li>
     <li>
-      <label> 
-        <input type="email" name="email" placeholder="Email">
-      </label>
+<div class="subscription"> 
+  <label>
+    <input type="email" name="email" placeholder="Email">
+  </label>
+</div>
     </li>
   </ul>
 </footer>
@@ -88,41 +124,6 @@
     <li> <a href=""> <img class="network" src="../src/uiKit/img/facebook.svg" alt="Logotip facebook"></a></li>
     <li> <a href=""> <img class="network" src="../src/uiKit/img/instagram.svg" alt="Logotip instagram"></a></li>
   </ul>
-</div>
-    <div class="visually-hidden">
-<div class="modal modal-registration">
-  <h1>Регистрация аккаунта</h1>
-  <form class="form-registration" action="" method="post"> 
-    <input type="text" name="first-name" placeholder="Имя">
-    <input type="text" name="last-name" placeholder="Фамилия">
-    <input class="visually-hidden" id="man" type="radio" name="human" value="man" checked>
-    <label for="man">Мужчина</label>
-    <input class="visually-hidden" id="woman" type="radio" name="human" value="woman">
-    <label for="woman">Женщина</label>
-    <h3>дата рождения</h3>
-    <input class="datepicker-here" id="birthday" type="text" data-position="right top" value="ДД.ММ.ГГГГ">
-    <h3>данные для входа в сервис</h3>
-    <input type="email" name="email" placeholder="Email">
-    <input type="password" name="password" placeholder="Пароль">
-<input class="visually-hidden toggle" id="toggle-n" type="checkbox">
-<label class="toggle" for="toggle-n">Получать спецпредложения</label>
-    <button class="btn-4" type="submit" value="">перейти к оплате</button>
-  </form>
-  <p>Уже есть аккаунт на Toxin
-    <button class="btn-2">войти</button>
-  </p>
-</div>
-    </div>
-<div class="modal modal-login"> 
-  <form>
-    <h1>Войти</h1>
-    <input type="email" name="email" placeholder="Email">
-    <input type="password" name="password" placeholder="Пароль">
-    <button class="btn-4" type="submit" value="">войти</button>
-  </form>
-  <p>Нет аккаунта на Toxin?
-    <button class="btn-2">создать</button>
-  </p>
 </div>
   </body>
 </html>

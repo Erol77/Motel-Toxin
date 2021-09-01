@@ -1,17 +1,21 @@
-- var title = 'Регистрация';
-- var author = 'enlore';
-- var theGreat = '<span>escape!</span>';
-doctype html
-html(lang="ru")
-  include ./../component/head.pug
+extends ../component/layout
+
+block title
+  title Sign In
+  - var titleSection = 'Вход';
+
+block content
   body.landing
     include ./../component/header.pug
     .slaider 
       img(src="../src/uiKit/img/landing/image 4.jpg", alt="", width="100%")
-    h1= title
-    p Written with love by #{ author }
-    p This will be safe: #{ theGreat }
-    include ./../component/footer.pug
     .visually-hidden
       include ./../component/form-registration.pug
     include ./../component/login.pug
+      //- - var titlePage = 'Регистрация';
+        - var author = 'enlore';
+        - var theGreat = '<span>escape!</span>';
+
+            h1= titlePage
+        p Written with love by #{ author }
+        p This will be safe: #{ theGreat }

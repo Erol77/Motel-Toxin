@@ -1,13 +1,13 @@
-doctype html
-html(lang="ru")
-  include ./../component/head.pug
+extends ../component/layout
+
+block title
+  title Registration
+  - var titleSection = 'Регистрация';
+
+block content
   body.landing
-    include ./../component/header.pug
     .slaider 
       img(src="../src/uiKit/img/landing/image 4.jpg", alt="", width="100%")
-
-    include ./../component/footer.pug
     .visually-hidden
       include ./../component/form-searh.pug
-    .visually-hidden
-      include ./../component/form-registration.pug
+    include ./../component/form-registration.pug
