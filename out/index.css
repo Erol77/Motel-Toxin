@@ -366,6 +366,11 @@ body {
   color: rgba(31, 32, 65, 0.75);
   background-color: rgba(31, 32, 65, 0.05); }
 
+* {
+  padding: 0;
+  margin: 0;
+  border: 0; }
+
 h1,
 h2,
 h3 {
@@ -2214,4 +2219,29 @@ input.checkbox-button[type="checkbox"]:checked + label::before {
 
 .searh-room:last-child {
   text-align: center; }
+
+.details {
+  background-color: #ffffff; }
+  .details > .header {
+    margin-bottom: 0px; }
+  .details-list {
+    padding: 70px 140px; }
+
+.room-detail img:first-child {
+  float: left; }
+
+.item-room {
+  margin-top: 20px;
+  width: 291px;
+  height: 70px; }
+  .item-room hr {
+    border: none;
+    width: 280px;
+    background-color: rgba(31, 32, 65, 0.1);
+    height: 1px;
+    margin-top: 20px; }
+
+.item-room__icon {
+  float: left;
+  margin-right: 10px; }
 

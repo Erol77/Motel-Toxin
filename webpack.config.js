@@ -83,11 +83,11 @@ type: "asset/resource"
             
     //  new CleanWebpackPlugin(),
     
-    //  new HtmlWebpackPlugin({
-    //     template: PATHS.source + '/uiKit/index.pug',
-    //     filename: '[name].html',
+     new HtmlWebpackPlugin({
+        template: PATHS.source + '/uiKit/index.pug',
+        filename: '[name].html',
     //     // inject: 'body'
-    // }),
+    }),
          new HtmlWebpackPlugin({
         template: PATHS.source + '/uiKit/landing/roomDetails.pug',
         filename: 'roomDetails.html',

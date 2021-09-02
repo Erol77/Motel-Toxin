@@ -5,21 +5,46 @@ block title
   - var titleSection = 'Детальная страница';
 
 block content
-  body.detail
+  body.details
     .room-detail 
       img(src="../src/uiKit/img/landing/image.jpg", alt="", width="68%")
       img(src="../src/uiKit/img/landing/image.jpg", alt="", width="32%")
       img(src="../src/uiKit/img/landing/image.jpg", alt="", width="32%")
     .visually-hidden
       include ./../component/form-searh.pug
-    .room-list
+    .details-list
       h2 Сведения о номере
       .item-room 
         .item-room__icon 
-          img(src="../img/insert_emoticonsmail.svg", alt="emoticonsmail")
-        h3.item-room__title 
-        p.item-room__text 
+          img(
+            src="../src/uiKit/img/insert_emoticonsmail.svg",
+            alt="emoticonsmail"
+          )
+        h3.item-room__title Комфорт
+        p.item-room__text Шумопоглощающие стены
+        hr 
+      .item-room 
+        .item-room__icon 
+          img(src="../src/uiKit/img/location_city.svg", alt="location_city")
+        h3.item-room__title Удобство
+        p.item-room__text Окно в каждой из спален
+        hr 
+      .item-room 
+        .item-room__icon 
+          img(src="../src/uiKit/img/whatshot.svg", alt="whatshot")
+        h3.item-room__title Уют
+        p.item-room__text Номер оснащён камином
+      h2 Впечатления от номера
+      .details-impressions
+        .details-impressions__icon
+          H1 260
+          h3 голосов
+        ul.details-impressions__list 
+          li Великолепно
+          li Хорошо
+          li Удовлетворительно
+          li Разочарован
+      h2 Отзывы посетителей номера
+      p 2 отзыва
 
-      ul 
-        li 
       include ./../component/form-order.pug

@@ -1,21 +1,36 @@
-details{
-    .header {
+.details{
+    &>.header {
         margin-bottom: 0px;
     }
 
     background-color: #ffffff;
 
+        &-list {
+            padding: 70px 140px;
+        }
 
 } 
-.item-room hr {
+
+.room-detail img:first-child {
+    float: left;
+}
+
+.item-room {
+    margin-top: 20px;
+    width: 291px;
+    height: 70px;
+
+    hr {
     border: none;
     width: 280px;
     // color: rgba(31, 32, 65, 0.05);
-    background-color: rgba(31, 32, 65, 0.05);
+    background-color: rgba(31, 32, 65, 0.1);
     height: 1px;
-    margin-top: 10px;
+    margin-top: 20px;
+    }
 }
 
 .item-room__icon {
     float: left;
+    margin-right: 10px;
 }
