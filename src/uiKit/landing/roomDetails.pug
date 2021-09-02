@@ -5,7 +5,7 @@ block title
   - var titleSection = 'Детальная страница';
 
 block content
-  body
+  body.detail
     .room-detail 
       img(src="../src/uiKit/img/landing/image.jpg", alt="", width="68%")
       img(src="../src/uiKit/img/landing/image.jpg", alt="", width="32%")
@@ -13,4 +13,13 @@ block content
     .visually-hidden
       include ./../component/form-searh.pug
     .room-list
+      h2 Сведения о номере
+      .item-room 
+        .item-room__icon 
+          img(src="../img/insert_emoticonsmail.svg", alt="emoticonsmail")
+        h3.item-room__title 
+        p.item-room__text 
+
+      ul 
+        li 
       include ./../component/form-order.pug

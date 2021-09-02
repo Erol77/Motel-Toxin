@@ -1,0 +1,21 @@
+details{
+    .header {
+        margin-bottom: 0px;
+    }
+
+    background-color: #ffffff;
+
+
+} 
+.item-room hr {
+    border: none;
+    width: 280px;
+    // color: rgba(31, 32, 65, 0.05);
+    background-color: rgba(31, 32, 65, 0.05);
+    height: 1px;
+    margin-top: 10px;
+}
+
+.item-room__icon {
+    float: left;
+}
