@@ -2227,6 +2227,8 @@ input.checkbox-button[type="checkbox"]:checked + label::before {
   .details-list {
     padding: 70px 140px; }
 
+.reviews-list img:first-child,
+.reviews-list button:first-child,
 .room-detail img:first-child {
   float: left; }
 
