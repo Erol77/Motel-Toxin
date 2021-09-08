@@ -8,6 +8,12 @@
         &-list {
             padding: 70px 140px;
         }
+    &-wrapper{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        clear: both;
+    }
 
 } 
 .reviews-list img:first-child,

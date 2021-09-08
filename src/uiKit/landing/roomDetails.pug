@@ -13,72 +13,79 @@ block content
       img(src="../src/uiKit/img/room/room888-2.png", alt="", width="32%")
     .visually-hidden
       include ./../component/form-searh.pug
-    .details-list
-      h2 Сведения о номере
-      .item-room 
-        .item-room__icon 
-          img(
-            src="../src/uiKit/img/insert_emoticonsmail.svg",
-            alt="emoticonsmail"
-          )
-        h3.item-room__title Комфорт
-        p.item-room__text Шумопоглощающие стены
-        hr 
-      .item-room 
-        .item-room__icon 
-          img(src="../src/uiKit/img/location_city.svg", alt="location_city")
-        h3.item-room__title Удобство
-        p.item-room__text Окно в каждой из спален
-        hr 
-      .item-room 
-        .item-room__icon 
-          img(src="../src/uiKit/img/whatshot.svg", alt="whatshot")
-        h3.item-room__title Уют
-        p.item-room__text Номер оснащён камином
-      .impressions
-        h2 Впечатления от номера
-        .impressions__icon
-          H1 260
-          h3 голосов
-        ul.impressions__list 
-          li Великолепно
-          li Хорошо
-          li Удовлетворительно
-          li Разочарован
-      .reviews
-        h2 Отзывы посетителей номера
-        p 2 отзыва
-        .reviews-list
-          .reviews__icon 
-            img(
-              src="../src/uiKit/img/image_otziv.png",
-              alt="image_otziv",
-              width=" 48px",
-              height="48px"
-            )
-          h3.reviews__title Мурад Сарафанов
-          p.reviews__text 5 дней назад
-          +like(12,'chek')
-          p.reviews__text Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.
-        .reviews-list
-          .reviews__icon 
-            img(
-              src="../src/uiKit/img/image 4.jpg",
-              alt="image_otziv",
-              width=" 48px",
-              height="48px"
-            )
-          h3.reviews__title Патрисия Стёклышкова
-          p.reviews__text Неделю назад
-          +like(2,'')
-          p.reviews__text Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент
-        .rules
-          h2 Правила
-          ul 
-            li Нельзя с питомцами
-            li Без вечеринок и мероприятий
-            li Время прибытия — после 13:00, <br> а выезд до 12:00
-        .rules
-          h2 Отмена
-          p Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
+    .details-wrapper
+      .details-list
+        .details-wrapper
+          .room-information 
+            h2 Сведения о номере
+            .item-room 
+              .item-room__icon 
+                img(
+                  src="../src/uiKit/img/insert_emoticonsmail.svg",
+                  alt="emoticonsmail"
+                )
+              h3.item-room__title Комфорт
+              p.item-room__text Шумопоглощающие стены
+              hr 
+            .item-room 
+              .item-room__icon 
+                img(
+                  src="../src/uiKit/img/location_city.svg",
+                  alt="location_city"
+                )
+              h3.item-room__title Удобство
+              p.item-room__text Окно в каждой из спален
+              hr 
+            .item-room 
+              .item-room__icon 
+                img(src="../src/uiKit/img/whatshot.svg", alt="whatshot")
+              h3.item-room__title Уют
+              p.item-room__text Номер оснащён камином
+          .impressions
+            h2 Впечатления от номера
+            .impressions__icon
+              H1 260
+              h3 голосов
+            ul.impressions__list 
+              li Великолепно
+              li Хорошо
+              li Удовлетворительно
+              li Разочарован
+        .details-wrapper
+          h2 Отзывы посетителей номера
+          p 2 отзыва
+        .reviews
+          .reviews-list
+            .reviews__icon 
+              img(
+                src="../src/uiKit/img/image_otziv.png",
+                alt="image_otziv",
+                width=" 48px",
+                height="48px"
+              )
+            h3.reviews__title Мурад Сарафанов
+            p.reviews__text 5 дней назад
+            +like(12,'chek')
+            p.reviews__text Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.
+          .reviews-list
+            .reviews__icon 
+              img(
+                src="../src/uiKit/img/image 4.jpg",
+                alt="image_otziv",
+                width=" 48px",
+                height="48px"
+              )
+            h3.reviews__title Патрисия Стёклышкова
+            p.reviews__text Неделю назад
+            +like(2,'')
+            p.reviews__text Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент
+          .rules
+            h2 Правила
+            ul 
+              li Нельзя с питомцами
+              li Без вечеринок и мероприятий
+              li Время прибытия — после 13:00, <br> а выезд до 12:00
+          .rules
+            h2 Отмена
+            p Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
       include ./../component/form-order.pug

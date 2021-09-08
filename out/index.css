@@ -2226,6 +2226,11 @@ input.checkbox-button[type="checkbox"]:checked + label::before {
     margin-bottom: 0px; }
   .details-list {
     padding: 70px 140px; }
+  .details-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    clear: both; }
 
 .reviews-list img:first-child,
 .reviews-list button:first-child,
