@@ -6,12 +6,25 @@
     background-color: #ffffff;
 
         &-list {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
             padding: 70px 140px;
+            clear: both;
+
+            .modal-order{
+                margin-top: 0px;
+            }
         }
     &-wrapper{
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+        clear: both;
+       // margin: 30px 70px;
+    }
+    &-wrapper-column{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
         clear: both;
     }
 
@@ -40,4 +53,22 @@
 .item-room__icon {
     float: left;
     margin-right: 10px;
+}
+
+.reviews{
+        &__text{
+        max-width: 720px;
+    }
+    & .button{
+        margin-right: 14px;
+    }
+}
+
+.rules{
+    max-width: 340px;
+}
+
+.room-information,
+.impressions {
+    width: 380px;
 }

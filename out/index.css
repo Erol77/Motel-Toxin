@@ -2225,11 +2225,20 @@ input.checkbox-button[type="checkbox"]:checked + label::before {
   .details > .header {
     margin-bottom: 0px; }
   .details-list {
-    padding: 70px 140px; }
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding: 70px 140px;
+    clear: both; }
+    .details-list .modal-order {
+      margin-top: 0px; }
   .details-wrapper {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    clear: both; }
+  .details-wrapper-column {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
     clear: both; }
 
 .reviews-list img:first-child,
@@ -2251,4 +2260,17 @@ input.checkbox-button[type="checkbox"]:checked + label::before {
 .item-room__icon {
   float: left;
   margin-right: 10px; }
+
+.reviews__text {
+  max-width: 720px; }
+
+.reviews .button {
+  margin-right: 14px; }
+
+.rules {
+  max-width: 340px; }
+
+.room-information,
+.impressions {
+  width: 380px; }
 
