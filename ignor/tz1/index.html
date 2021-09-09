@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preload" href="css/Gilroyextrabold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="css/Gilroylight.woff2" as="font" type="font/woff2" crossorigin>
+
+    <link rel="stylesheet" href="css/gilroy.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+
+    <div class="info">
+        <main class="info-form-open">
+            <!-- info-form-open -->
+            <div class="info-form__body">
+                <h2>Info</h2>
+                <p for="">Enter your email address</p>
+                <input class="info-form__input" style="width:  370px;" type="text" name="email" placeholder="team@checkforpatent.com ">
+                <hr>
+                <h2>Product 1</h2>
+                <p for="">Enter main keyword for the product</p>
+                <input class="info-form__input" type="text" name="product" placeholder="for example, sylicon wine cup ">
+                <hr>
+                <p for="">Enter link to the similar product as a reference</p>
+                <input class="info-form__input" type="text" name="reference" placeholder="https://...">
+                <hr>
+                <a class="more" href="#">Add more products <img src="img/icon1.svg" alt="+" class="add-svg"></a>
+                <p> We offer discount up to 36% for multiple checks</p>
+            </div>
+
+            <button type="button" formaction="paymenterror" class="info-form-buy btn-txt" id="btn1"> and Pay 24.99 USD </button>
+
+            <div class="info-form__btn"> </div>
+            <p class="add-svg-blok-txt"><img src="img/icon2.svg" alt="blok" class="add-svg-blok"> Secure payment with Stripe</p>
+
+        </main>
+        <section class="adding-form">
+            <!-- adding-form-open -->
+            <h1>Adding more products</h1>
+            <p>The more items you check, the better the price.</p>
+            <div class="container">
+
+                <div class="form_radio" id="radio_1">
+                    <input id="radio-5" type="radio" name="radio" value="5" checked>
+                    <label for="radio-5">
+                        <h3>5 products for 80 usd / 16$ for each</h3>
+                        <p class="radio-cheked">You safe 36% on each patent check</p>
+                    </label>
+                </div>
+
+                <div class="form_radio" id="radio_2">
+                    <input id="radio-4" type="radio" name="radio" value="4">
+                    <label for="radio-4">
+                        <h3>4 products for 72 usd / 18$ for each</h3>
+                        <p class="radio-cheked">You safe 28% on each patent check </p>
+                    </label>
+                </div>
+
+                <div class="form_radio" id="radio_3">
+                    <input id="radio-3" type="radio" name="radio" value="3">
+                    <label for="radio-3">
+                        <h3>3 products for 60 usd / 20$ for each</h3>
+                        <p class="radio-cheked">You safe 20% on each patent check </p>
+                    </label>
+                </div>
+
+                <div class="form_radio" id="radio_4">
+                    <input id="radio-2" type="radio" name="radio" value="2">
+                    <label for="radio-2">
+                        <h3>2 products for 44 usd / 22$ for each</h3>
+                        <p class="radio-cheked">You safe 12% on each patent check </p>
+                    </label>
+                </div>
+
+                
+                <div class="form_radio" id="radio_5">
+                    <input id="radio-1" type="radio" name="radio" value="1">
+                    <label for="radio-1">
+                        <h3 style="line-height: 20px;">1 product for 24.99 usd</h3>
+                        <p class="radio-cheked"></p>
+                    </label>
+                </div>
+                <button class="radio-btn btn-txt"> Continue</button>
+
+            </div>
+        </section>
+
+        <section class="edit-form">
+            <!-- edit-form-open overflow-y -->
+            <div class="edit-form__body">
+                <h2>Info</h2>
+                <p for="">Enter your email address</p>
+                <input class="info-form__input" style="width:  370px;" type="text" name="email" placeholder="team@checkforpatent.com ">
+                <hr>
+                <div class="edit-form__element">
+
+                </div>
+
+
+            </div>
+
+            <button type="button" class="byu-btn btn-txt" id="btn2v3" value="Continue">Continue </button>
+        </section>
+        <section class="success-form">
+            <!-- success-form-open -->
+            <div class="success-form__body">
+                <div>
+                    <h2>Successfull payment</h2>
+                    <p>Your request has been accepted and will be
+                        processed within 24 working hours. We will send you a payment details
+                        and all information to your email.</p>
+                    <img src="img/succsess.png" alt="success">
+                </div>
+
+                <button class="succsess-back btn-txt" id="btn3v1"> Back </button>
+            </div>
+        </section>
+        <section class="failed-form">
+            <!-- success-form-open -->
+            <div class="failed-form__body">
+                <div>
+                    <h2>Your payment failed</h2>
+                    <p>Sorry, but we’ve having trouble processing your payment.
+                        You have been not charged for this transaction.</p>
+                    <img src="img/failed.png" alt="failed">
+                </div>
+
+                <input type="button" class="failed-back btn-txt" id="btn4to1" value="Try to pay again">
+            </div>
+        </section>
+
+    </div>
+
+</body>
+
+</html>
