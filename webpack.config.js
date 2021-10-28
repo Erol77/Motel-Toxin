@@ -92,22 +92,22 @@ type: "asset/resource"
         template: PATHS.source + '/uiKit/landing/roomDetails.pug',
         filename: 'roomDetails.html',
     }),
-    //      new HtmlWebpackPlugin({
-    //     template: PATHS.source + '/uiKit/landing/landing.pug',
-    //     filename: 'landing.html',
-    // }),
-    //          new HtmlWebpackPlugin({
-    //     template: PATHS.source + '/uiKit/landing/registration.pug',
-    //     filename: 'registration.html',
-    // }),
-    //              new HtmlWebpackPlugin({
-    //     template: PATHS.source + '/uiKit/landing/signIn.pug',
-    //     filename: 'signIn.html',
-    // }),
-    //                  new HtmlWebpackPlugin({
-    //     template: PATHS.source + '/uiKit/landing/searhRoom.pug',
-    //     filename: 'searhRoom.html',
-    // }),
+         new HtmlWebpackPlugin({
+        template: PATHS.source + '/uiKit/landing/landing.pug',
+        filename: 'landing.html',
+    }),
+             new HtmlWebpackPlugin({
+        template: PATHS.source + '/uiKit/landing/registration.pug',
+        filename: 'registration.html',
+    }),
+                 new HtmlWebpackPlugin({
+        template: PATHS.source + '/uiKit/landing/signIn.pug',
+        filename: 'signIn.html',
+    }),
+                     new HtmlWebpackPlugin({
+        template: PATHS.source + '/uiKit/landing/searhRoom.pug',
+        filename: 'searhRoom.html',
+    }),
    // new LodashModuleReplacementPlugin
    new MiniCssExtractPlugin({
      filename: '[name].css'
