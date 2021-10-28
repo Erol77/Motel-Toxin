@@ -3,7 +3,11 @@
 }
 
 .order-list {
-    line-height: 0px;
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    height: 30px;
+
+    line-height: 20px;
     ul {
     padding: 0;
     margin: 0;
@@ -26,12 +30,6 @@
 }
 
 .order-price{
-    text-align: right
-}
-
-.order-list {
-    display: grid;
-    grid-template-columns: 120px 1fr;
-    height: 30px;
-
+    position: absolute;
+    text-align: right;
 }
