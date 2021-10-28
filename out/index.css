@@ -468,46 +468,43 @@ input[type="password"]:focus {
   padding: 20px 30px 30px 30px; }
 
 .modal-searh h1 {
-  margin-bottom: 0; }
+  margin-bottom: 10px; }
 
 .form-searh {
   position: relative; }
-
-.form-searh h3 {
-  margin-bottom: 5px;
-  text-transform: uppercase; }
-
-.form-searh label {
-  display: inline-block;
-  margin-top: 10px; }
-
-.form-searh input[type="text"] {
-  display: inline-block;
-  width: 130px;
-  height: 40px;
-  padding-left: 15px;
-  margin: 0;
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  border-radius: 4px; }
-
-.form-searh label:nth-child(2) {
-  float: right; }
-
-.form-searh label:nth-child(3) input {
-  width: 300px;
-  margin-bottom: 10px; }
-
-.form-searh label::after {
-  content: "";
-  width: 24px;
-  height: 24px;
-  position: absolute;
-  margin-left: -30px;
-  margin-top: 12px;
-  vertical-align: middle;
-  background-image: url(e85954bc6e43e8dff6e057cce6ab769e.svg);
-  background-repeat: no-repeat;
-  background-position: 0; }
+  .form-searh > button {
+    margin-top: 20px; }
+  .form-searh h3 {
+    margin-bottom: 5px;
+    text-transform: uppercase; }
+  .form-searh label {
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 10px; }
+  .form-searh input[type="text"] {
+    display: inline-block;
+    width: 130px;
+    height: 40px;
+    padding-left: 15px;
+    margin: 0;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    border-radius: 4px; }
+  .form-searh label:nth-child(2) {
+    float: right; }
+  .form-searh label:nth-child(3) input {
+    width: 300px;
+    margin-bottom: 10px; }
+  .form-searh label::after {
+    content: "";
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    margin-left: -30px;
+    margin-top: 12px;
+    vertical-align: middle;
+    background-image: url(e85954bc6e43e8dff6e057cce6ab769e.svg);
+    background-repeat: no-repeat;
+    background-position: 0; }
 
 .cards {
   display: flex;
@@ -1353,6 +1350,8 @@ input[type="radio"].visually-hidden {
 
 .form-registration {
   position: relative; }
+  .form-registration > button {
+    margin-top: 20px; }
 
 .human input[type="radio"] + label {
   padding-left: 40px;
@@ -1416,6 +1415,8 @@ input[type="radio"].visually-hidden {
 
 .modal-order-form {
   position: relative; }
+  .modal-order-form > button {
+    margin-top: 20px; }
 
 .modal-order-form label {
   display: inline-block; }

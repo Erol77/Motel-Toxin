@@ -13,5 +13,8 @@
 
 .form-registration {
     position: relative;
+        &>button {
+            margin-top: 20px;
+        }
 }
 @import "../component/elements/human/human";

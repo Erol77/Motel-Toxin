@@ -32,6 +32,9 @@
 
 .modal-order-form {
     position: relative;
+        &>button {
+            margin-top: 20px;
+        }
 }
 .modal-order-form label {
     display: inline-block;
