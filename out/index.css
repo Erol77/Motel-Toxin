@@ -1500,6 +1500,14 @@ form.modal-order-form h2 {
   background-color: #ffffff;
   padding: 20px 30px 30px 30px;
   margin-top: 40px; }
+  .modal-login h1 {
+    margin: 30px 0 10px; }
+  .modal-login input {
+    margin: 10px 0 0; }
+  .modal-login button {
+    margin-top: 20px; }
+  .modal-login p > button {
+    margin-left: 53px; }
 
 input:hover,
 input:focus {
